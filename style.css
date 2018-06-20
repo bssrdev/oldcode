@@ -60,7 +60,7 @@ css list:
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,800');
 
 body{
-	background: #062489;
+	/*background: #062489;*/
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
 	color: #cbe5ff;
