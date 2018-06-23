@@ -405,7 +405,7 @@ ul{
 .home{
     display:block;
     position:relative;
-    /*height:225vh;*/
+    max-height:1430px;
 }
 .home:after{
     content:'';
