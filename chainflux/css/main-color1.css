@@ -405,7 +405,7 @@ ul{
 .home{
     display:block;
     position:relative;
-    /*height:100vh*/
+    height:225vh;
 }
 .home:after{
     content:'';
