@@ -230,7 +230,7 @@ input:-webkit-autofill:focus {
     padding-bottom: 20px;
 }
 
-.page-title h2:after {
+/*.page-title h2:after {
     content: "\e675";
     font-family: 'themify';
     position: absolute;
@@ -241,7 +241,7 @@ input:-webkit-autofill:focus {
     width: 15px;
     height: 15px;
     font-size: 14px;
-}
+}*/
 
 /**
 *Box-style
