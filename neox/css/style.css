@@ -550,8 +550,8 @@ ol {
 	background: #fff;
 	width: calc(20% - 25px);
 	display: inline-block;
-	/*margin: 0 10px;*/
-	margin: 0 110px;
+	margin: 0 10px;
+	/*margin: 0 110px;*/
 	text-align: center;
 	padding: 50px 10px;
 	-webkit-box-shadow: 1px 1px 1px rgba(33, 54, 61, 0.15);
