@@ -20,11 +20,122 @@
 	<link rel="stylesheet" href="css/owl.carousel.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
 
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web-socket-js/1.0.0/web_socket.js"></script>
+	<script type="text/javascript" src="web3.js"></script>
 
 	<!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var url = 'http://139.59.44.13:9000'
+			var web3Http;
+			var web3WS;
+			var subscription;
+			var i = 0
+			$('#register').on('submit', function(e) {
+				e.preventDefault()
+				var email = $('input[name="email').val()
+				var password = $('input[name="password').val()
+				var cpassword = $('input[name="cpassword').val()
+
+				if (!email)
+					return alert('Email is required')
+				if (!password || !cpassword)
+					return alert('Password and cpassword is required')
+
+				if (password !== cpassword)
+					return alert('Confirm password and password do not match')
+
+				$.post(url+ '/register', {
+					email,
+					password
+				}, 'json')
+				.done(function(res) {
+					console.log(res)
+					$('p').text(res.url)
+					$('input[name="email').val('')
+					$('input[name="password').val('')
+					$('input[name="cpassword').val('')
+				})
+				.fail(function(res) {
+					alert(res.responseJSON.message)
+				})
+			})
+			$('#getUrl').on('submit', function(e) {
+				e.preventDefault()
+				var email = $('input[name="email1').val()
+				var password = $('input[name="password1').val()
+
+				if (!email)
+					return alert('Email is required')
+				if (!password)
+					return alert('Password is required')
+				$.post(url+'/userurl', {
+					email,
+					password
+				}, 'json')
+				.done(function(res) {
+					console.log(res)
+					$('p').text(res.url)
+					$('input[name="email1').val('')
+					$('input[name="password1').val('')
+				})
+				.fail(function(res) {
+					alert(res.responseJSON.message)
+				})
+			})
+			$('button.connect').on('click', function(e) {
+				e.preventDefault()
+				var hash = $('input[name=hash]').val()
+				var u = $('input[name=url]').val() || url
+				if (!hash)
+					return alert('Enter the hash')
+				web3WS = new Web3(new Web3.providers.WebsocketProvider("ws://" + u + "/node/" + hash));
+				web3Http = new Web3(new Web3.providers.HttpProvider("http://" + u + "/node/" + hash));
+			})
+			
+			$('button.test').on('click', function(e) {
+				e.preventDefault()
+				if (!web3Http) {
+					return alert('Should connect first')
+				}
+				web3Http.eth.getBlock('latest', function(err, d) {
+					alert("HTTP :" + JSON.stringify(d))
+				})
+			})
+			$('button.sub').on('click', function(e) {
+				e.preventDefault()
+				if (!web3WS) {
+					return alert('Should connect first')
+				}
+				i = 0;
+				subscription = web3WS.eth.subscribe('newBlockHeaders', function(error, result){
+				  if (error)
+				    return console.log(error);
+				  if (i < 3) {
+				  	alert("WS :" + JSON.stringify(result))
+				  	i++
+				  }
+				  
+				})
+				.on("data", function(blockHeader){
+					console.log(blockHeader)
+				});
+			})
+			$('button.unsub').on('click', function(e) {
+				e.preventDefault()
+				// subscription.unsubscribe(function(error, success){
+				//     if(success)
+				//     	alert ('Successfully unsubscribed!');
+				// });
+				i = 3
+			})
+
+		})
+	</script>
 
 </head>
 <body>
@@ -45,30 +156,66 @@
 
 
 	<!-- Hero section -->
-	<section class="hero-section">
+	<section class="hero-section" style="height:auto;padding-top: 100px;display: block;background-image: url(../img/hero-bg.png);background-color: #f3f7f9;background-position: right top;background-repeat: no-repeat;position: relative;padding-bottom: 46px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 hero-text">
-					<h2 style="font-size: 50px;">Enter the details</h2>
-					<form>
+					<h2 style="font-size: 50px;">Register Here</h2>
+					<form id="register">
 					  <div class="form-group">
 					    <label for="exampleInputEmail1">Email address</label>
-					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
 					    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 					  </div>
 					  <div class="form-group">
 					    <label for="exampleInputPassword1">Password</label>
-					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
 					  </div>
 					  <div class="form-group">
 					    <label for="exampleInputPassword2">Repeat Password</label>
-					    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Repeat Password">
+					    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Repeat Password" name="cpassword">
 					  </div>
-					  <button type="submit" class="site-btn sb-gradients">Submit</button>
+					  <button type="submit" class="site-btn sb-gradients register">Submit</button>
 					</form>
 				</div>
 				<div class="col-md-6">
 					<img src="img/laptop.png" class="laptop-image" alt="">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<h2 style="font-size: 50px;">Retrieve URL</h2>
+					<form id="getUrl">
+					  <div class="form-group">
+					    <label for="exampleInputEmail2">Email address</label>
+					    <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter email" name="email1">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputPassword3">Password</label>
+					    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password" name="password1">
+					  </div>
+					  <button type="submit" class="site-btn sb-gradients get_url">Submit</button>
+					</form>
+				</div>
+				<p></p>
+				<div class="col-md-6">
+					<h2 style="font-size: 50px;">Test</h2>
+					<form>
+					  <div class="form-group">
+					    <label for="formGroupExampleInput1">Address</label>
+					    <input type="text" class="form-control" id="formGroupExampleInput1" placeholder="139.59.44.13:9000" name="url">
+					  </div>
+					  <div class="form-group">
+					    <label for="formGroupExampleInput2">Hash</label>
+					    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="hash" name="hash">
+					  </div>
+					  <button type="submit" class="site-btn sb-gradients connect">Connect</button>
+					  <button type="submit" class="site-btn sb-gradients test">Text Web3 Call</button>
+					  <br>
+					  <br>
+					  <button type="submit" class="site-btn sb-gradients sub">Web3 Subscription</button>
+					  <button type="submit" class="site-btn sb-gradients unsub">Web3 Unsubscritpion</button>
+					</form>
 				</div>
 			</div>
 		</div>
