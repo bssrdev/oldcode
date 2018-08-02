@@ -55,7 +55,8 @@
 				}, 'json')
 				.done(function(res) {
 					console.log(res)
-					$('p').text(res.url)
+					alert('Your URL is http://139.59.44.13:9000/node/ \ and your Hash is' + res.url.split("http://139.59.44.13:9000/node/"))
+					$('#p1').text(res.url)
 					$('input[name="email').val('')
 					$('input[name="password').val('')
 					$('input[name="cpassword').val('')
@@ -79,7 +80,8 @@
 				}, 'json')
 				.done(function(res) {
 					console.log(res)
-					$('p').text(res.url)
+					alert('Your URL is http://139.59.44.13:9000/node/ \ and your Hash is' + res.url.split("http://139.59.44.13:9000/node/"))
+					$('#p2').text(res.url)
 					$('input[name="email1').val('')
 					$('input[name="password1').val('')
 				})
@@ -177,6 +179,7 @@
 					  </div>
 					  <button type="submit" class="site-btn sb-gradients register">Submit</button>
 					</form>
+					<!-- <p id="p1"></p> -->
 				</div>
 				<div class="col-md-6">
 					<img src="img/laptop.png" class="laptop-image" alt="">
@@ -196,8 +199,9 @@
 					  </div>
 					  <button type="submit" class="site-btn sb-gradients get_url">Submit</button>
 					</form>
+					<!-- <p id="p2"></p> -->
 				</div>
-				<p></p>
+				<!-- <p></p> -->
 				<div class="col-md-6">
 					<h2 style="font-size: 50px;">Test</h2>
 					<form>
