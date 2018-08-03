@@ -578,7 +578,7 @@ ol {
 	opacity: 1;
 }
 
-.member:hover {
+/*.member:hover {
 	-webkit-box-shadow: 1px 14px 43px rgba(33, 54, 61, 0.15);
 	        box-shadow: 1px 14px 43px rgba(33, 54, 61, 0.15);
 }
@@ -589,7 +589,7 @@ ol {
 
 .member:hover .member-text {
 	opacity: 0;
-}
+}*/
 
 .member-img {
 	width: 230px;
