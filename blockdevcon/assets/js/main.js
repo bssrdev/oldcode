@@ -1,4 +1,4 @@
-$(".dropdown").hover(function(){$(this).addClass('open');},function(){$(this).removeClass('open');});jQuery('#clock').countdown('2019/01/24',function(event){var $this=jQuery(this).html(event.strftime(''
+$(".dropdown").hover(function(){$(this).addClass('open');},function(){$(this).removeClass('open');});jQuery('#clock').countdown('2018/10/12',function(event){var $this=jQuery(this).html(event.strftime(''
 +'<div class="time-entry days"><span>%-D</span> Days</div> '
 +'<div class="time-entry hours"><span>%H</span> Hours</div> '
 +'<div class="time-entry minutes"><span>%M</span> Minutes</div> '
