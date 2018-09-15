@@ -81,7 +81,7 @@
                                             <i class="fa fa-apple" aria-hidden="true"></i>
                                         </div>
                                         <div class="media-body">
-                                            <a href="#"><h4>Available</h4></a>
+                                            <a href="#" data-toggle="modal" data-target="#exampleModal"><h4>Available</h4></a>
                                             <p>on App Store</p>
                                         </div>
                                     </div>
@@ -92,7 +92,7 @@
                                             <i class="fa fa-android" aria-hidden="true"></i>
                                         </div>
                                         <div class="media-body">
-                                            <a href="#"><h4>Available</h4></a>
+                                            <a href="#" data-toggle="modal" data-target="#exampleModal"><h4>Available</h4></a>
                                             <p>on Play Store</p>
                                         </div>
                                     </div>
@@ -106,6 +106,34 @@
 						</div>
 					</div>
 				</div>
+            </div>
+
+            <!-- Button trigger modal -->
+            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+              Launch demo modal
+            </button> -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Alpha 1.0 Release</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body" style="text-align: center;">
+                    <h5>Alpha release on October 1st 2pm GMT</h5>
+                    <!-- Display the countdown timer in an element -->
+                    <h1 id="demo" style="color: #7c2289;"></h1>
+                  </div>
+                  <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div> -->
+                </div>
+              </div>
             </div>
         </section>
         <!--================End Home Banner Area =================-->
@@ -128,8 +156,8 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="feature_item" style="height: 100%;">
                             <img src="img/icon/f-icon-1.png" alt="">
-                            <h4>Censorship resistant</h4>
-                            <p>Murmur upholds free speech. No central authority can control or modify a users’ actions. At the same time, if there is any wrongdoing or illegal activities that are murmured/yelled, then that EOS account can be blocked as per the EOS constitution.</p>
+                            <h4>Prevent fake news</h4>
+                            <p>Every transaction on a blockchain is traceable to its origin. This helps minimize fake news by verifying the source behind false information. Such bad actors who spread fake news can then be made publicly known to prevent further spreading and also can be blocked from EOS through the EOS constitution. This is unlike a centralized network where a domino effect can cause irrevocable social damage.</p>
                         </div>
                     </div>
                 </div>
@@ -137,14 +165,14 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="feature_item" style="height: 100%;">
                             <img src="img/icon/f-icon-1.png" alt="">
-                            <h4>Prevent fake news</h4>
-                            <p>Every transaction on a blockchain is traceable to its origin. This helps minimize fake news by verifying the source behind false information. Such bad actors who spread fake news can then be made publicly known to prevent further spreading and also can be blocked from EOS through the EOS constitution. This is unlike a centralized network where a domino effect can cause irrevocable social damage.</p>
+                            <h4>Censorship resistant</h4>
+                            <p>Murmur upholds free speech. No central authority can control or modify a users’ actions. At the same time, if there is any wrongdoing or illegal activities that are murmured/yelled, then that EOS account can be blocked as per the EOS constitution.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="feature_item" style="height: 100%;">
                             <img src="img/icon/f-icon-1.png" alt="">
-                            <h4>Protocol integration</h4>
+                            <h4>Protocol Integration</h4>
                             <p>Applications such as advertisement and payment networks can build on top of Murmur with our open-source SDKs and APIs. The overlying value of these networks then goes directly to the users, who can get rewarded for hosting relevant ads on their profile or transact freely and securely with their peers.</p>
                         </div>
                     </div>
@@ -668,5 +696,35 @@
         <script src="js/mail-script.js"></script>
         <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
         <script src="js/theme.js"></script>
+        <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Oct 1, 2018 14:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+          // Get todays date and time
+          var now = new Date().getTime();
+
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Display the result in the element with id="demo"
+          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+
+          // If the count down is finished, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
     </body>
 </html>
