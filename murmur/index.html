@@ -18,6 +18,21 @@
         <!-- main css -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
+        <style type="text/css">
+            /* Extra small devices (phones, 600px and down) */
+            @media only screen and (min-width: 991px) {
+                .roadmap_phone 
+                {
+                    display: none;
+                }
+            }
+            @media only screen and (max-width: 990px) {
+                .roadmap_phone_1 
+                {
+                    display: none;
+                }
+            }
+        </style>
     </head>
     <body data-spy="scroll" data-target="#mainNav" data-offset="70">
         
@@ -377,7 +392,8 @@
                     <br>
                     <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.</p> -->
                     <!-- <img src="img/roadmap.jpg" style="width: 100%;margin-top: 10px;"> -->
-                    <img src="img/roadmap_1.png" style="width: 100%;margin-top: 10px;">
+                    <img class="roadmap_phone_1" src="img/roadmap_1.png" style="width: 100%;margin-top: 10px;">
+                    <img class="roadmap_phone" src="img/roadmap_mobile.png" style="width: 100%;margin-top: 10px;">
                 </div>
             </div>
         </section>
