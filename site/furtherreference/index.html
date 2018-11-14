@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Further Reference - WandX</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Further Reference";
+    var mkdocs_page_input_path = "furtherreference.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> WandX</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">WandX Documentation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../gettingstarted/">Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Further Reference</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#further-reference">Further Reference</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#advanced-topics">Advanced Topics</a></li>
+        
+            <li><a class="toctree-l3" href="#advanced-resources">Advanced Resources</a></li>
+        
+            <li><a class="toctree-l3" href="#wandx-blog-posts">WandX Blog Posts</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">WandX</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Further Reference</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="further-reference">Further Reference</h1>
+<h2 id="advanced-topics">Advanced Topics</h2>
+<h3 id="units-and-natural-units">Units and Natural Units</h3>
+<p>Here, we cover how unit amounts are defined and calculated in WnadX tokens. In the ERC20 standard, each token has a base unit that is defined by its <code>decimals</code> property. For example, a WnadX token’s <code>decimals</code> is 18, meaning its base unit is <code>10 ** -18</code> of one WnadX. Intuitively, it makes sense to tie a certain amount of a component‘s base unit to one WnadX token to calculate the component allocation of the WnadX. However, this becomes problematic when a component token has a significantly lower <code>decimals</code> value than a WnadX. Take for example Airswap (AST), which uses only 4 decimal places, this makes their token far less divisible. As a consequence, say we want to issue <code>10 ** 13</code> of a WnadX that contains AST, there‘s a chance that the issuance would require transferring partial amounts of an AST base unit, which is not possible, and thus would leave the WnadX token undercollateralized.</p>
+<p>To combat this problem, instead of tying component base unit amounts to one WnadX Token, we can tie the component base unit amounts to some quantity of WnadX token base units. This is what the natural unit of a WnadX is for: it defines the amount of WnadX token base units to tie component token amounts to. In order to make this work there is a lower bound on what the natural unit can be, which is <code>10 ** (18 - minimumDecimal)</code> where minimumDecimal is the lowest decimal value of the component tokens comprising the WnadX. Furthermore in order to avoid rounding errors in issuance and redemption, all issue and redeem quantities must be multiples of the natural unit. For a more thorough treatment, including an example, see section 5.2.1 of our <a href="https://www.wandx.co/whitepaper.html">White Paper</a>.</p>
+<h2 id="advanced-resources">Advanced Resources</h2>
+<ul>
+<li><a href="https://www.wandx.co/whitepaper.html">Whitepaper</a></li>
+<li><a href="https://teamwandx.slack.com/">Contracts Github</a></li>
+</ul>
+<h2 id="wandx-blog-posts">WandX Blog Posts</h2>
+<ul>
+<li><a href="https://blog.wandx.co/wandxs-basket-protocol-3b57774e57aa">WandX’s Basket Protocol</a></li>
+<li><a href="https://blog.wandx.co/wandx-decentralized-exchange-release-1-0-326a7f49b0d">WandX Decentralized Exchange and basket protocol release 1.0</a></li>
+<li><a href="https://blog.wandx.co/paving-the-future-with-smart-contracts-acbc8f4e4d7c">Paving The Future With Smart Contracts</a></li>
+<li><a href="https://blog.wandx.co/wandx-the-multi-blockchain-dex-and-basket-protocol-f8717134d7e5">WandX : The Multi-Blockchain DEX and Basket protocol</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../gettingstarted/" class="btn btn-neutral" title="Getting Started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../gettingstarted/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
