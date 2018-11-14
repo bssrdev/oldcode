@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Smart Contracts - WandX</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Smart Contracts";
+    var mkdocs_page_input_path = "smartcontracts.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> WandX</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">WandX Documentation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../gettingstarted/">Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Smart Contracts</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#smart-contracts">Smart Contracts</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#architecture">Architecture</a></li>
+        
+            <li><a class="toctree-l3" href="#deployed-contracts">Deployed Contracts</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../furtherreference/">Further Reference</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">WandX</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Smart Contracts</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="smart-contracts">Smart Contracts</h1>
+<p>Set is a smart contract framework for building collateralized baskets of tokenized assets. Set uses a modular system of Ethereum smart contracts where components can be added, upgraded, or removed without requiring an overhaul of the system.</p>
+<p>Our main resources for learning more are below:</p>
+<ul>
+<li><a href="https://www.wandx.co/whitepaper.html">Whitepaper</a>: A document documenting the motivation and specification for the protocol.</li>
+<li><a href="https://teamwandx.slack.com/">Contracts Github</a>: A document documenting the motivation and specification for the protocol.</li>
+</ul>
+<h2 id="architecture">Architecture</h2>
+<p>Image of the Architecture will come here.</p>
+<h3 id="coresol">Core.sol</h3>
+<p>This public-facing smart contract contains all the business logic and external functions associated with creating, issuing, rebalancing, and redeeming Sets. Core serves as a kernel that orchestrates interactions between the various other smart contracts.</p>
+<h3 id="transferproxysol">TransferProxy.sol</h3>
+<p>This smart contract facilitates the transfer of ERC20 tokens for all transactions. Users who wish to utilize their tokens must authorize the TransferProxy contract to move their tokens by calling the ERC20-compliant token’s approve function. The design of a centralized TransferProxy contract is intended to minimize the number of overall number of ERC20 approve transactions required in the system.</p>
+<h3 id="vaultsol">Vault.sol</h3>
+<p>This smart contract stores all the Set’s component and contains mappings to track ownership of assets. Vault’s accounting interfaces are only available to Core.</p>
+<h3 id="settokenfactorysol">SetTokenFactory.sol</h3>
+<p>This smart contract contains the template for a specific type of Set and facilitates the creation of all Set token contracts. Creators can create a new Set token by calling Core’s create function and supplying the Factory address and the required parameters. For a Factory to be valid, it needs to be registered with Core. Initially, there will be a SetTokenFactory (creating standard Sets) and RebalancingTokenFactory (a factory for creating Rebalancing Set tokens).</p>
+<h3 id="settokensol">SetToken.sol</h3>
+<p>This ERC-20 compliant smart contract represents an unique Set with specified ERC-20 components and units and tracks balances of the Set tokens. Each Set token smart contract is created by a Factory and is tracked by Core. Each smart contract exposes mint and burn functions that only Core could call during issuance and redemption.</p>
+<h3 id="iexchangewrappersol">IExchangeWrapper.sol</h3>
+<p>This smart contract serves as a conduit between decentralized exchanges and Core to facilitate component-acquisition in an issuance order. Each exchange wrapper contract exposes a common exchange function that accepts a bytes string that encodes exchange messages. The ExchangeWrapper is responsible for parsing call data conforming to an exchange's interface (“exchange messages”) and executing each order as the taker of each transaction. Initially, we will be supporting withdrawing tokens from the submitter’s wallet and 0x Exchange Version 2.</p>
+<h3 id="rebalancingsettokenfactorysol">RebalancingSetTokenFactory.sol</h3>
+<p>This smart contract contains a template for a specific type of Rebalancing Set and facilitates the creation of all Rebalancing Set token contracts. Creators can create a new Rebalancing Set token by calling Core's create function and supplying the Factory address and required parameters similar to the SetTokenFactory contract. Rebalancing Set tokens deployed by this factory can only have their mint and burn functions called by Core.</p>
+<h3 id="rebalancingsettokensol">RebalancingSetToken.sol</h3>
+<p>This ERC-20 compliant smart contract represents an unique Rebalancing Set with specified ERC-20 components and units and tracks balances of the Rebalancing Set tokens. Each Rebalancing Set token smart contract is created by the RebalancingSetTokenFactory and is tracked by Core. Each smart contract contains additional data and functions unique to a Rebalancing Set.</p>
+<h2 id="deployed-contracts">Deployed Contracts</h2>
+<h3 id="kovan-testnet">Kovan Testnet</h3>
+<table>
+<thead>
+<tr>
+<th>Contract</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>0xc89092a43287c12cfe87c8631b718176ea702d18</td>
+</tr>
+<tr>
+<td>SetTokenFactory</td>
+<td>0xa4c8d565719fefd8cf79d1178bbf262cbe659af2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ropsten-testnet">Ropsten Testnet</h3>
+<table>
+<thead>
+<tr>
+<th>Contract</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>0xc89092a43287c12cfe87c8631b718176ea702d18</td>
+</tr>
+<tr>
+<td>SetTokenFactory</td>
+<td>0xa4c8d565719fefd8cf79d1178bbf262cbe659af2</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../furtherreference/" class="btn btn-neutral float-right" title="Further Reference">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../gettingstarted/" class="btn btn-neutral" title="Getting Started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../gettingstarted/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../furtherreference/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
