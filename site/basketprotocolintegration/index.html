@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Further Referencece - WandX</title>
+        <title>Basket Protocol Integration - WandX</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -63,8 +63,8 @@
     <a href="../basketprotocol/">Basket Protocol</a>
 </li>
                                     
-<li >
-    <a href="../basketprotocolintegration/">Basket Protocol Integration</a>
+<li class="active">
+    <a href="./">Basket Protocol Integration</a>
 </li>
                                     
 <li >
@@ -75,8 +75,8 @@
     <a href="../smartcontracts/">Smart Contracts</a>
 </li>
                                     
-<li class="active">
-    <a href="./">Further Referencece</a>
+<li >
+    <a href="../furtherreference/">Further Referencece</a>
 </li>
                                 </ul>
                             </li>
@@ -167,12 +167,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../smartcontracts/">
+                                <a rel="next" href="../basketprotocol/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../gettingstarted/">
+                                <a rel="prev" href="../infrasolution/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -184,31 +184,73 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#further-reference">Further Reference</a></li>
-            <li><a href="#advanced-topics">Advanced Topics</a></li>
-            <li><a href="#advanced-resources">Advanced Resources</a></li>
-            <li><a href="#wandx-blog-posts">WandX Blog Posts</a></li>
+        <li class="main active"><a href="#basket-protocol-integration">Basket Protocol Integration</a></li>
+            <li><a href="#step-1">Step 1</a></li>
+            <li><a href="#step-2">Step 2</a></li>
+            <li><a href="#step-3">Step 3</a></li>
+            <li><a href="#step-4">Step 4</a></li>
+            <li><a href="#step-5-only-through-the-wandx-platform">Step 5 ((only through the WandX platform))</a></li>
+            <li><a href="#step-6">Step 6</a></li>
+            <li><a href="#step-7-new-basket-creation">Step 7 (new Basket creation)</a></li>
+            <li><a href="#step-8">Step 8</a></li>
+            <li><a href="#step-9">Step 9</a></li>
+            <li><a href="#step-10">Step 10</a></li>
+            <li><a href="#step-11">Step 11</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="further-reference">Further Reference</h1>
-<h2 id="advanced-topics">Advanced Topics</h2>
-<h3 id="units-and-natural-units">Units and Natural Units</h3>
-<p>Here, we cover how unit amounts are defined and calculated in WnadX tokens. In the ERC20 standard, each token has a base unit that is defined by its <code>decimals</code> property. For example, a WnadX token’s <code>decimals</code> is 18, meaning its base unit is <code>10 ** -18</code> of one WnadX. Intuitively, it makes sense to tie a certain amount of a component‘s base unit to one WnadX token to calculate the component allocation of the WnadX. However, this becomes problematic when a component token has a significantly lower <code>decimals</code> value than a WnadX. Take for example Airswap (AST), which uses only 4 decimal places, this makes their token far less divisible. As a consequence, say we want to issue <code>10 ** 13</code> of a WnadX that contains AST, there‘s a chance that the issuance would require transferring partial amounts of an AST base unit, which is not possible, and thus would leave the WnadX token undercollateralized.</p>
-<p>To combat this problem, instead of tying component base unit amounts to one WnadX Token, we can tie the component base unit amounts to some quantity of WnadX token base units. This is what the natural unit of a WnadX is for: it defines the amount of WnadX token base units to tie component token amounts to. In order to make this work there is a lower bound on what the natural unit can be, which is <code>10 ** (18 - minimumDecimal)</code> where minimumDecimal is the lowest decimal value of the component tokens comprising the WnadX. Furthermore in order to avoid rounding errors in issuance and redemption, all issue and redeem quantities must be multiples of the natural unit. For a more thorough treatment, including an example, see section 5.2.1 of our <a href="https://www.wandx.co/whitepaper.html">White Paper</a>.</p>
-<h2 id="advanced-resources">Advanced Resources</h2>
+<h1 id="basket-protocol-integration">Basket Protocol Integration</h1>
+<p>Integration of the Basket protocol with Exchanges</p>
+<p><img alt="Buy Order" src="../img/thirdparty.jpg" />
+Above architecture describes the integration of the Basket protocol with exchanges.</p>
+<p>The <a href="../basketprotocol/">Basket protocol</a> , created by the WandX team, enables users to create baskets of ERC20 Tokens and group them into a single unit which is stored on a smart contract. This document focuses on how exchanges can use the Basket protocol to offer Token Baskets to their customers.</p>
+<ol>
+<li>Initially, the exchange ( let's call it the ABC Exchange) needs to register with WandX and sign the needed documents. This can be done through an email interaction with abhinav.ramesh@wandx.co.</li>
+<li>After the agreement, the ABC Exchange will be a part of the Basket protocol.</li>
+<li>Whenever a User comes to the WandX platform and trades, they have the flexibility to create a Basket of tokens.</li>
+<li>Once the User create this basket, this basket is pushed onto the Basket Storage Contract. There is a two way communication between the Basket Storage Contract and the WandX platform, which means data gets updated every now and then on the Basket Storage Contract.</li>
+<li>As a part of this Basket protocol, the ABC Exchange has the flexibility to choose any of these Baskets from the Basket Storage Contract and trade these Baskets on their platform.</li>
+<li>Now users can come onto the ABC Exchange and purchase these Basket of tokens.</li>
+<li>Once the transaction is complete, the exchange profit fee goes to Exchange Wallet which is controlled by the WandX team.</li>
+<li>From this Exchange Wallet, exchange profit fee goes to Fee Distributor Contract which is owned by the WandX team, where the fee breaks down according to the Agreements signed between the ABC Exchange and Basket protocol and gets transferred to the ABC Exchange.</li>
+<li>All transactions happening during the process can be visible on Etherscan.</li>
+</ol>
+<h2 id="step-1">Step 1</h2>
+<p>ABC exchange sends an integration request to the Basket protocol.</p>
+<h2 id="step-2">Step 2</h2>
+<p>ABC Exchange will discuss and agree upon the terms and conditions related to the Basket protocol , with the WandX Team.</p>
+<p>The following details should be shared and agreed upon:</p>
 <ul>
-<li><a href="https://www.wandx.co/whitepaper.html">Whitepaper</a></li>
-<li><a href="https://teamwandx.slack.com/">Contracts Github</a></li>
+<li>Fee split ratio</li>
+<li>Frequency at which fee transfers should happen between WandX Team and ABC Exchange</li>
+<li>ABC Exchange address on the Etherscan. (Fees will be transferred to this address)</li>
+<li>Storage Contract address (WandX team will share this)</li>
+<li>Basket contract ABI  (WandX team will share this)</li>
+<li>Code to extract the list of active Baskets from the Storage (From the contract shared above)</li>
+<li>Code to execute or call, Basket buy or trade methods</li>
 </ul>
-<h2 id="wandx-blog-posts">WandX Blog Posts</h2>
-<ul>
-<li><a href="https://blog.wandx.co/wandxs-basket-protocol-3b57774e57aa">WandX’s Basket Protocol</a></li>
-<li><a href="https://blog.wandx.co/wandx-decentralized-exchange-release-1-0-326a7f49b0d">WandX Decentralized Exchange and basket protocol release 1.0</a></li>
-<li><a href="https://blog.wandx.co/paving-the-future-with-smart-contracts-acbc8f4e4d7c">Paving The Future With Smart Contracts</a></li>
-<li><a href="https://blog.wandx.co/wandx-the-multi-blockchain-dex-and-basket-protocol-f8717134d7e5">WandX : The Multi-Blockchain DEX and Basket protocol</a></li>
-</ul></div>
+<h2 id="step-3">Step 3</h2>
+<p>WandX Team will set up the ABC Exchange integration with the Basket protocol.</p>
+<h2 id="step-4">Step 4</h2>
+<p>After the integration with Basket protocol, the ABC Exchange can extract and display the list of Baskets on their Exchange using the code shared in step 2.</p>
+<h2 id="step-5-only-through-the-wandx-platform">Step 5 ((only through the WandX platform))</h2>
+<p>The WandX Team can make Basket updates if any, and can push them onto the Basket Storage Contract.</p>
+<p>New Baskets can be published as and when users create them on the WandX platform.</p>
+<h2 id="step-6">Step 6</h2>
+<p>Individual exchanges can build their own Basket interaction UI for all the methods like publish, update, cancel, buy, deposit, withdraw, buy. These methods are available for the Baskets that are created on WandX. The UI for these methods can be provided by WandX, and customized for each exchange.</p>
+<p>The ABI as shared in Step 2 will have the mandatory details to build this UI and interactions, the code for which is available only for buy or trade method interactions.</p>
+<h2 id="step-7-new-basket-creation">Step 7 (new Basket creation)</h2>
+<p>New Baskets can only be created on the WandX platform.</p>
+<h2 id="step-8">Step 8</h2>
+<p>When a user tries to buy a Basket on an exchange, that exchange address (shared with the WandX Team in step 2) needs to be injected as a parameter into the Buy method. This address is mandatory to claim the Exchange trade fee. Refer the code shared in step 2.</p>
+<h2 id="step-9">Step 9</h2>
+<p>When a buy transaction on ABC Exchange is executed successfully, the calculated Fees will be transferred into the Exchange Wallet (WandX team controls the Exchange Wallet). </p>
+<h2 id="step-10">Step 10</h2>
+<p>When a buy transaction is executed successfully, the details like Basket ID, exchange address, trade fee  will be available through events in the transaction. Anyone can go to etherscan and verify the transaction details and fee collection details.</p>
+<p>A transaction parsing job will be running in the background which identifies and processes the Basket related transactions, extracts the fee related details and generates/updates the Fee Collection Table (WandX Team controls this and will be shared with other exchanges on need basis).</p>
+<h2 id="step-11">Step 11</h2>
+<p>Fee Distribution job will run on a weekly/monthly basis, and transferring of funds will happen as recorded in the fee table. Funds will be transferred to the Exchange account which has been shared in step 2.</p></div>
         </div>
 
         <footer class="col-md-12">

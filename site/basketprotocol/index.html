@@ -56,15 +56,15 @@
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../gettingstarted/">Getting Started</a>
-</li>
-                                    
-<li >
     <a href="../decentralizedexchange/">Decentralized Exchange</a>
 </li>
                                     
 <li class="active">
     <a href="./">Basket Protocol</a>
+</li>
+                                    
+<li >
+    <a href="../basketprotocolintegration/">Basket Protocol Integration</a>
 </li>
                                     
 <li >
@@ -89,6 +89,10 @@
     <ul class="dropdown-menu">
             
 <li >
+    <a href="../gettingstarted/">Getting Started</a>
+</li>
+            
+<li >
     <a href="../comingsoon/">Microapp</a>
 </li>
     </ul>
@@ -97,6 +101,10 @@
   <li class="dropdown-submenu">
     <a href="#">NEO</a>
     <ul class="dropdown-menu">
+            
+<li >
+    <a href="../gettingstarted/">Getting Started</a>
+</li>
             
 <li >
     <a href="../comingsoon/">Wallet</a>
@@ -109,6 +117,10 @@
     <ul class="dropdown-menu">
             
 <li >
+    <a href="../gettingstarted/">Getting Started</a>
+</li>
+            
+<li >
     <a href="../comingsoon/">Wallet</a>
 </li>
     </ul>
@@ -117,6 +129,10 @@
   <li class="dropdown-submenu">
     <a href="#">Wanchain</a>
     <ul class="dropdown-menu">
+            
+<li >
+    <a href="../gettingstarted/">Getting Started</a>
+</li>
             
 <li >
     <a href="../comingsoon/">Wallet</a>
@@ -156,7 +172,7 @@
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../infrasolution/">
+                                <a rel="prev" href="../basketprotocolintegration/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -169,12 +185,44 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#basket-protocol">Basket Protocol</a></li>
+            <li><a href="#trading-protocol">Trading Protocol</a></li>
+            <li><a href="#example-basket-transaction">Example Basket Transaction</a></li>
+            <li><a href="#buy">Buy</a></li>
+            <li><a href="#sell">Sell</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="basket-protocol">Basket Protocol</h1>
-<p>Using the WandX Basket protocol to enable creation of Baskets of ERC20 or ERC223 Tokens, to enable trading a large amount of a single Token entirely peer to peer through a single transaction without affecting the price of the Token as there wouldn't be any API through which the price is determined.</p></div>
+<p>Using the WandX Basket protocol to enable creation of Baskets of ERC20 or ERC223 Tokens, to enable trading a large amount of a single Token entirely peer to peer through a single transaction without affecting the price of the Token as there wouldn't be any API through which the price is determined.</p>
+<h2 id="trading-protocol">Trading Protocol</h2>
+<p>WandX has successfully launched a protocol that allows users to create and trade baskets of ERC20 tokens through smart contracts. Baskets are customized bundles of ERC20 tokens, specified by the user. For example, as an owner of these tokens, I could create a Basket of 100 EOS, 1000 KIN and 100 LRC on a smart contract. With the creation of this Basket, I would now be the owner of the smart contract that contains these tokens.</p>
+<p>Once created, I can then list the Basket for trade for an ask price, for example 2 ETH, which is posted on the already established smart contract. Once listed, another person or entity can assume ownership of this Token Basket by sending 2 ETH to that basket address. The Basket originator then receives the 2 ETH through the smart contract, while the person who sent the 2 ETH is the new owner of the basket. In this way, WandX has created a fully decentralized mechanism of creating trading ERC20 Token Baskets.</p>
+<p>The Token baskets can be integrated into any exchange or wallet that allows sign in through a users’ private key, and subsequently executed by any wallet or exchange.</p>
+<h2 id="example-basket-transaction">Example Basket Transaction</h2>
+<p>Let’s better define how this transaction might work today</p>
+<ul>
+<li>Seller (and owner) of tokens defines and publishes basket</li>
+<li>Underlying tokens are deposited onto the smart contract which is still to this point owned by the Seller</li>
+<li>Buyer purchases basket using Ether</li>
+<li>Smart contract is executed</li>
+<li>Buyer gets the basket and thus ownership of the underlying tokens</li>
+<li>Seller gets the ether</li>
+</ul>
+<h2 id="buy">Buy</h2>
+<h3 id="create-a-buy-order">Create a buy order</h3>
+<p><img alt="Buy Order" src="../img/Buy/WandxPortfolioflow2nd-16.jpg" /></p>
+<h3 id="update-or-cancel-buy-order">Update or Cancel Buy Order</h3>
+<p><img alt="Cancel Buy Order" src="../img/Buy/WandxPortfolioflow2nd-17.jpg" /></p>
+<h3 id="fill-order">Fill Order</h3>
+<p><img alt="Fill Buy Order" src="../img/Buy/WandxPortfolioflow2nd-19.jpg" /></p>
+<h2 id="sell">Sell</h2>
+<h3 id="create-a-sell-order">Create a sell order</h3>
+<p><img alt="Sell Order" src="../img/Sell/WandxPortfolioflow2nd-10.jpg" /></p>
+<h3 id="update-or-cancel-sell-order">Update or Cancel sell Order</h3>
+<p><img alt="Cancel Sell Order" src="../img/Sell/WandxPortfolioflow2nd-11.jpg" /></p>
+<h3 id="fill-order_1">Fill Order</h3>
+<p><img alt="Fill Sell Order" src="../img/Sell/WandxPortfolioflow2nd-13.jpg" /></p></div>
         </div>
 
         <footer class="col-md-12">

@@ -56,15 +56,15 @@
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../gettingstarted/">Getting Started</a>
-</li>
-                                    
-<li >
     <a href="../decentralizedexchange/">Decentralized Exchange</a>
 </li>
                                     
 <li >
     <a href="../basketprotocol/">Basket Protocol</a>
+</li>
+                                    
+<li >
+    <a href="../basketprotocolintegration/">Basket Protocol Integration</a>
 </li>
                                     
 <li >
@@ -89,6 +89,10 @@
     <ul class="dropdown-menu">
             
 <li >
+    <a href="../gettingstarted/">Getting Started</a>
+</li>
+            
+<li >
     <a href="../comingsoon/">Microapp</a>
 </li>
     </ul>
@@ -97,6 +101,10 @@
   <li class="dropdown-submenu">
     <a href="#">NEO</a>
     <ul class="dropdown-menu">
+            
+<li >
+    <a href="../gettingstarted/">Getting Started</a>
+</li>
             
 <li >
     <a href="../comingsoon/">Wallet</a>
@@ -109,6 +117,10 @@
     <ul class="dropdown-menu">
             
 <li >
+    <a href="../gettingstarted/">Getting Started</a>
+</li>
+            
+<li >
     <a href="../comingsoon/">Wallet</a>
 </li>
     </ul>
@@ -117,6 +129,10 @@
   <li class="dropdown-submenu">
     <a href="#">Wanchain</a>
     <ul class="dropdown-menu">
+            
+<li >
+    <a href="../gettingstarted/">Getting Started</a>
+</li>
             
 <li >
     <a href="../comingsoon/">Wallet</a>
@@ -168,77 +184,11 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#smart-contracts">Smart Contracts</a></li>
-            <li><a href="#architecture">Architecture</a></li>
-            <li><a href="#deployed-contracts">Deployed Contracts</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="smart-contracts">Smart Contracts</h1>
-<p>Set is a smart contract framework for building collateralized baskets of tokenized assets. Set uses a modular system of Ethereum smart contracts where components can be added, upgraded, or removed without requiring an overhaul of the system.</p>
-<p>Our main resources for learning more are below:</p>
-<ul>
-<li><a href="https://www.wandx.co/whitepaper.html">Whitepaper</a>: A document documenting the motivation and specification for the protocol.</li>
-<li><a href="https://teamwandx.slack.com/">Contracts Github</a>: A document documenting the motivation and specification for the protocol.</li>
-</ul>
-<h2 id="architecture">Architecture</h2>
-<p>Image of the Architecture will come here.</p>
-<h3 id="coresol">Core.sol</h3>
-<p>This public-facing smart contract contains all the business logic and external functions associated with creating, issuing, rebalancing, and redeeming Sets. Core serves as a kernel that orchestrates interactions between the various other smart contracts.</p>
-<h3 id="transferproxysol">TransferProxy.sol</h3>
-<p>This smart contract facilitates the transfer of ERC20 tokens for all transactions. Users who wish to utilize their tokens must authorize the TransferProxy contract to move their tokens by calling the ERC20-compliant token’s approve function. The design of a centralized TransferProxy contract is intended to minimize the number of overall number of ERC20 approve transactions required in the system.</p>
-<h3 id="vaultsol">Vault.sol</h3>
-<p>This smart contract stores all the Set’s component and contains mappings to track ownership of assets. Vault’s accounting interfaces are only available to Core.</p>
-<h3 id="settokenfactorysol">SetTokenFactory.sol</h3>
-<p>This smart contract contains the template for a specific type of Set and facilitates the creation of all Set token contracts. Creators can create a new Set token by calling Core’s create function and supplying the Factory address and the required parameters. For a Factory to be valid, it needs to be registered with Core. Initially, there will be a SetTokenFactory (creating standard Sets) and RebalancingTokenFactory (a factory for creating Rebalancing Set tokens).</p>
-<h3 id="settokensol">SetToken.sol</h3>
-<p>This ERC-20 compliant smart contract represents an unique Set with specified ERC-20 components and units and tracks balances of the Set tokens. Each Set token smart contract is created by a Factory and is tracked by Core. Each smart contract exposes mint and burn functions that only Core could call during issuance and redemption.</p>
-<h3 id="iexchangewrappersol">IExchangeWrapper.sol</h3>
-<p>This smart contract serves as a conduit between decentralized exchanges and Core to facilitate component-acquisition in an issuance order. Each exchange wrapper contract exposes a common exchange function that accepts a bytes string that encodes exchange messages. The ExchangeWrapper is responsible for parsing call data conforming to an exchange's interface (“exchange messages”) and executing each order as the taker of each transaction. Initially, we will be supporting withdrawing tokens from the submitter’s wallet and 0x Exchange Version 2.</p>
-<h3 id="rebalancingsettokenfactorysol">RebalancingSetTokenFactory.sol</h3>
-<p>This smart contract contains a template for a specific type of Rebalancing Set and facilitates the creation of all Rebalancing Set token contracts. Creators can create a new Rebalancing Set token by calling Core's create function and supplying the Factory address and required parameters similar to the SetTokenFactory contract. Rebalancing Set tokens deployed by this factory can only have their mint and burn functions called by Core.</p>
-<h3 id="rebalancingsettokensol">RebalancingSetToken.sol</h3>
-<p>This ERC-20 compliant smart contract represents an unique Rebalancing Set with specified ERC-20 components and units and tracks balances of the Rebalancing Set tokens. Each Rebalancing Set token smart contract is created by the RebalancingSetTokenFactory and is tracked by Core. Each smart contract contains additional data and functions unique to a Rebalancing Set.</p>
-<h2 id="deployed-contracts">Deployed Contracts</h2>
-<h3 id="kovan-testnet">Kovan Testnet</h3>
-<table>
-<thead>
-<tr>
-<th>Contract</th>
-<th>Address</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Core</td>
-<td>0xc89092a43287c12cfe87c8631b718176ea702d18</td>
-</tr>
-<tr>
-<td>SetTokenFactory</td>
-<td>0xa4c8d565719fefd8cf79d1178bbf262cbe659af2</td>
-</tr>
-</tbody>
-</table>
-<h3 id="ropsten-testnet">Ropsten Testnet</h3>
-<table>
-<thead>
-<tr>
-<th>Contract</th>
-<th>Address</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Core</td>
-<td>0xc89092a43287c12cfe87c8631b718176ea702d18</td>
-</tr>
-<tr>
-<td>SetTokenFactory</td>
-<td>0xa4c8d565719fefd8cf79d1178bbf262cbe659af2</td>
-</tr>
-</tbody>
-</table></div>
+</div>
         </div>
 
         <footer class="col-md-12">
