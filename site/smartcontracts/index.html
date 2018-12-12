@@ -250,7 +250,7 @@
   </thead>
   <tbody>
       <tr>
-        <th></th>
+        <th>address _vault</th>
         <td></td>
         <td></td>
       </tr>
@@ -262,77 +262,727 @@
 <pre><code class="solidity">function updateExConfig(address _wallet,  address _verifierAddr, address _feeCalculator)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _wallet</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _verifierAddr</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _feeCalculator</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">isOrderSigned</h3>
 
 <pre><code class="solidity">function isOrderSigned(bytes32 _msgHash, uint8 v, bytes32 r, bytes32 s, address _signer)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>bytes32 _msgHash</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint8 v</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 r</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 s</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _signer</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">validExchangeFee</h3>
 
 <pre><code class="solidity">function validExchangeFee(address _sellerFeeToken, address _buyerFeeToken, uint256 _sellerFeeValue, uint256 _buyrFeeValue)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _sellerFeeToken</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _buyerFeeToken</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _sellerFeeValue</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _buyrFeeValue</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">getFeeIndex</h3>
 
 <pre><code class="solidity">function getFeeIndex(address _token)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _token</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">getTwoWayOrderHash</h3>
 
 <pre><code class="solidity">function getTwoWayOrderHash(address[] _sellerTokens, address[] _buyerTokens, uint256[] _sellerValues, uint256[] _buyerValues, address[5] _orderAddresses, uint256[5] _orderValues, bytes32 _orderID)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address[] _sellerTokens</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[] _buyerTokens</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _sellerValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _buyerValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[5] _orderAddresses</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[5] _orderValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _orderID</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">getOneWayOrderHashes</h3>
 
 <pre><code class="solidity">function getOneWayOrderHashes(address[] _sellerTokens, address[] _buyerTokens, uint256[] _sellerValues, uint256[] _buyerValues, address[5] _orderAddresses, uint256[5] _orderValues, bytes32 _orderID)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address[] _sellerTokens</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[] _buyerTokens</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _sellerValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _buyerValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[5] _orderAddresses</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[5] _orderValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _orderID</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">getOrderHash</h3>
 
 <pre><code class="solidity">function getOrderHash(address[] _tokens, uint256[] _counts, uint256 _pValue, uint256 _fValue, address _feeToken, address _maker, address _signer, bytes32 _orderID)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address[] _tokens</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _counts</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _pValue</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _fValue</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _feeToken</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _maker</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _signer</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _orderID</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">trasnferTokens</h3>
 
 <pre><code class="solidity">function trasnferTokens(address[] _sellerTokens, address[] _buyerTokens, uint256[] _sellerValues, uint256[] _buyerValues, address[5] _orderAddresses, uint256[5] _orderValues)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address[] _sellerTokens</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[] _buyerTokens</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _sellerValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _buyerValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[5] _orderAddresses</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[5] _orderValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">basicSigValidations</h3>
 
 <pre><code class="solidity">function basicSigValidations(address[5] _orderAddresses, uint8[2] _v, bytes32 _sr, bytes32 _ss, bytes32 _br, bytes32 _bs, bytes32 _sellerHash, bytes32 _buyerHash)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address[5] _orderAddresses</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint8[2] _v</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _sr</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _ss</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _br</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _bs</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _sellerHash</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _buyerHash</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">oneWayFulfillPO</h3>
 
 <pre><code class="solidity">function oneWayFulfillPO(address[] _sellerTokens, address[] _buyerTokens, uint256[] _sellerValues, uint256[] _buyerValues, address[5] _orderAddresses, uint256[5] _orderValues, uint8[2] _v, bytes32 _br, bytes32 _bs, bytes32 _sr, bytes32 _ss, bytes32 _orderID)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address[] _sellerTokens</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[] _buyerTokens</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _sellerValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _buyerValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[5] _orderAddresses</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[5] _orderValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint8[2] _v</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _br</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _bs</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _sr</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _ss</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _orderID</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">orderExists</h3>
 
 <pre><code class="solidity">function orderExists(bytes32 _hash, bytes32 _orderID)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>bytes32 _hash</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _orderID</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">validateAuthorization</h3>
 
 <pre><code class="solidity">function validateAuthorization(address[] _sellerTokens, address[] _buyerTokens, uint256[] _sellerValues, uint256[] _buyerValues, address[5] _orderAddresses, uint256[5] _orderValues)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address[] _sellerTokens</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[] _buyerTokens</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _sellerValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _buyerValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[5] _orderAddresses</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[5] _orderValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h2 id="two-way-dex">Two Way Dex</h2>
 <h3 style="color: orange;">DEx2WaySig</h3>
 
 <pre><code class="solidity">function DEx2WaySig( address _vault, address _feeCalculator, address _baseToken, address _etherToken, address _verifierAddr)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _vault</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _feeCalculator</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _baseToken</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _etherToken</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _verifierAddr</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">recoverSignerAddr</h3>
 
-<pre><code class="solidity">function recoverSignerAddr(bytes32 _msgHash, uint8 v, bytes32 r, bytes32 s) public view returns (address)
+<pre><code class="solidity">function recoverSignerAddr(bytes32 _msgHash, uint8 v, bytes32 r, bytes32 s)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>bytes32 _msgHash</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint8 v</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 r</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 s</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">twoWayFulfillPO</h3>
 
 <pre><code class="solidity">function twoWayFulfillPO(address[] _sellerTokens, address[] _buyerTokens, uint256[] _sellerValues, uint256[] _buyerValues, address[5] _orderAddresses, uint256[3] _orderValues, uint8[2] _v, bytes32 _br, bytes32 _bs, bytes32 _sr, bytes32 _ss, bytes32 _hash, bytes32 _orderID)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address[] _sellerTokens</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[] _buyerTokens</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _sellerValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _buyerValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[5] _orderAddresses</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[5] _orderValues</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint8[2] _v</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _br</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _bs</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _sr</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _ss</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _hash</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _orderID</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h2 id="very-basic-portfolio">Very Basic Portfolio</h2>
 <h3 id="vbp">VBP</h3>
 <h3 style="color: orange;">VBP</h3>
@@ -340,87 +990,548 @@
 <pre><code class="solidity">function VBP(address _owner, address[] _assets, uint256[] _volumes, uint256 _askValue, uint256 _expiryBlock, bytes32 _portfolioName)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _owner</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[] _assets</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _volumes</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _askValue</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _expiryBlock</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _portfolioName</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">updatePortfolio</h3>
 
 <pre><code class="solidity">function updatePortfolio (uint256 _askValue, uint256 _expiresAfter, address[] _assets,  uint256[] _volumes, bytes32 _portfolioName)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>uint256 _askValue</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _expiresAfter</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[] _assets</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _volumes</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _portfolioName</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">locateAsset</h3>
 
 <pre><code class="solidity">function locateAsset(address _keyAsset)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _keyAsset</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">updateAssets</h3>
 
 <pre><code class="solidity">function updateAssets(address[] _assets, uint256[] _volumes)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address[] _assets</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _volumes</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">depositTokens</h3>
 
 <pre><code class="solidity">function depositTokens(address _token, uint _amount)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _token</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint _amount</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">balanceOfToken</h3>
 
 <pre><code class="solidity">function balanceOfToken(address _depositor, address _token)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _depositor</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _token</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">withdrawToken</h3>
 
 <pre><code class="solidity">function withdrawToken(address _token, uint256 _amount)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _token</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _amount</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">liquidate</h3>
 
 <pre><code class="solidity">function liquidate()
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">publish</h3>
 
 <pre><code class="solidity">function publish()
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">cancelPortfolio</h3>
 
 <pre><code class="solidity">function cancelPortfolio()
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">buy</h3>
 
 <pre><code class="solidity">function buy()
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">moveAssets</h3>
 
 <pre><code class="solidity">function moveAssets(address _from, address _to)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _from</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _to</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 id="vbp-exchange">VBP Exchange</h3>
 <h3 style="color: orange;">VBPExchange</h3>
 
 <pre><code class="solidity">function VBPExchange(address _storage, address _calc, address _proxy, address _token)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _storage</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _calc</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _proxy</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _token</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">updateExchange</h3>
 
 <pre><code class="solidity">function updateExchange(address _storage, address _calc, address _proxy, address _token)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _storage</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _calc</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _proxy</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _token</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">getPortfolioHash</h3>
 
 <pre><code class="solidity">function getPortfolioHash(address _maker, address[] _assets, uint256[] _volumes, uint256 _askValue, uint256 _expiryBlock, bytes32 _name)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _maker</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[] _assets</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _volumes</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _askValue</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _expiryBlock</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _name</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">getFee</h3>
 
 <pre><code class="solidity">function getFee(uint256 _askValue, uint256 _feeIndex)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>uint256 _askValue</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _feeIndex</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">createPortfolio</h3>
 
 <pre><code class="solidity">function createPortfolio(address _maker, address[] _assets, uint256[] _volumes, uint256 _askValue, uint256 _expiryBlock, bytes32 _name)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _maker</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[] _assets</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _volumes</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _askValue</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _expiryBlock</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _name</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h2 id="recurrent-portfolio">Recurrent Portfolio</h2>
 <h3 id="recurrentportfolio">RecurrentPortfolio</h3>
 <h3 style="color: orange;">RecurrentPortfolios</h3>
@@ -428,92 +1539,566 @@
 <pre><code class="solidity">function RecurrentPortfolios(address _owner, address _wallet, address[] _assets, uint256[] _volumes, uint256 _askValue, uint256 _feeRateForEther, uint256 _expiryBlock, bytes32 _portfolioName)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _owner</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _wallet</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[] _assets</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _volumes</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _askValue</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _feeRateForEther</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _expiryBlock</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _portfolioName</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">updatePortfolio</h3>
 
 <pre><code class="solidity">function updatePortfolio (uint256 _askValue, uint256 _expiresAfter, address[] _assets,  uint256[] _volumes, bytes32 _portfolioName)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>uint256 _askValue</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _expiresAfter</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[] _assets</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _volumes</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _portfolioName</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">locateAsset</h3>
 
 <pre><code class="solidity">function locateAsset(address _keyAsset)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _keyAsset</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">updateAssets</h3>
 
 <pre><code class="solidity">function updateAssets(address[] _assets, uint256[] _volumes)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address[] _assets</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _volumes</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">depositTokens</h3>
 
 <pre><code class="solidity">function depositTokens(address _token, uint _amount)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _token</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint _amount</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">balanceOfToken</h3>
 
 <pre><code class="solidity">function balanceOfToken(address _depositor, address _token)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _depositor</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _token</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">withdrawToken</h3>
 
 <pre><code class="solidity">function withdrawToken(address _token, uint256 _amount)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _token</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _amount</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">liquidate</h3>
 
 <pre><code class="solidity">function liquidate()
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">getExchangeFee</h3>
 
 <pre><code class="solidity">function getExchangeFee()
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">publish</h3>
 
 <pre><code class="solidity">function publish()
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">cancelPortfolio</h3>
 
 <pre><code class="solidity">function cancelPortfolio()
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">buy</h3>
 
 <pre><code class="solidity">function buy(address _exchange)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _exchange</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">moveAssets</h3>
 
 <pre><code class="solidity">function moveAssets(address _from, address _to)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _from</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _to</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 id="recurrentportfolio-exchange">RecurrentPortfolio Exchange</h3>
 <h3 style="color: orange;">RPExchange</h3>
 
 <pre><code class="solidity">function RPExchange(address _storage, address _calc, address _proxy, address _token, address _wallet)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _storage</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _calc</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _proxy</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _token</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _wallet</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">updateExchange</h3>
 
 <pre><code class="solidity">function updateExchange(address _storage, address _calc, address _proxy, address _token, address _wallet)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _storage</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _calc</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _proxy</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _token</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address _wallet</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">getPortfolioHash</h3>
 
 <pre><code class="solidity">function getPortfolioHash(address _maker, address[] _assets, uint256[] _volumes, uint256 _askValue, uint256 _expiryBlock, bytes32 _name)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _maker</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>address[] _assets</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[] _volumes</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _askValue</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _expiryBlock</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _name</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">getFee</h3>
 
 <pre><code class="solidity">function getFee(uint256 _askValue, uint256 _feeIndex)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>uint256 _askValue</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _feeIndex</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">createPortfolio</h3>
 
 <pre><code class="solidity">function createPortfolio(address _maker, address[] _assets, uint256[] _volumes, uint256 _askValue, uint256 _expiryBlock, bytes32 _name)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h2 id="order-book">Order Book</h2>
 <h3 id="authentication">Authentication</h3>
 <h3 style="color: orange;">addAuthorizedAddress</h3>
@@ -521,53 +2106,248 @@
 <pre><code class="solidity">function addAuthorizedAddress(address _newAddress)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _newAddress</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">removeAuthorizedAddress</h3>
 
 <pre><code class="solidity">function removeAuthorizedAddress(address _newAddress)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _newAddress</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">changeApprover</h3>
 
 <pre><code class="solidity">function changeApprover(address _newApprover)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _newApprover</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">changeOwner</h3>
 
 <pre><code class="solidity">function changeOwner(address _newOwner)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _newOwner</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">ecrecovery</h3>
 
 <pre><code class="solidity">function ecrecovery(bytes32 _msgHash, uint8 v, bytes32 r, bytes32 s)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>bytes32 _msgHas</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint8 v</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 r</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 s</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 id="authentication-multi-owner">Authentication Multi-Owner</h3>
 <h3 style="color: orange;">addOwnership</h3>
 
 <pre><code class="solidity">function addOwnership(address _newOwner)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _newOwner</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">removeOwnership</h3>
 
 <pre><code class="solidity">function removeOwnership(address _owner)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _owner</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">changeApprover</h3>
 
 <pre><code class="solidity">function changeApprover(address _newApprover)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _newApprover</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">changeOwner</h3>
 
 <pre><code class="solidity">function changeOwner(address _newOwner)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _newOwner</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 id="orderbook">OrderBook</h3>
 <h3 style="color: orange;">changeTraderConfig</h3>
 
 <pre><code class="solidity">function changeTraderConfig(bool _tradeActive, address _dataStore, bool _isLocked)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">updateFeeCalcConfig</h3>
 
 <pre><code class="solidity">function updateFeeCalcConfig(address _baseToken, address _ether, uint256 _baseTokenFee, uint256 _etherFee, uint256 _normalTokenFee)
@@ -694,61 +2474,293 @@
 <pre><code class="solidity">function addOwner(address newOwner)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address newOwner</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">removeOwner</h3>
 
 <pre><code class="solidity">function removeOwner(address _owner)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _owner</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">OrderVault</h3>
 
 <pre><code class="solidity">function OrderVault()
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">openVault</h3>
 
 <pre><code class="solidity">function openVault(uint256 _startTime, uint256 _closureTime)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>uint256 _startTime</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256 _closureTime</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">extendVault</h3>
 
 <pre><code class="solidity">function extendVault(uint256 _closureTime)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>uint256 _closureTime</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">closeVault</h3>
 
 <pre><code class="solidity">function closeVault()
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">storeInVault</h3>
 
 <pre><code class="solidity">function storeInVault(bytes32 _orderHash, bytes32 _orderID)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>bytes32 _orderHash</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _orderID</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">sealVault</h3>
 
 <pre><code class="solidity">function sealVault()
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">getNumberOfOders</h3>
 
 <pre><code class="solidity">function getNumberOfOders()
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">orderLocated</h3>
 
 <pre><code class="solidity">function orderLocated(bytes32 _hash, bytes32 _orderID)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>bytes32 _hash</th>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>bytes32 _orderID</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 id="ownable">Ownable</h3>
 <h3 style="color: orange;">Ownable</h3>
 
 <pre><code class="solidity">function Ownable()
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">transferOwnership</h3>
 
 <pre><code class="solidity">function transferOwnership(address newOwner)
-</code></pre></div>
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address newOwner</th>
+        <td></td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr></p></div>
         
         
     </div>
