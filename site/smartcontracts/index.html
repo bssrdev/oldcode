@@ -169,7 +169,7 @@
 <h2 id="one-way-dex">One Way Dex</h2>
 <h3 style="color: orange;">DEx1WaySig</h3>
 
-<p>This function does this task.</p>
+<p>Send the address along with token, fee value and verifier address.</p>
 <pre><code class="solidity">function DEx1WaySig( address _vault, address _feeCalculator, address _baseToken, address _etherToken, address _verifierAddr)
 </code></pre>
 
@@ -190,22 +190,22 @@
       </tr>
         <tr>
         <th>address _feeCalculator</th>
-        <td>Number</td>
+        <td>BigNumber</td>
         <td>Value to change</td>
       </tr>
       <tr>
         <th>address _baseToken</th>
-        <td>String</td>
+        <td>BigNumber</td>
         <td>Value to change</td>
       </tr>
       <tr>
         <th>address _etherToken</th>
-        <td>String</td>
+        <td>BigNumber</td>
         <td>Value to change</td>
       </tr>
       <tr>
         <th>address _verifierAddr</th>
-        <td>String</td>
+        <td>Address</td>
         <td>Value to change</td>
       </tr>
   </tbody>
@@ -213,6 +213,7 @@
 <hr></p>
 <h3 style="color: orange;">killExchange</h3>
 
+<p>Under Emergency cases to kill the exchange.</p>
 <pre><code class="solidity">function killExchange()
 </code></pre>
 
@@ -236,6 +237,7 @@
 <hr></p>
 <h3 style="color: orange;">updateVault</h3>
 
+<p>To update the Wallet.</p>
 <pre><code class="solidity">function updateVault(address _vault)
 </code></pre>
 
@@ -251,14 +253,15 @@
   <tbody>
       <tr>
         <th>address _vault</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Vault Address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">updateExConfig</h3>
 
+<p>Once verified Wallet and fee values are updated.</p>
 <pre><code class="solidity">function updateExConfig(address _wallet,  address _verifierAddr, address _feeCalculator)
 </code></pre>
 
@@ -274,24 +277,25 @@
   <tbody>
       <tr>
         <th>address _wallet</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Wallet Address</td>
       </tr>
       <tr>
         <th>address _verifierAddr</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Address verification</td>
       </tr>
       <tr>
         <th>address _feeCalculator</th>
-        <td></td>
-        <td></td>
+        <td>BigNumber</td>
+        <td>Fee calculator</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">isOrderSigned</h3>
 
+<p>TO sign the Order using VRS Structure.</p>
 <pre><code class="solidity">function isOrderSigned(bytes32 _msgHash, uint8 v, bytes32 r, bytes32 s, address _signer)
 </code></pre>
 
@@ -307,34 +311,35 @@
   <tbody>
       <tr>
         <th>bytes32 _msgHash</th>
-        <td></td>
-        <td></td>
+        <td>TxHash</td>
+        <td>Transaction message hash</td>
       </tr>
       <tr>
         <th>uint8 v</th>
-        <td></td>
-        <td></td>
+        <td>Boolean</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 r</th>
-        <td></td>
-        <td></td>
+        <td>Boolean</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 s</th>
-        <td></td>
-        <td></td>
+        <td>Boolean</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>address _signer</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Signature address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">validExchangeFee</h3>
 
+<p>Based on Sell and Buy token identifying the buy and sell value.</p>
 <pre><code class="solidity">function validExchangeFee(address _sellerFeeToken, address _buyerFeeToken, uint256 _sellerFeeValue, uint256 _buyrFeeValue)
 </code></pre>
 
@@ -350,29 +355,30 @@
   <tbody>
       <tr>
         <th>address _sellerFeeToken</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Seller Free tokens</td>
       </tr>
       <tr>
         <th>address _buyerFeeToken</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Buyer free tokens</td>
       </tr>
       <tr>
         <th>uint256 _sellerFeeValue</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Seller fee value</td>
       </tr>
       <tr>
         <th>uint256 _buyrFeeValue</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Buyer Fee value</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">getFeeIndex</h3>
 
+<p>Retreive the fee value.</p>
 <pre><code class="solidity">function getFeeIndex(address _token)
 </code></pre>
 
@@ -388,14 +394,15 @@
   <tbody>
       <tr>
         <th>address _token</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Token Address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">getTwoWayOrderHash</h3>
 
+<p>Once the transaction is complete receieve the hash value which contains both side value.</p>
 <pre><code class="solidity">function getTwoWayOrderHash(address[] _sellerTokens, address[] _buyerTokens, uint256[] _sellerValues, uint256[] _buyerValues, address[5] _orderAddresses, uint256[5] _orderValues, bytes32 _orderID)
 </code></pre>
 
@@ -411,44 +418,45 @@
   <tbody>
       <tr>
         <th>address[] _sellerTokens</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Seller Tokens</td>
       </tr>
       <tr>
         <th>address[] _buyerTokens</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Buyer Tokens</td>
       </tr>
       <tr>
         <th>uint256[] _sellerValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Seller Value</td>
       </tr>
       <tr>
         <th>uint256[] _buyerValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Buyer Value</td>
       </tr>
       <tr>
         <th>address[5] _orderAddresses</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Order Address</td>
       </tr>
       <tr>
         <th>uint256[5] _orderValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Order Value</td>
       </tr>
       <tr>
         <th>bytes32 _orderID</th>
-        <td></td>
-        <td></td>
+        <td>Boolean</td>
+        <td>Order ID</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">getOneWayOrderHashes</h3>
 
+<p>Once the transaction is complete receieve the hash value which contains one side value</p>
 <pre><code class="solidity">function getOneWayOrderHashes(address[] _sellerTokens, address[] _buyerTokens, uint256[] _sellerValues, uint256[] _buyerValues, address[5] _orderAddresses, uint256[5] _orderValues, bytes32 _orderID)
 </code></pre>
 
@@ -464,44 +472,45 @@
   <tbody>
       <tr>
         <th>address[] _sellerTokens</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Seller Tokens</td>
       </tr>
       <tr>
         <th>address[] _buyerTokens</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Buyer Tokens</td>
       </tr>
       <tr>
         <th>uint256[] _sellerValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Seller Value</td>
       </tr>
       <tr>
         <th>uint256[] _buyerValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Buyer Value</td>
       </tr>
       <tr>
         <th>address[5] _orderAddresses</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Order Address</td>
       </tr>
       <tr>
         <th>uint256[5] _orderValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Order Value</td>
       </tr>
       <tr>
         <th>bytes32 _orderID</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Order ID</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">getOrderHash</h3>
 
+<p>Order hash can be retrieved here.</p>
 <pre><code class="solidity">function getOrderHash(address[] _tokens, uint256[] _counts, uint256 _pValue, uint256 _fValue, address _feeToken, address _maker, address _signer, bytes32 _orderID)
 </code></pre>
 
@@ -517,49 +526,50 @@
   <tbody>
       <tr>
         <th>address[] _tokens</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Token</td>
       </tr>
       <tr>
         <th>uint256[] _counts</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Token count</td>
       </tr>
       <tr>
         <th>uint256 _pValue</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>uint256 _fValue</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>address _feeToken</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Fee token</td>
       </tr>
       <tr>
         <th>address _maker</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Maker Address</td>
       </tr>
       <tr>
         <th>address _signer</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Signature address</td>
       </tr>
       <tr>
         <th>bytes32 _orderID</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Order ID</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">trasnferTokens</h3>
 
+<p>Can transfer tokens from one account to another.</p>
 <pre><code class="solidity">function trasnferTokens(address[] _sellerTokens, address[] _buyerTokens, uint256[] _sellerValues, uint256[] _buyerValues, address[5] _orderAddresses, uint256[5] _orderValues)
 </code></pre>
 
@@ -575,39 +585,40 @@
   <tbody>
       <tr>
         <th>address[] _sellerTokens</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Seller Tokens</td>
       </tr>
       <tr>
         <th>address[] _buyerTokens</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Buyer Tokens</td>
       </tr>
       <tr>
         <th>uint256[] _sellerValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Seller Value</td>
       </tr>
       <tr>
         <th>uint256[] _buyerValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Buyuer Value</td>
       </tr>
       <tr>
         <th>address[5] _orderAddresses</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Address of the order</td>
       </tr>
       <tr>
         <th>uint256[5] _orderValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Value of the order</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">basicSigValidations</h3>
 
+<p>Validating the sign transactions.</p>
 <pre><code class="solidity">function basicSigValidations(address[5] _orderAddresses, uint8[2] _v, bytes32 _sr, bytes32 _ss, bytes32 _br, bytes32 _bs, bytes32 _sellerHash, bytes32 _buyerHash)
 </code></pre>
 
@@ -623,49 +634,50 @@
   <tbody>
       <tr>
         <th>address[5] _orderAddresses</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Order Address</td>
       </tr>
       <tr>
         <th>uint8[2] _v</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 _sr</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 _ss</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 _br</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 _bs</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 _sellerHash</th>
-        <td></td>
-        <td></td>
+        <td>TxHash</td>
+        <td>Seller Trnsaction Hash</td>
       </tr>
       <tr>
         <th>bytes32 _buyerHash</th>
-        <td></td>
-        <td></td>
+        <td>TxHash</td>
+        <td>Buyer Transaction Hash</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">oneWayFulfillPO</h3>
 
+<p>One way portfolio verifications being fulfilled or not.</p>
 <pre><code class="solidity">function oneWayFulfillPO(address[] _sellerTokens, address[] _buyerTokens, uint256[] _sellerValues, uint256[] _buyerValues, address[5] _orderAddresses, uint256[5] _orderValues, uint8[2] _v, bytes32 _br, bytes32 _bs, bytes32 _sr, bytes32 _ss, bytes32 _orderID)
 </code></pre>
 
@@ -681,69 +693,70 @@
   <tbody>
       <tr>
         <th>address[] _sellerTokens</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Seller Tokens</td>
       </tr>
       <tr>
         <th>address[] _buyerTokens</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Buyer Tokens</td>
       </tr>
       <tr>
         <th>uint256[] _sellerValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Seller Value</td>
       </tr>
       <tr>
         <th>uint256[] _buyerValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Buyer Value</td>
       </tr>
       <tr>
         <th>address[5] _orderAddresses</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Order Address</td>
       </tr>
       <tr>
         <th>uint256[5] _orderValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Order Values</td>
       </tr>
       <tr>
         <th>uint8[2] _v</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 _br</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 _bs</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 _sr</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 _ss</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 _orderID</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Order ID</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">orderExists</h3>
 
+<p>Verify if the order placed still exists or not.</p>
 <pre><code class="solidity">function orderExists(bytes32 _hash, bytes32 _orderID)
 </code></pre>
 
@@ -759,19 +772,20 @@
   <tbody>
       <tr>
         <th>bytes32 _hash</th>
-        <td></td>
-        <td></td>
+        <td>TxHash</td>
+        <td>Has Value</td>
       </tr>
       <tr>
         <th>bytes32 _orderID</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Order ID</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">validateAuthorization</h3>
 
+<p>Validate a particular order is being authorized by the right individual or not.</p>
 <pre><code class="solidity">function validateAuthorization(address[] _sellerTokens, address[] _buyerTokens, uint256[] _sellerValues, uint256[] _buyerValues, address[5] _orderAddresses, uint256[5] _orderValues)
 </code></pre>
 
@@ -787,33 +801,33 @@
   <tbody>
       <tr>
         <th>address[] _sellerTokens</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Seller Tokens</td>
       </tr>
       <tr>
         <th>address[] _buyerTokens</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Buyer Tokens</td>
       </tr>
       <tr>
         <th>uint256[] _sellerValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Seller Value</td>
       </tr>
       <tr>
         <th>uint256[] _buyerValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Buyer Value</td>
       </tr>
       <tr>
         <th>address[5] _orderAddresses</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Order Address</td>
       </tr>
       <tr>
         <th>uint256[5] _orderValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Order Value</td>
       </tr>
   </tbody>
 </table>
@@ -821,6 +835,7 @@
 <h2 id="two-way-dex">Two Way Dex</h2>
 <h3 style="color: orange;">DEx2WaySig</h3>
 
+<p>Send the address along with token, fee value and verifier address and receive the has back again.</p>
 <pre><code class="solidity">function DEx2WaySig( address _vault, address _feeCalculator, address _baseToken, address _etherToken, address _verifierAddr)
 </code></pre>
 
@@ -836,34 +851,35 @@
   <tbody>
       <tr>
         <th>address _vault</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Valut Address</td>
       </tr>
       <tr>
         <th>address _feeCalculator</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Fee calculator</td>
       </tr>
       <tr>
         <th>address _baseToken</th>
-        <td></td>
-        <td></td>
+        <td>BigNumber</td>
+        <td>Base token value</td>
       </tr>
       <tr>
         <th>address _etherToken</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Ether token address</td>
       </tr>
       <tr>
         <th>address _verifierAddr</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Verifier Address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">recoverSignerAddr</h3>
 
+<p>To recover the address of the sender.</p>
 <pre><code class="solidity">function recoverSignerAddr(bytes32 _msgHash, uint8 v, bytes32 r, bytes32 s)
 </code></pre>
 
@@ -879,29 +895,30 @@
   <tbody>
       <tr>
         <th>bytes32 _msgHash</th>
-        <td></td>
-        <td></td>
+        <td>TxHash</td>
+        <td>Transaction Hash</td>
       </tr>
       <tr>
         <th>uint8 v</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 r</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 s</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">twoWayFulfillPO</h3>
 
+<p>Fulfilling the portfolio two ways.</p>
 <pre><code class="solidity">function twoWayFulfillPO(address[] _sellerTokens, address[] _buyerTokens, uint256[] _sellerValues, uint256[] _buyerValues, address[5] _orderAddresses, uint256[3] _orderValues, uint8[2] _v, bytes32 _br, bytes32 _bs, bytes32 _sr, bytes32 _ss, bytes32 _hash, bytes32 _orderID)
 </code></pre>
 
@@ -917,68 +934,68 @@
   <tbody>
       <tr>
         <th>address[] _sellerTokens</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Seller tokens</td>
       </tr>
       <tr>
         <th>address[] _buyerTokens</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Buyer Tokens</td>
       </tr>
       <tr>
         <th>uint256[] _sellerValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Seller value</td>
       </tr>
       <tr>
         <th>uint256[] _buyerValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Buyer value</td>
       </tr>
       <tr>
         <th>address[5] _orderAddresses</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Order address</td>
       </tr>
       <tr>
         <th>uint256[5] _orderValues</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Value of orders placed</td>
       </tr>
       <tr>
         <th>uint8[2] _v</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 _br</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 _bs</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 _sr</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 _ss</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 _hash</th>
-        <td></td>
-        <td></td>
+        <td>Hash</td>
+        <td>Hash value</td>
       </tr>
       <tr>
         <th>bytes32 _orderID</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Order ID</td>
       </tr>
   </tbody>
 </table>
@@ -987,6 +1004,7 @@
 <h3 id="vbp">VBP</h3>
 <h3 style="color: orange;">VBP</h3>
 
+<p>Very basic portfolio sending all parameters, which include owner address, assets, volume of assets, ask value, expiry block, portfolio name.</p>
 <pre><code class="solidity">function VBP(address _owner, address[] _assets, uint256[] _volumes, uint256 _askValue, uint256 _expiryBlock, bytes32 _portfolioName)
 </code></pre>
 
@@ -1002,39 +1020,40 @@
   <tbody>
       <tr>
         <th>address _owner</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Owner address</td>
       </tr>
       <tr>
         <th>address[] _assets</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Asset address</td>
       </tr>
       <tr>
         <th>uint256[] _volumes</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Trade volume</td>
       </tr>
       <tr>
         <th>uint256 _askValue</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Ask value for the basket</td>
       </tr>
       <tr>
         <th>uint256 _expiryBlock</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Block expiry time</td>
       </tr>
       <tr>
         <th>bytes32 _portfolioName</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Portfoli Name</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">updatePortfolio</h3>
 
+<p>Update a portfolio that was already created.</p>
 <pre><code class="solidity">function updatePortfolio (uint256 _askValue, uint256 _expiresAfter, address[] _assets,  uint256[] _volumes, bytes32 _portfolioName)
 </code></pre>
 
@@ -1050,34 +1069,35 @@
   <tbody>
       <tr>
         <th>uint256 _askValue</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Ask value for the basket</td>
       </tr>
       <tr>
         <th>uint256 _expiresAfter</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Block expiry time</td>
       </tr>
       <tr>
         <th>address[] _assets</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Asset address</td>
       </tr>
       <tr>
         <th>uint256[] _volumes</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Volume of the asset</td>
       </tr>
       <tr>
         <th>bytes32 _portfolioName</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Portfolio Name</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">locateAsset</h3>
 
+<p>TO identify where the assets have moved to.</p>
 <pre><code class="solidity">function locateAsset(address _keyAsset)
 </code></pre>
 
@@ -1093,14 +1113,15 @@
   <tbody>
       <tr>
         <th>address _keyAsset</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Key asset address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">updateAssets</h3>
 
+<p>Update the assets that had already been set in the basket.</p>
 <pre><code class="solidity">function updateAssets(address[] _assets, uint256[] _volumes)
 </code></pre>
 
@@ -1116,19 +1137,20 @@
   <tbody>
       <tr>
         <th>address[] _assets</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Asset address</td>
       </tr>
       <tr>
         <th>uint256[] _volumes</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Total volume</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">depositTokens</h3>
 
+<p>Deposit tokens into the basket.</p>
 <pre><code class="solidity">function depositTokens(address _token, uint _amount)
 </code></pre>
 
@@ -1144,19 +1166,20 @@
   <tbody>
       <tr>
         <th>address _token</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Token Address</td>
       </tr>
       <tr>
         <th>uint _amount</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Total amount</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">balanceOfToken</h3>
 
+<p>Findn out the balance of token in the contract.</p>
 <pre><code class="solidity">function balanceOfToken(address _depositor, address _token)
 </code></pre>
 
@@ -1172,19 +1195,20 @@
   <tbody>
       <tr>
         <th>address _depositor</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Depositor address</td>
       </tr>
       <tr>
         <th>address _token</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Token address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">withdrawToken</h3>
 
+<p>Withdraw tokens from basket.</p>
 <pre><code class="solidity">function withdrawToken(address _token, uint256 _amount)
 </code></pre>
 
@@ -1200,19 +1224,20 @@
   <tbody>
       <tr>
         <th>address _token</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Token address</td>
       </tr>
       <tr>
         <th>uint256 _amount</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Total Amount</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">liquidate</h3>
 
+<p>Liquidate tokens from my basket.</p>
 <pre><code class="solidity">function liquidate()
 </code></pre>
 
@@ -1236,6 +1261,7 @@
 <hr></p>
 <h3 style="color: orange;">publish</h3>
 
+<p>Publish my basket.</p>
 <pre><code class="solidity">function publish()
 </code></pre>
 
@@ -1259,6 +1285,7 @@
 <hr></p>
 <h3 style="color: orange;">cancelPortfolio</h3>
 
+<p>Cancel my portfolio that had been created.</p>
 <pre><code class="solidity">function cancelPortfolio()
 </code></pre>
 
@@ -1282,6 +1309,7 @@
 <hr></p>
 <h3 style="color: orange;">buy</h3>
 
+<p>Buy a particular basket that is available.</p>
 <pre><code class="solidity">function buy()
 </code></pre>
 
@@ -1305,6 +1333,7 @@
 <hr></p>
 <h3 style="color: orange;">moveAssets</h3>
 
+<p>Move assets from one address to another.</p>
 <pre><code class="solidity">function moveAssets(address _from, address _to)
 </code></pre>
 
@@ -1320,13 +1349,13 @@
   <tbody>
       <tr>
         <th>address _from</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Senders address</td>
       </tr>
       <tr>
         <th>address _to</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Receivers address</td>
       </tr>
   </tbody>
 </table>
@@ -1334,6 +1363,7 @@
 <h3 id="vbp-exchange">VBP Exchange</h3>
 <h3 style="color: orange;">VBPExchange</h3>
 
+<p>Very basic portfolio exchange main function.</p>
 <pre><code class="solidity">function VBPExchange(address _storage, address _calc, address _proxy, address _token)
 </code></pre>
 
@@ -1349,29 +1379,30 @@
   <tbody>
       <tr>
         <th>address _storage</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Storage address</td>
       </tr>
       <tr>
         <th>address _calc</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Fee calculator address</td>
       </tr>
       <tr>
         <th>address _proxy</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Proxy address</td>
       </tr>
       <tr>
         <th>address _token</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Address of the token</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">updateExchange</h3>
 
+<p>Update the vbp exchange.</p>
 <pre><code class="solidity">function updateExchange(address _storage, address _calc, address _proxy, address _token)
 </code></pre>
 
@@ -1387,29 +1418,30 @@
   <tbody>
       <tr>
         <th>address _storage</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Token storage address</td>
       </tr>
       <tr>
         <th>address _calc</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Address calculator</td>
       </tr>
       <tr>
         <th>address _proxy</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Proxy Address</td>
       </tr>
       <tr>
         <th>address _token</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Token Address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">getPortfolioHash</h3>
 
+<p>Get a particular portfolio hash.</p>
 <pre><code class="solidity">function getPortfolioHash(address _maker, address[] _assets, uint256[] _volumes, uint256 _askValue, uint256 _expiryBlock, bytes32 _name)
 </code></pre>
 
@@ -1425,39 +1457,40 @@
   <tbody>
       <tr>
         <th>address _maker</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>maker Address</td>
       </tr>
       <tr>
         <th>address[] _assets</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Asset Address</td>
       </tr>
       <tr>
         <th>uint256[] _volumes</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Transactions Volume</td>
       </tr>
       <tr>
         <th>uint256 _askValue</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Ask Value</td>
       </tr>
       <tr>
         <th>uint256 _expiryBlock</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Block Expiry</td>
       </tr>
       <tr>
         <th>bytes32 _name</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>String Name</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">getFee</h3>
 
+<p>Get fee based on arket value for a particular basket.</p>
 <pre><code class="solidity">function getFee(uint256 _askValue, uint256 _feeIndex)
 </code></pre>
 
@@ -1473,19 +1506,20 @@
   <tbody>
       <tr>
         <th>uint256 _askValue</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Ask Value</td>
       </tr>
       <tr>
         <th>uint256 _feeIndex</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Fee Index</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">createPortfolio</h3>
 
+<p>Create a basket portfolio</p>
 <pre><code class="solidity">function createPortfolio(address _maker, address[] _assets, uint256[] _volumes, uint256 _askValue, uint256 _expiryBlock, bytes32 _name)
 </code></pre>
 
@@ -1501,33 +1535,33 @@
   <tbody>
       <tr>
         <th>address _maker</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Maker Address</td>
       </tr>
       <tr>
         <th>address[] _assets</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Asset Address</td>
       </tr>
       <tr>
         <th>uint256[] _volumes</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Trade volume</td>
       </tr>
       <tr>
         <th>uint256 _askValue</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Ask Value</td>
       </tr>
       <tr>
         <th>uint256 _expiryBlock</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Block expiry</td>
       </tr>
       <tr>
         <th>bytes32 _name</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Name</td>
       </tr>
   </tbody>
 </table>
@@ -1536,6 +1570,7 @@
 <h3 id="recurrentportfolio">RecurrentPortfolio</h3>
 <h3 style="color: orange;">RecurrentPortfolios</h3>
 
+<p>Recurrent portfolio main function which is used to repeat a particualr portfolio.</p>
 <pre><code class="solidity">function RecurrentPortfolios(address _owner, address _wallet, address[] _assets, uint256[] _volumes, uint256 _askValue, uint256 _feeRateForEther, uint256 _expiryBlock, bytes32 _portfolioName)
 </code></pre>
 
@@ -1551,49 +1586,50 @@
   <tbody>
       <tr>
         <th>address _owner</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Owner address</td>
       </tr>
       <tr>
         <th>address _wallet</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Wallet address</td>
       </tr>
       <tr>
         <th>address[] _assets</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Asset address</td>
       </tr>
       <tr>
         <th>uint256[] _volumes</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Volume of the basket</td>
       </tr>
       <tr>
         <th>uint256 _askValue</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Ask value for the basket</td>
       </tr>
       <tr>
         <th>uint256 _feeRateForEther</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Fee rate for ether</td>
       </tr>
       <tr>
         <th>uint256 _expiryBlock</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Block expiry time</td>
       </tr>
       <tr>
         <th>bytes32 _portfolioName</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Portfolio Name</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">updatePortfolio</h3>
 
+<p>Update a particular portfolio.</p>
 <pre><code class="solidity">function updatePortfolio (uint256 _askValue, uint256 _expiresAfter, address[] _assets,  uint256[] _volumes, bytes32 _portfolioName)
 </code></pre>
 
@@ -1609,34 +1645,35 @@
   <tbody>
       <tr>
         <th>uint256 _askValue</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Ask value of the basket</td>
       </tr>
       <tr>
         <th>uint256 _expiresAfter</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Expiry time</td>
       </tr>
       <tr>
         <th>address[] _assets</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Asset address</td>
       </tr>
       <tr>
         <th>uint256[] _volumes</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Volume of the basket</td>
       </tr>
       <tr>
         <th>bytes32 _portfolioName</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Name of the portfolio</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">locateAsset</h3>
 
+<p>Locate assets on my dashboard.</p>
 <pre><code class="solidity">function locateAsset(address _keyAsset)
 </code></pre>
 
@@ -1652,14 +1689,15 @@
   <tbody>
       <tr>
         <th>address _keyAsset</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Key asset address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">updateAssets</h3>
 
+<p>Update assets once transaction are complete.</p>
 <pre><code class="solidity">function updateAssets(address[] _assets, uint256[] _volumes)
 </code></pre>
 
@@ -1675,19 +1713,20 @@
   <tbody>
       <tr>
         <th>address[] _assets</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Asset address</td>
       </tr>
       <tr>
         <th>uint256[] _volumes</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Volume of tokens</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">depositTokens</h3>
 
+<p>Deposit tokens into my account. </p>
 <pre><code class="solidity">function depositTokens(address _token, uint _amount)
 </code></pre>
 
@@ -1703,19 +1742,20 @@
   <tbody>
       <tr>
         <th>address _token</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Token address</td>
       </tr>
       <tr>
         <th>uint _amount</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Amount</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">balanceOfToken</h3>
 
+<p>Get token banalnce in my account.</p>
 <pre><code class="solidity">function balanceOfToken(address _depositor, address _token)
 </code></pre>
 
@@ -1731,19 +1771,20 @@
   <tbody>
       <tr>
         <th>address _depositor</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Depositer Address</td>
       </tr>
       <tr>
         <th>address _token</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Token Address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">withdrawToken</h3>
 
+<p>Withdraw tokens from my account.</p>
 <pre><code class="solidity">function withdrawToken(address _token, uint256 _amount)
 </code></pre>
 
@@ -1759,19 +1800,20 @@
   <tbody>
       <tr>
         <th>address _token</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Token Address</td>
       </tr>
       <tr>
         <th>uint256 _amount</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Amount</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">liquidate</h3>
 
+<p>Liquidate tokens in my account.</p>
 <pre><code class="solidity">function liquidate()
 </code></pre>
 
@@ -1795,6 +1837,7 @@
 <hr></p>
 <h3 style="color: orange;">getExchangeFee</h3>
 
+<p>Get my exchange fee.</p>
 <pre><code class="solidity">function getExchangeFee()
 </code></pre>
 
@@ -1818,6 +1861,7 @@
 <hr></p>
 <h3 style="color: orange;">publish</h3>
 
+<p>Publish my portfolio.</p>
 <pre><code class="solidity">function publish()
 </code></pre>
 
@@ -1841,6 +1885,7 @@
 <hr></p>
 <h3 style="color: orange;">cancelPortfolio</h3>
 
+<p>Cancel my portfolio.</p>
 <pre><code class="solidity">function cancelPortfolio()
 </code></pre>
 
@@ -1864,6 +1909,7 @@
 <hr></p>
 <h3 style="color: orange;">buy</h3>
 
+<p>Buy portfolio or tokens on a particular exchange.</p>
 <pre><code class="solidity">function buy(address _exchange)
 </code></pre>
 
@@ -1880,13 +1926,14 @@
       <tr>
         <th>address _exchange</th>
         <td></td>
-        <td></td>
+        <td>Exchange address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">moveAssets</h3>
 
+<p>Move asstes from one address to another.</p>
 <pre><code class="solidity">function moveAssets(address _from, address _to)
 </code></pre>
 
@@ -1902,13 +1949,13 @@
   <tbody>
       <tr>
         <th>address _from</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>From address</td>
       </tr>
       <tr>
         <th>address _to</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>To Address</td>
       </tr>
   </tbody>
 </table>
@@ -1916,6 +1963,7 @@
 <h3 id="recurrentportfolio-exchange">RecurrentPortfolio Exchange</h3>
 <h3 style="color: orange;">RPExchange</h3>
 
+<p>Recurrent portfolio exchange main function.</p>
 <pre><code class="solidity">function RPExchange(address _storage, address _calc, address _proxy, address _token, address _wallet)
 </code></pre>
 
@@ -1931,34 +1979,35 @@
   <tbody>
       <tr>
         <th>address _storage</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Storage address</td>
       </tr>
       <tr>
         <th>address _calc</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Address fee calculator</td>
       </tr>
       <tr>
         <th>address _proxy</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Proxy Address</td>
       </tr>
       <tr>
         <th>address _token</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Token address</td>
       </tr>
       <tr>
         <th>address _wallet</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Wallet address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">updateExchange</h3>
 
+<p>Update my exchange once transaction are complete.</p>
 <pre><code class="solidity">function updateExchange(address _storage, address _calc, address _proxy, address _token, address _wallet)
 </code></pre>
 
@@ -1974,34 +2023,35 @@
   <tbody>
       <tr>
         <th>address _storage</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Address storage</td>
       </tr>
       <tr>
         <th>address _calc</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Address fee calculator</td>
       </tr>
       <tr>
         <th>address _proxy</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Address proxy</td>
       </tr>
       <tr>
         <th>address _token</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Token address</td>
       </tr>
       <tr>
         <th>address _wallet</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Wallet address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">getPortfolioHash</h3>
 
+<p>Get my portfoilio hash once the transaction is complete.</p>
 <pre><code class="solidity">function getPortfolioHash(address _maker, address[] _assets, uint256[] _volumes, uint256 _askValue, uint256 _expiryBlock, bytes32 _name)
 </code></pre>
 
@@ -2017,39 +2067,40 @@
   <tbody>
       <tr>
         <th>address _maker</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Maker address</td>
       </tr>
       <tr>
         <th>address[] _assets</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Asstes location address</td>
       </tr>
       <tr>
         <th>uint256[] _volumes</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Volume of the basket</td>
       </tr>
       <tr>
         <th>uint256 _askValue</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Ask value of the basket</td>
       </tr>
       <tr>
         <th>uint256 _expiryBlock</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Block expiry time</td>
       </tr>
       <tr>
         <th>bytes32 _name</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Name</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">getFee</h3>
 
+<p>Get fee of my tokens or portfoio on the exchange.</p>
 <pre><code class="solidity">function getFee(uint256 _askValue, uint256 _feeIndex)
 </code></pre>
 
@@ -2065,19 +2116,20 @@
   <tbody>
       <tr>
         <th>uint256 _askValue</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Ask value of the basket</td>
       </tr>
       <tr>
         <th>uint256 _feeIndex</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Trnsaction fee index value</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">createPortfolio</h3>
 
+<p>Create a portfolio on RP Exchange.</p>
 <pre><code class="solidity">function createPortfolio(address _maker, address[] _assets, uint256[] _volumes, uint256 _askValue, uint256 _expiryBlock, bytes32 _name)
 </code></pre>
 
@@ -2103,6 +2155,7 @@
 <h3 id="authentication">Authentication</h3>
 <h3 style="color: orange;">addAuthorizedAddress</h3>
 
+<p>Add authorized addresses to echange.</p>
 <pre><code class="solidity">function addAuthorizedAddress(address _newAddress)
 </code></pre>
 
@@ -2118,14 +2171,15 @@
   <tbody>
       <tr>
         <th>address _newAddress</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>New address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">removeAuthorizedAddress</h3>
 
+<p>Remove already aurthorized addresses.</p>
 <pre><code class="solidity">function removeAuthorizedAddress(address _newAddress)
 </code></pre>
 
@@ -2141,14 +2195,15 @@
   <tbody>
       <tr>
         <th>address _newAddress</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>New address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">changeApprover</h3>
 
+<p>Change the approver who was already responsible for approving.</p>
 <pre><code class="solidity">function changeApprover(address _newApprover)
 </code></pre>
 
@@ -2164,14 +2219,15 @@
   <tbody>
       <tr>
         <th>address _newApprover</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>New approver address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">changeOwner</h3>
 
+<p>Change the owner of the portfolio or tokens or contract.</p>
 <pre><code class="solidity">function changeOwner(address _newOwner)
 </code></pre>
 
@@ -2187,14 +2243,15 @@
   <tbody>
       <tr>
         <th>address _newOwner</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>New Owner address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">ecrecovery</h3>
 
+<p>Recovering the signature hasg of every transaction.</p>
 <pre><code class="solidity">function ecrecovery(bytes32 _msgHash, uint8 v, bytes32 r, bytes32 s)
 </code></pre>
 
@@ -2210,23 +2267,23 @@
   <tbody>
       <tr>
         <th>bytes32 _msgHas</th>
-        <td></td>
-        <td></td>
+        <td>Hash</td>
+        <td>Message Hash</td>
       </tr>
       <tr>
         <th>uint8 v</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 r</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
       <tr>
         <th>bytes32 s</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Signature module</td>
       </tr>
   </tbody>
 </table>
@@ -2234,6 +2291,7 @@
 <h3 id="authentication-multi-owner">Authentication Multi-Owner</h3>
 <h3 style="color: orange;">addOwnership</h3>
 
+<p>Providing ownership to a particular newly added owner.</p>
 <pre><code class="solidity">function addOwnership(address _newOwner)
 </code></pre>
 
@@ -2249,14 +2307,15 @@
   <tbody>
       <tr>
         <th>address _newOwner</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>New owner address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">removeOwnership</h3>
 
+<p>Removing ownership.</p>
 <pre><code class="solidity">function removeOwnership(address _owner)
 </code></pre>
 
@@ -2272,14 +2331,15 @@
   <tbody>
       <tr>
         <th>address _owner</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Owner address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">changeApprover</h3>
 
+<p>Cchange approver.</p>
 <pre><code class="solidity">function changeApprover(address _newApprover)
 </code></pre>
 
@@ -2295,14 +2355,15 @@
   <tbody>
       <tr>
         <th>address _newApprover</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>New approver address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">changeOwner</h3>
 
+<p>Change the owner of the contract.</p>
 <pre><code class="solidity">function changeOwner(address _newOwner)
 </code></pre>
 
@@ -2318,8 +2379,8 @@
   <tbody>
       <tr>
         <th>address _newOwner</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>New Owner address</td>
       </tr>
   </tbody>
 </table>
@@ -2327,7 +2388,854 @@
 <h3 id="orderbook">OrderBook</h3>
 <h3 style="color: orange;">changeTraderConfig</h3>
 
+<p>Trade configuration changes for orderbook can be made here.</p>
 <pre><code class="solidity">function changeTraderConfig(bool _tradeActive, address _dataStore, bool _isLocked)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>bool _tradeActive</th>
+        <td>Boolean</td>
+        <td>Trade active status</td>
+      </tr>
+      <tr>
+        <th>address _dataStore</th>
+        <td>Address</td>
+        <td>Data store address</td>
+      </tr>
+      <tr>
+        <th>bool _isLocked</th>
+        <td>Boolean</td>
+        <td>Locked status</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">updateFeeCalcConfig</h3>
+
+<pre><code class="solidity">function updateFeeCalcConfig(address _baseToken, address _ether, uint256 _baseTokenFee, uint256 _etherFee, uint256 _normalTokenFee)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _baseToken</th>
+        <td>Address</td>
+        <td>Base token address</td>
+      </tr>
+      <tr>
+        <th>address _ether</th>
+        <td>Address</td>
+        <td>Ether address</td>
+      </tr>
+      <tr>
+        <th>uint256 _baseTokenFee</th>
+        <td>String</td>
+        <td>Base token fee</td>
+      </tr>
+      <tr>
+        <th>uint256 _etherFee</th>
+        <td>String</td>
+        <td>Ether fee</td>
+      </tr>
+      <tr>
+        <th>uint256 _normalTokenFee</th>
+        <td>Normal token fee</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">calcTradeFee</h3>
+
+<pre><code class="solidity">function calcTradeFee(uint256 _value, address _feeToken)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>uint256 _value</th>
+        <td>String</td>
+        <td>Value of tokens</td>
+      </tr>
+      <tr>
+        <th>address _feeToken</th>
+        <td>Address</td>
+        <td>Token fee</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">orderHash</h3>
+
+<pre><code class="solidity">function orderHash(address _sellToken, address _buyToken, uint256 _totalOrderVolume, uint256 _priceRate, uint256 _numBlocksExpires, address _orderCreator, uint256 _orderType, bytes32 _orderID, address _feeToken)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _sellToken</th>
+        <td>Address</td>
+        <td>Sell token address</td>
+      </tr>
+      <tr>
+        <th>address _buyToken</th>
+        <td>Address</td>
+        <td>Buy token address</td>
+      </tr>
+      <tr>
+        <th>uint256 _totalOrderVolume</th>
+        <td>String</td>
+        <td>Total order volume</td>
+      </tr>
+      <tr>
+        <th>uint256 _priceRate</th>
+        <td>String</td>
+        <td>Price Rate</td>
+      </tr>
+      <tr>
+        <th>uint256 _numBlocksExpires</th>
+        <td>String</td>
+        <td>Block expiry time</td>
+      </tr>
+      <tr>
+        <th>address _orderCreator</th>
+        <td>Address</td>
+        <td>Order creator address</td>
+      </tr>
+      <tr>
+        <th>uint256 _orderType</th>
+        <td>String</td>
+        <td>Order type</td>
+      </tr>
+      <tr>
+        <th>bytes32 _orderID</th>
+        <td>String</td>
+        <td>Order ID</td>
+      </tr>
+      <tr>
+        <th>address _feeToken</th>
+        <td>String</td>
+        <td>Token Fee</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">validateAndGetOrderHash</h3>
+
+<pre><code class="solidity">function validateAndGetOrderHash (address[6] _tokensAndAddresses, uint256[6] _volumes, uint256 _numBlocksExpires,  uint256 _orderType, bytes32 _orderID)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address[6] _tokensAndAddresses</th>
+        <td>Address</td>
+        <td>Token address and count</td>
+      </tr>
+      <tr>
+        <th>uint256[6] _volumes</th>
+        <td>String</td>
+        <td>Volume of tokens</td>
+      </tr>
+      <tr>
+        <th>uint256 _numBlocksExpires</th>
+        <td>String</td>
+        <td>Block expiry time</td>
+      </tr>
+      <tr>
+        <th>uint256 _orderType</th>
+        <td>String</td>
+        <td>Type of order</td>
+      </tr>
+      <tr>
+        <th>bytes32 _orderID</th>
+        <td>String</td>
+        <td>Order ID</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">verifySignature</h3>
+
+<pre><code class="solidity">function verifySignature(address _signer, bytes32 _orderHash, uint8 v, bytes32 r, bytes32 s)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _signer</th>
+        <td>Address</td>
+        <td>Address of the individual who signed the transaction</td>
+      </tr>
+      <tr>
+        <th>bytes32 _orderHash</th>
+        <td>Tx Hash</td>
+        <td>Order hash</td>
+      </tr>
+      <tr>
+        <th>uint8 v</th>
+        <td>String</td>
+        <td>Signature Module</td>
+      </tr>
+      <tr>
+        <th>bytes32 r</th>
+        <td>String</td>
+        <td>Signature Module</td>
+      </tr>
+      <tr>
+        <th>bytes32 s</th>
+        <td>String</td>
+        <td>Signature Module</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">basicSigValidations</h3>
+
+<pre><code class="solidity">function basicSigValidations(address[6] _orderAddresses, uint256 _orderType, bytes32 _orderHash, uint8 v, bytes32 r, bytes32 s)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address[6] _orderAddresses</th>
+        <td>Address</td>
+        <td>Orderer address</td>
+      </tr>
+      <tr>
+        <th>uint256 _orderType</th>
+        <td>String</td>
+        <td>Order type</td>
+      </tr>
+      <tr>
+        <th>bytes32 _orderHash</th>
+        <td>TxHash</td>
+        <td>Order hash</td>
+      </tr>
+      <tr>
+        <th>uint8 v</th>
+        <td>String</td>
+        <td>Signature Module</td>
+      </tr>
+      <tr>
+        <th>bytes32 r</th>
+        <td>String</td>
+        <td>Signature Module</td>
+      </tr>
+      <tr>
+        <th>bytes32 s</th>
+        <td>String</td>
+        <td>Signature Module</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">orderAvailability</h3>
+
+<pre><code class="solidity">function orderAvailability(bytes32 _orderHash, address _orderCreator, uint256 _totalOrderVolume)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>bytes32 _orderHash</th>
+        <td>TxHash</td>
+        <td>Order Hash</td>
+      </tr>
+      <tr>
+        <th>address _orderCreator</th>
+        <td>Address</td>
+        <td>Order Creator</td>
+      </tr>
+      <tr>
+        <th>uint256 _totalOrderVolume</th>
+        <td>String</td>
+        <td>Total order volume</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">isOrderClosedOrFulfilled</h3>
+
+<pre><code class="solidity">function isOrderClosedOrFulfilled(bytes32 _orderHash, address _orderCreator, uint256 _totalOrderVolume)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>bytes32 _orderHash</th>
+        <td>TxHash</td>
+        <td>Orer Hash</td>
+      </tr>
+      <tr>
+        <th>address _orderCreator</th>
+        <td>Address</td>
+        <td>Order Creator</td>
+      </tr>
+      <tr>
+        <th>uint256 _totalOrderVolume</th>
+        <td>String</td>
+        <td>Total order volume</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">oredrAlreadyExists</h3>
+
+<pre><code class="solidity">function oredrAlreadyExists(bytes32 _orderHash, address _orderCreator)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>bytes32 _orderHash</th>
+        <td>TxHash</td>
+        <td>Order Hash</td>
+      </tr>
+      <tr>
+        <th>address _orderCreator</th>
+        <td>Address</td>
+        <td>Order creator</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">createOrder</h3>
+
+<pre><code class="solidity">function createOrder(address _sellToken, address _buyToken, uint256 _totalOrderVolume, uint256 _priceRate, uint256 _numBlocksExpires, address _orderCreator, uint256 _orderType, bytes32 _orderID, address _feeToken)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _sellToken</th>
+        <td>Address</td>
+        <td>Sell token</td>
+      </tr>
+      <tr>
+        <th>address _buyToken</th>
+        <td>Address</td>
+        <td>Buy token</td>
+      </tr>
+      <tr>
+        <th>uint256 _totalOrderVolume</th>
+        <td>String</td>
+        <td>Total order volume</td>
+      </tr>
+      <tr>
+        <th>uint256 _priceRate</th>
+        <td>String</td>
+        <td>Price rating</td>
+      </tr>
+      <tr>
+        <th>uint256 _numBlocksExpires</th>
+        <td>String</td>
+        <td>Block expiry time</td>
+      </tr>
+      <tr>
+        <th>address _orderCreator</th>
+        <td>Address</td>
+        <td>Order creator</td>
+      </tr>
+      <tr>
+        <th>uint256 _orderType</th>
+        <td>String</td>
+        <td>Order type</td>
+      </tr>
+      <tr>
+        <th>bytes32 _orderID</th>
+        <td>String</td>
+        <td>Order ID</td>
+      </tr>
+      <tr>
+        <th>address _feeToken</th>
+        <td>Address</td>
+        <td>Token fee</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">cancelOrder</h3>
+
+<pre><code class="solidity">function cancelOrder(bytes32 _orderHash, address _orderCreator, uint256 _totalOrderVolume, address _feeToken, uint256 _orderValue)
+</code></pre>
+
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>bytes32 _orderHash</th>
+        <td>TxHash</td>
+        <td>Order hash</td>
+      </tr>
+      <tr>
+        <th>address _orderCreator</th>
+        <td>Address</td>
+        <td>Order creator</td>
+      </tr>
+      <tr>
+        <th>uint256 _totalOrderVolume</th>
+        <td>String</td>
+        <td>Total volume of the order</td>
+      </tr>
+      <tr>
+        <th>address _feeToken</th>
+        <td>Address</td>
+        <td>Token fee</td>
+      </tr>
+      <tr>
+        <th>uint256 _orderValue</th>
+        <td>String</td>
+        <td>Value of the order</td>
+      </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h3 style="color: orange;">fillOrder</h3>
+
+<pre><code class="solidity">function fillOrder(address[6] _tokensAndAddresses, uint256[6] _volumes, uint256 _numBlocksExpires,  uint256 _orderType, uint8 v, bytes32 r, bytes32 s, bytes32 _orderID)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address[6] _tokensAndAddresses</th>
+        <td>Address</td>
+        <td>Value of tokens and also the address</td>
+      </tr>
+      <tr>
+        <th>uint256[6] _volumes</th>
+        <td>String</td>
+        <td>Volume of the trade</td>
+      </tr>
+      <tr>
+        <th>uint256 _numBlocksExpires</th>
+        <td>String</td>
+        <td>Block expiry time</td>
+      </tr>
+      <tr>
+        <th>uint256 _orderType</th>
+        <td>String</td>
+        <td>Order type</td>
+      </tr>
+      <tr>
+        <th>uint8 v</th>
+        <td>String</td>
+        <td>Signature module</td>
+      </tr>
+      <tr>
+        <th>bytes32 r</th>
+        <td>String</td>
+        <td>Signature module</td>
+      </tr>
+      <tr>
+        <th>bytes32 s</th>
+        <td>String</td>
+        <td>Signature module</td>
+      </tr>
+      <tr>
+        <th>bytes32 _orderID</th>
+        <td>String</td>
+        <td>Order ID</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">walletTransfers</h3>
+
+<pre><code class="solidity">function walletTransfers(address[6] _tokensAndAddresses, uint256[6] _volumes)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address[6] _tokensAndAddresses</th>
+        <td>Address</td>
+        <td>Tokens and address to send</td>
+      </tr>
+      <tr>
+        <th>uint256[6] _volumes</th>
+        <td>String</td>
+        <td>Volume of the trade</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">orderMatchHash</h3>
+
+<pre><code class="solidity">function orderMatchHash(address[6] _tokensAndAddresses, uint256[5] _volumes, bytes32 _orderMatchID, uint256 _expiryBlockNumber)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address[6] _tokensAndAddresses</th>
+        <td>Address</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>uint256[5] _volumes</th>
+        <td>String</td>
+        <td>Total volume</td>
+      </tr>
+      <tr>
+        <th>bytes32 _orderMatchID</th>
+        <td>String</td>
+        <td>Order match ID</td>
+      </tr>
+      <tr>
+        <th>uint256 _expiryBlockNumber</th>
+        <td>String</td>
+        <td>Block expiry number</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">fillOrderMatch</h3>
+
+<pre><code class="solidity">function fillOrderMatch(address[6] _tokensAndAddresses, uint256[5] _volumes, uint256 _expiryBlockNumber, bytes32 _orderMatchID,uint8 v, bytes32 r, bytes32 s)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address[6] _tokensAndAddresses</th>
+        <td>Address</td>
+        <td>Tokens and address</td>
+      </tr>
+      <tr>
+        <th>uint256[5] _volumes</th>
+        <td>String</td>
+        <td>Total volume</td>
+      </tr>
+      <tr>
+        <th>uint256 _expiryBlockNumber</th>
+        <td>String</td>
+        <td>Block expiry number</td>
+      </tr>
+      <tr>
+        <th>bytes32 _orderMatchID</th>
+        <td>String</td>
+        <td>Order match ID</td>
+      </tr>
+      <tr>
+        <th>uint8 v</th>
+        <td>String</td>
+        <td>Signature module</td>
+      </tr>
+      <tr>
+        <th>bytes32 r</th>
+        <td>String</td>
+        <td>Signature module</td>
+      </tr>
+      <tr>
+        <th>bytes32 s</th>
+        <td>String</td>
+        <td>Signature module</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">balanceOf</h3>
+
+<pre><code class="solidity">function balanceOf(address _depositor)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _depositor</th>
+        <td>Address</td>
+        <td>Depositor Address</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">balanceOfToken</h3>
+
+<pre><code class="solidity">function balanceOfToken(address _depositor, address _token)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _depositor</th>
+        <td>Address</td>
+        <td>Depositor Address</td>
+      </tr>
+      <tr>
+        <th>address _token</th>
+        <td>Address</td>
+        <td>Token address</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">deposit</h3>
+
+<pre><code class="solidity">function deposit(address _depositor)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _depositor</th>
+        <td>Address</td>
+        <td>Depositor address</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">depositTokens</h3>
+
+<pre><code class="solidity">function depositTokens(address _depositor, address _token, uint256 _amount)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _depositor</th>
+        <td>Address</td>
+        <td>Depositor address</td>
+      </tr>
+      <tr>
+        <th>address _token</th>
+        <td>Address</td>
+        <td>Token address</td>
+      </tr>
+      <tr>
+        <th>uint256 _amount</th>
+        <td>String</td>
+        <td>Amount</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">withdrawTo</h3>
+
+<pre><code class="solidity">function withdrawTo(address _to, uint256 _amount)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _to</th>
+        <td>Address</td>
+        <td>Receivers address</td>
+      </tr>
+      <tr>
+        <th>uint256 _amount</th>
+        <td>String</td>
+        <td>Total amount</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">withdrawTokenTo</h3>
+
+<pre><code class="solidity">function withdrawTokenTo(address _to, address _token, uint256 _amount)
+</code></pre>
+
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _to</th>
+        <td>Address</td>
+        <td>Receivers address</td>
+      </tr>
+      <tr>
+        <th>address _token</th>
+        <td>Address</td>
+        <td>Token address</td>
+      </tr>
+      <tr>
+        <th>uint256 _amount</th>
+        <td>String</td>
+        <td>Total amount</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
+<h3 style="color: orange;">moveToSafetyWallet</h3>
+
+<pre><code class="solidity">function moveToSafetyWallet()
 </code></pre>
 
 <p>Parameters
@@ -2348,129 +3256,81 @@
   </tbody>
 </table>
 <hr></p>
-<h3 style="color: orange;">updateFeeCalcConfig</h3>
-
-<pre><code class="solidity">function updateFeeCalcConfig(address _baseToken, address _ether, uint256 _baseTokenFee, uint256 _etherFee, uint256 _normalTokenFee)
-</code></pre>
-
-<h3 style="color: orange;">calcTradeFee</h3>
-
-<pre><code class="solidity">function calcTradeFee(uint256 _value, address _feeToken)
-</code></pre>
-
-<h3 style="color: orange;">orderHash</h3>
-
-<pre><code class="solidity">function orderHash(address _sellToken, address _buyToken, uint256 _totalOrderVolume, uint256 _priceRate, uint256 _numBlocksExpires, address _orderCreator, uint256 _orderType, bytes32 _orderID, address _feeToken)
-</code></pre>
-
-<h3 style="color: orange;">validateAndGetOrderHash</h3>
-
-<pre><code class="solidity">function validateAndGetOrderHash (address[6] _tokensAndAddresses, uint256[6] _volumes, uint256 _numBlocksExpires,  uint256 _orderType, bytes32 _orderID)
-</code></pre>
-
-<h3 style="color: orange;">verifySignature</h3>
-
-<pre><code class="solidity">function verifySignature(address _signer, bytes32 _orderHash, uint8 v, bytes32 r, bytes32 s)
-</code></pre>
-
-<h3 style="color: orange;">basicSigValidations</h3>
-
-<pre><code class="solidity">function basicSigValidations(address[6] _orderAddresses, uint256 _orderType, bytes32 _orderHash, uint8 v, bytes32 r, bytes32 s)
-</code></pre>
-
-<h3 style="color: orange;">orderAvailability</h3>
-
-<pre><code class="solidity">function orderAvailability(bytes32 _orderHash, address _orderCreator, uint256 _totalOrderVolume)
-</code></pre>
-
-<h3 style="color: orange;">isOrderClosedOrFulfilled</h3>
-
-<pre><code class="solidity">function isOrderClosedOrFulfilled(bytes32 _orderHash, address _orderCreator, uint256 _totalOrderVolume)
-</code></pre>
-
-<h3 style="color: orange;">oredrAlreadyExists</h3>
-
-<pre><code class="solidity">function oredrAlreadyExists(bytes32 _orderHash, address _orderCreator)
-</code></pre>
-
-<h3 style="color: orange;">createOrder</h3>
-
-<pre><code class="solidity">function createOrder(address _sellToken, address _buyToken, uint256 _totalOrderVolume, uint256 _priceRate, uint256 _numBlocksExpires, address _orderCreator, uint256 _orderType, bytes32 _orderID, address _feeToken)
-</code></pre>
-
-<h3 style="color: orange;">cancelOrder</h3>
-
-<pre><code class="solidity">function cancelOrder(bytes32 _orderHash, address _orderCreator, uint256 _totalOrderVolume, address _feeToken, uint256 _orderValue)
-</code></pre>
-
-<h3 style="color: orange;">fillOrder</h3>
-
-<pre><code class="solidity">function fillOrder(address[6] _tokensAndAddresses, uint256[6] _volumes, uint256 _numBlocksExpires,  uint256 _orderType, uint8 v, bytes32 r, bytes32 s, bytes32 _orderID)
-</code></pre>
-
-<h3 style="color: orange;">walletTransfers</h3>
-
-<pre><code class="solidity">function walletTransfers(address[6] _tokensAndAddresses, uint256[6] _volumes)
-</code></pre>
-
-<h3 style="color: orange;">orderMatchHash</h3>
-
-<pre><code class="solidity">function orderMatchHash(address[6] _tokensAndAddresses, uint256[5] _volumes, bytes32 _orderMatchID, uint256 _expiryBlockNumber)
-</code></pre>
-
-<h3 style="color: orange;">fillOrderMatch</h3>
-
-<pre><code class="solidity">function fillOrderMatch(address[6] _tokensAndAddresses, uint256[5] _volumes, uint256 _expiryBlockNumber, bytes32 _orderMatchID,uint8 v, bytes32 r, bytes32 s)
-</code></pre>
-
-<h3 style="color: orange;">balanceOf</h3>
-
-<pre><code class="solidity">function balanceOf(address _depositor)
-</code></pre>
-
-<h3 style="color: orange;">balanceOfToken</h3>
-
-<pre><code class="solidity">function balanceOfToken(address _depositor, address _token)
-</code></pre>
-
-<h3 style="color: orange;">deposit</h3>
-
-<pre><code class="solidity">function deposit(address _depositor)
-</code></pre>
-
-<h3 style="color: orange;">depositTokens</h3>
-
-<pre><code class="solidity">function depositTokens(address _depositor, address _token, uint256 _amount)
-</code></pre>
-
-<h3 style="color: orange;">withdrawTo</h3>
-
-<pre><code class="solidity">function withdrawTo(address _to, uint256 _amount)
-</code></pre>
-
-<h3 style="color: orange;">withdrawTokenTo</h3>
-
-<pre><code class="solidity">function withdrawTokenTo(address _to, address _token, uint256 _amount)
-</code></pre>
-
-<h3 style="color: orange;">moveToSafetyWallet</h3>
-
-<pre><code class="solidity">function moveToSafetyWallet()
-</code></pre>
-
 <h3 style="color: orange;">walletTransfer</h3>
 
 <pre><code class="solidity">function walletTransfer(address _from, address _to, address _token, uint256 _amount)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _from</th>
+        <td>Address</td>
+        <td>Senders address</td>
+      </tr>
+      <tr>
+        <th>address _to</th>
+        <td>Address</td>
+        <td>Receivers address</td>
+      </tr>
+      <tr>
+        <th>address _token</th>
+        <td>Address</td>
+        <td>Token address</td>
+      </tr>
+      <tr>
+        <th>uint256 _amount</th>
+        <td>String</td>
+        <td>Total amount</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 style="color: orange;">OrderBook</h3>
 
 <pre><code class="solidity">function OrderBook(address _newApprover, address _newWallet, address _dataStore)
 </code></pre>
 
+<p>Parameters
+<table class="table table-bordered">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th>address _newApprover</th>
+        <td>Address</td>
+        <td>Approvers address</td>
+      </tr>
+      <tr>
+        <th>address _newWallet</th>
+        <td>Address</td>
+        <td>New Wallet address</td>
+      </tr>
+      <tr>
+        <th>address _dataStore</th>
+        <td>Address</td>
+        <td>Data store address</td>
+      </tr>
+  </tbody>
+</table>
+<hr></p>
 <h3 id="order-vault">Order Vault</h3>
 <h3 style="color: orange;">addOwner</h3>
 
+<p>Add a particular owner to a vault.</p>
 <pre><code class="solidity">function addOwner(address newOwner)
 </code></pre>
 
@@ -2486,14 +3346,15 @@
   <tbody>
       <tr>
         <th>address newOwner</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>New Owner address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">removeOwner</h3>
 
+<p>Remove ownership of a particualar address.</p>
 <pre><code class="solidity">function removeOwner(address _owner)
 </code></pre>
 
@@ -2509,14 +3370,15 @@
   <tbody>
       <tr>
         <th>address _owner</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Owner address</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">OrderVault</h3>
 
+<p>Order a new Vault.</p>
 <pre><code class="solidity">function OrderVault()
 </code></pre>
 
@@ -2540,6 +3402,7 @@
 <hr></p>
 <h3 style="color: orange;">openVault</h3>
 
+<p>Opening up a new vault.</p>
 <pre><code class="solidity">function openVault(uint256 _startTime, uint256 _closureTime)
 </code></pre>
 
@@ -2555,19 +3418,20 @@
   <tbody>
       <tr>
         <th>uint256 _startTime</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Start time of the vault</td>
       </tr>
       <tr>
         <th>uint256 _closureTime</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Expiry time for the vault</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">extendVault</h3>
 
+<p>Extend the vault.</p>
 <pre><code class="solidity">function extendVault(uint256 _closureTime)
 </code></pre>
 
@@ -2583,14 +3447,15 @@
   <tbody>
       <tr>
         <th>uint256 _closureTime</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Expiry time for the basket</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">closeVault</h3>
 
+<p>Closing the vault.</p>
 <pre><code class="solidity">function closeVault()
 </code></pre>
 
@@ -2614,6 +3479,7 @@
 <hr></p>
 <h3 style="color: orange;">storeInVault</h3>
 
+<p>Store the values on the valut.</p>
 <pre><code class="solidity">function storeInVault(bytes32 _orderHash, bytes32 _orderID)
 </code></pre>
 
@@ -2629,19 +3495,20 @@
   <tbody>
       <tr>
         <th>bytes32 _orderHash</th>
-        <td></td>
-        <td></td>
+        <td>TxHash</td>
+        <td>Transaction Hash</td>
       </tr>
       <tr>
         <th>bytes32 _orderID</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Order ID</td>
       </tr>
   </tbody>
 </table>
 <hr></p>
 <h3 style="color: orange;">sealVault</h3>
 
+<p>Set the value for a particular asset on the exchange.</p>
 <pre><code class="solidity">function sealVault()
 </code></pre>
 
@@ -2665,6 +3532,7 @@
 <hr></p>
 <h3 style="color: orange;">getNumberOfOders</h3>
 
+<p>Get the number of orders on the exchange that are being placed.</p>
 <pre><code class="solidity">function getNumberOfOders()
 </code></pre>
 
@@ -2688,6 +3556,7 @@
 <hr></p>
 <h3 style="color: orange;">orderLocated</h3>
 
+<p>Locate the order. Which address owns the new contract.</p>
 <pre><code class="solidity">function orderLocated(bytes32 _hash, bytes32 _orderID)
 </code></pre>
 
@@ -2703,13 +3572,13 @@
   <tbody>
       <tr>
         <th>bytes32 _hash</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Transaction Hash</td>
       </tr>
       <tr>
         <th>bytes32 _orderID</th>
-        <td></td>
-        <td></td>
+        <td>String</td>
+        <td>Order ID</td>
       </tr>
   </tbody>
 </table>
@@ -2717,6 +3586,7 @@
 <h3 id="ownable">Ownable</h3>
 <h3 style="color: orange;">Ownable</h3>
 
+<p>Identify who own the contract.</p>
 <pre><code class="solidity">function Ownable()
 </code></pre>
 
@@ -2740,6 +3610,7 @@
 <hr></p>
 <h3 style="color: orange;">transferOwnership</h3>
 
+<p>Transfer ownership from one address to another.</p>
 <pre><code class="solidity">function transferOwnership(address newOwner)
 </code></pre>
 
@@ -2755,8 +3626,8 @@
   <tbody>
       <tr>
         <th>address newOwner</th>
-        <td></td>
-        <td></td>
+        <td>Address</td>
+        <td>Address of the owner</td>
       </tr>
   </tbody>
 </table>
