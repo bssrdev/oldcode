@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <link rel="shortcut icon" href="../img/favicon.ico">
 
-    <title>Wanchain - WandX</title>
+    <title>Aion - WandX</title>
 
     <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -103,8 +103,8 @@
     <ul class="dropdown-menu">
         
             
-<li >
-    <a href="../aionsmartcontracts/">Aion</a>
+<li class="active">
+    <a href="./">Aion</a>
 </li>
 
         
@@ -115,8 +115,8 @@
 
         
             
-<li class="active">
-    <a href="./">Wanchain</a>
+<li >
+    <a href="../wansmartcontracts/">Wanchain</a>
 </li>
 
         
@@ -158,12 +158,12 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../smartcontracts/">
+                        <a rel="next" href="../infrasolution/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../furtherreference/">
+                        <a rel="prev" href="../smartcontracts/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -177,7 +177,7 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#wanchain-smart-contracts-basket-and-dex">Wanchain Smart Contracts - (Basket and DEX)</a></li>
+        <li class="first-level active"><a href="#aion-smart-contracts-basket">AION Smart Contracts - (Basket)</a></li>
             <li class="second-level"><a href="#one-way-dex">One Way Dex</a></li>
                 
             <li class="second-level"><a href="#two-way-dex">Two Way Dex</a></li>
@@ -201,12 +201,12 @@
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="wanchain-smart-contracts-basket-and-dex">Wanchain Smart Contracts - (Basket and DEX)</h1>
+<h1 id="aion-smart-contracts-basket">AION Smart Contracts - (Basket)</h1>
 <h2 id="one-way-dex">One Way Dex</h2>
 <h3 style="color: orange;">DEx1WaySig</h3>
 
 <p>Send the address along with token, fee value and verifier address.</p>
-<pre><code class="solidity">function DEx1WaySig( address _vault, address _feeCalculator, address _baseToken, address _wanToken, address _verifierAddr)
+<pre><code class="solidity">function DEx1WaySig( address _vault, address _feeCalculator, address _baseToken, address _aionToken, address _verifierAddr)
 </code></pre>
 
 <p>Parameters
@@ -235,7 +235,7 @@
         <td>Value to change</td>
       </tr>
       <tr>
-        <th>address _wanToken</th>
+        <th>address _aionToken</th>
         <td>BigNumber</td>
         <td>Value to change</td>
       </tr>
@@ -872,7 +872,7 @@
 <h3 style="color: orange;">DEx2WaySig</h3>
 
 <p>Send the address along with token, fee value and verifier address and receive the has back again.</p>
-<pre><code class="solidity">function DEx2WaySig( address _vault, address _feeCalculator, address _baseToken, address _wanToken, address _verifierAddr)
+<pre><code class="solidity">function DEx2WaySig( address _vault, address _feeCalculator, address _baseToken, address _aionToken, address _verifierAddr)
 </code></pre>
 
 <p>Parameters
@@ -901,9 +901,9 @@
         <td>Base token value</td>
       </tr>
       <tr>
-        <th>address _wanToken</th>
+        <th>address _aionToken</th>
         <td>Address</td>
-        <td>wan token address</td>
+        <td>aion token address</td>
       </tr>
       <tr>
         <th>address _verifierAddr</th>
@@ -1607,7 +1607,7 @@
 <h3 style="color: orange;">RecurrentPortfolios</h3>
 
 <p>Recurrent portfolio main function which is used to repeat a particualr portfolio.</p>
-<pre><code class="solidity">function RecurrentPortfolios(address _owner, address _wallet, address[] _assets, uint256[] _volumes, uint256 _askValue, uint256 _feeRateForwan, uint256 _expiryBlock, bytes32 _portfolioName)
+<pre><code class="solidity">function RecurrentPortfolios(address _owner, address _wallet, address[] _assets, uint256[] _volumes, uint256 _askValue, uint256 _feeRateForaion, uint256 _expiryBlock, bytes32 _portfolioName)
 </code></pre>
 
 <p>Parameters
@@ -1646,9 +1646,9 @@
         <td>Ask value for the basket</td>
       </tr>
       <tr>
-        <th>uint256 _feeRateForwan</th>
+        <th>uint256 _feeRateForaion</th>
         <td>String</td>
-        <td>Fee rate for wan</td>
+        <td>Fee rate for aion</td>
       </tr>
       <tr>
         <th>uint256 _expiryBlock</th>
@@ -2458,7 +2458,7 @@
 <hr></p>
 <h3 style="color: orange;">updateFeeCalcConfig</h3>
 
-<pre><code class="solidity">function updateFeeCalcConfig(address _baseToken, address _wan, uint256 _baseTokenFee, uint256 _wanFee, uint256 _normalTokenFee)
+<pre><code class="solidity">function updateFeeCalcConfig(address _baseToken, address _aion, uint256 _baseTokenFee, uint256 _aionFee, uint256 _normalTokenFee)
 </code></pre>
 
 <p>Parameters
@@ -2477,9 +2477,9 @@
         <td>Base token address</td>
       </tr>
       <tr>
-        <th>address _wan</th>
+        <th>address _aion</th>
         <td>Address</td>
-        <td>wan address</td>
+        <td>aion address</td>
       </tr>
       <tr>
         <th>uint256 _baseTokenFee</th>
@@ -2487,9 +2487,9 @@
         <td>Base token fee</td>
       </tr>
       <tr>
-        <th>uint256 _wanFee</th>
+        <th>uint256 _aionFee</th>
         <td>String</td>
-        <td>wan fee</td>
+        <td>aion fee</td>
       </tr>
       <tr>
         <th>uint256 _normalTokenFee</th>
