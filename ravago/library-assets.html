@@ -72,8 +72,8 @@
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header">
-                <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
-                <strong><a href="index.html"><img src="img/logo/logosn.png" alt="" /></a></strong>
+                <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" style="margin-top: 10px;margin-bottom: 10px;"></a>
+                <strong><a href="index.html"><img src="img/logo/logosn.png" alt="" style="width: 70%;"></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
                 <nav class="sidebar-nav left-sidebar-menu-pro">
@@ -127,7 +127,7 @@
                             <ul class="submenu-angle" aria-expanded="false">
                                 <li><a title="All Library" href="library-assets.html"><span class="mini-sub-pro">Material Listed</span></a></li>
                                 <li><a title="Add Library" href="add-library-assets.html"><span class="mini-sub-pro">Add Material</span></a></li>
-                                <li><a title="Edit Library" href="edit-library-assets.html"><span class="mini-sub-pro">Edit Material</span></a></li>
+                                <!-- <li><a title="Edit Library" href="edit-library-assets.html"><span class="mini-sub-pro">Edit Material</span></a></li> -->
                             </ul>
                         </li>
                         <!-- <li>
@@ -916,8 +916,8 @@
                                                 </li>
                                                 <li><a href="add-library-assets.html">Add Material</a>
                                                 </li>
-                                                <li><a href="edit-library-assets.html">Edit Material</a>
-                                                </li>
+                                                <!-- <li><a href="edit-library-assets.html">Edit Material</a>
+                                                </li> -->
                                             </ul>
                                         </li>
                                         <!-- <li><a data-toggle="collapse" data-target="#demodepart" href="#">Departments <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
@@ -1074,117 +1074,123 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-status-wrap">
-                            <h4>Library List</h4>
+                            <h4>Material List</h4>
                             <div class="add-product">
-                                <a href="#">Add Library</a>
+                                <a href="add-library-assets.html">Add Material</a>
                             </div>
                             <div class="asset-inner">
                                 <table>
                                     <tr>
                                         <th>No</th>
                                         <th>Image</th>
-                                        <th>Name of Asset</th>
+                                        <th>Material ID</th>
                                         <th>Status</th>
-                                        <th>Subject</th>
-                                        <th>Department</th>
+                                        <th>MNC</th>
+                                        <th>Category</th>
                                         <th>Type</th>
                                         <th>Price</th>
-                                        <th>Setting</th>
+                                        <th>Blockchain</th>
                                     </tr>
                                     <tr>
                                         <td>1</td>
                                         <td><img src="img/product/book-1.jpg" alt="" /></td>
-                                        <td>Web Development Book</td>
+                                        <td>PLY-SCP-1876</td>
                                         <td>
-                                            <button class="pd-setting">Active</button>
+                                            <button class="pd-setting">Dispatched</button>
                                         </td>
-                                        <td>Html, Css</td>
-                                        <td>CSE</td>
-                                        <td>Book</td>
+                                        <td>Coca Cola</td>
+                                        <td>Plastic</td>
+                                        <td>ABS Scrap</td>
                                         <td>$1500</td>
                                         <td>
-                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                            <!-- <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button> -->
+                                            <button type="submit" class="btn btn-primary waves-effect waves-light">Connect</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td><img src="img/product/book-2.jpg" alt="" /></td>
-                                        <td>Quality Bol pen</td>
+                                        <td>PLY-SCP-4456</td>
                                         <td>
-                                            <button class="ps-setting">Paused</button>
+                                            <button class="ps-setting">In Progress</button>
                                         </td>
-                                        <td>PHP</td>
-                                        <td>CSE</td>
-                                        <td>CD</td>
+                                        <td>Pepsi</td>
+                                        <td>Rubber</td>
+                                        <td>PE Scrap</td>
                                         <td>$1700</td>
                                         <td>
-                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                            <!-- <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button> -->
+                                            <button type="submit" class="btn btn-primary waves-effect waves-light">Connect</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td><img src="img/product/book-3.jpg" alt="" /></td>
-                                        <td>Box of pendrive</td>
+                                        <td>PLY-SCP-9897</td>
                                         <td>
-                                            <button class="ds-setting">Disabled</button>
+                                            <button class="ds-setting">Paused</button>
                                         </td>
-                                        <td>Java</td>
-                                        <td>CSE</td>
-                                        <td>Book</td>
+                                        <td>Amazon</td>
+                                        <td>Rubber</td>
+                                        <td>PP Scrap</td>
                                         <td>$1500</td>
                                         <td>
-                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                            <!-- <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button> -->
+                                            <button type="submit" class="btn btn-primary waves-effect waves-light">Connect</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
                                         <td><img src="img/product/book-4.jpg" alt="" /></td>
-                                        <td>Quality Bol pen</td>
+                                        <td>PLY-SCP-6245</td>
                                         <td>
-                                            <button class="pd-setting">Active</button>
+                                            <button class="pd-setting">Dispatched</button>
                                         </td>
-                                        <td>PHP</td>
-                                        <td>CSE</td>
-                                        <td>CD</td>
+                                        <td>Marico</td>
+                                        <td>Chemicals</td>
+                                        <td>PET Scrap</td>
                                         <td>$1200</td>
                                         <td>
-                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                            <!-- <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button> -->
+                                            <button type="submit" class="btn btn-primary waves-effect waves-light">Connect</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
                                         <td><img src="img/product/book-1.jpg" alt="" /></td>
-                                        <td>Web Development Book</td>
+                                        <td>PLY-SCP-1233</td>
                                         <td>
-                                            <button class="pd-setting">Active</button>
+                                            <button class="pd-setting">Dispatched</button>
                                         </td>
-                                        <td>Wordpress</td>
-                                        <td>CSE</td>
-                                        <td>Book</td>
+                                        <td>Pepsi</td>
+                                        <td>Plastic</td>
+                                        <td>PE Scrap</td>
                                         <td>$1800</td>
                                         <td>
-                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                            <!-- <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button> -->
+                                            <button type="submit" class="btn btn-primary waves-effect waves-light">Connect</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>6</td>
-                                        <td><img src="img/product/book-2.jpg" alt="" /></td>
-                                        <td>Quality Bol pen</td>
+                                        <td><img src="img/product/book-3_old.jpg" alt="" /></td>
+                                        <td>PLY-SCP-8912</td>
                                         <td>
-                                            <button class="ps-setting">Paused</button>
+                                            <button class="ps-setting">In Progress</button>
                                         </td>
-                                        <td>Java</td>
-                                        <td>CSE</td>
-                                        <td>CD</td>
+                                        <td>Amazon</td>
+                                        <td>Rubber</td>
+                                        <td>ABS Scrap</td>
                                         <td>$1000</td>
                                         <td>
-                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                            <!-- <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button> -->
+                                            <button type="submit" class="btn btn-primary waves-effect waves-light">Connect</button>
                                         </td>
                                     </tr>
                                 </table>
