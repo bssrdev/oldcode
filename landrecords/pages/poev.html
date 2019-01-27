@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Retrieve Land Records</title>
+    <title>Verify Proof of Existence</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
@@ -16,7 +16,6 @@
 </head>
 
 <body>
-        <!-- ============================================================== -->
     <!-- ============================================================== -->
     <!-- main wrapper -->
     <!-- ============================================================== -->
@@ -227,7 +226,7 @@
                                 </div>
                             </li> -->
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>Proof Of Existence</a>
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>Proof Of Existence</a>
                                 <div id="submenu-3" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -252,14 +251,14 @@
                                 </div>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Publish and Retrieve</a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Publish and Retrieve</a>
                                 <div id="submenu-4" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a class="nav-link" href="plr.html">Publish Land Record</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Retrieve Land Record</a>
+                                            <a class="nav-link" href="rlr.html">Retrieve Land Record</a>
                                         </li>
                                         <!-- <li class="nav-item">
                                             <a class="nav-link" href="pages/multiselect.html">Multiselect</a>
@@ -442,13 +441,13 @@
                         <div class="row">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="page-header" id="top">
-                                    <h2 class="pageheader-title">Retrieve Land Records </h2>
-                                    <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                                    <h2 class="pageheader-title">Verify POE </h2>
+                                    <!-- <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p> -->
                                     <div class="page-breadcrumb">
                                         <nav aria-label="breadcrumb">
                                             <ol class="breadcrumb">
-                                                <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Publish and Retrieve</a></li>
-                                                <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Retrieve Land Records</a></li>
+                                                <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Proof of Existence</a></li>
+                                                <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Verify POE</a></li>
                                                 <!-- <li class="breadcrumb-item active" aria-current="page">Form Elements</li> -->
                                             </ol>
                                         </nav>
@@ -466,13 +465,13 @@
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <!-- <h2>Overview</h2> -->
-                                    <p class="lead">Welcome to the future of Land Record on Blockchain. Retrieve your data </p>
-                                    <ul class="list-unstyled arrow">
-                                        <li> Enter your Record identifier to retrieve data from Recordskeeper Blockchain.</li>
-                                        <!-- <li>Data Integrity</li>
-                                        <li>Data Authenticity</li>
-                                        <li>Data Verifiability </li> -->
-                                    </ul>
+                                    <!-- <p class="lead">This is a tool to generate a Proof-of-Existence of a file or record on Recordskeeper Blockchain. By submiting this form you will be uploading the file's signature with it's associated information into a Decentralized Public Ledger. Records stored here can later be fetched to prove that this file existed on particular date & time with the associated information.</p>
+                                    <p class="lead">Computationally & Technologically it is impossible to fake the Document's signature and/or modify the past records on Blockchain. Hence this PoE can be used to prove the file's existence in legal matters.</p> -->
+                                    <!-- <ul class="list-unstyled arrow">
+                                        <li> Fill the form & Upload the file</li>
+                                        <li> Copy the link & Share it with people you want to prove its existence</li>
+                                        <li>Anyone with link or file can verify the existence of the file at particular date & time. </li>
+                                    </ul> -->
                                 </div>
                             </div>
                             <!-- ============================================================== -->
@@ -485,28 +484,25 @@
                         <div class="row">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="section-block" id="basicform">
-                                    <h3 class="section-title">Retrieve your data</h3>
-                                    <!-- <p>Please specify the Data format that you want to retrieve.</p> -->
+                                    <h3 class="section-title">Verify Proof-of-Existence </h3>
+                                    <p>Upload the file & Verify POE.</p>
                                 </div>
                                 <div class="card">
-                                    <h5 class="card-header">Retrieve your data</h5>
+                                    <h5 class="card-header">Verify Proof-of-Existence </h5>
                                     <div class="card-body">
                                         <form>
-                                            <h5>Please specify the Data format that you want to retrieve.</h5>
-                                            <label class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" name="radio-inline" checked="" class="custom-control-input"><span class="custom-control-label">Hex</span>
-                                            </label>
-                                            <label class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" name="radio-inline" class="custom-control-input"><span class="custom-control-label">String</span>
-                                            </label>
-                                            <div class="form-group">
-                                                <label for="inputText3" class="col-form-label">Enter Your Record Public Key</label>
+                                            <!-- <div class="form-group">
+                                                <label for="inputText3" class="col-form-label">Enter Your Name</label>
                                                 <input id="inputText3" type="text" class="form-control">
                                             </div>
-                                            <!-- <div class="form-group">
+                                            <div class="form-group">
                                                 <label for="inputEmail">Enter Your Email address</label>
                                                 <input id="inputEmail" type="email" placeholder="name@example.com" class="form-control">
                                                 <p>We'll never share your email with anyone else.</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlTextarea1">Enter your data, which may be in any format like JSON, digest, hexcode, text, e.t.c.</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                             </div> -->
                                             <!-- <div class="form-group">
                                                 <label for="inputText4" class="col-form-label">Number Input</label>
@@ -525,12 +521,13 @@
                                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                             </div> -->
                                         </form>
-                                        <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#exampleModal">Retrieve</button>
+                                        <button class="btn btn-brand" type="submit">Upload Document</button>
+                                        <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#exampleModal">Verify POE</button>
                                         <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog modal-lg" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Your Record Data</h5>
+                                                        <h5 class="modal-title" id="exampleModalLabel">Success !!</h5>
                                                         <a href="#" class="close" data-dismiss="modal" aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
                                                                 </a>
@@ -548,31 +545,42 @@
                                     <table class="table table-striped table-bordered first">
                                         <thead>
                                             <tr>
-                                                <th>Publisher Address</th>
-                                                <th>Record Identifier Data</th>
-                                                <th>Date & Time (UTC)</th>
+                                                <th>Data</th>
+                                                <th>Value</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>mmJgjJ9PkckU2S84xuZavU5pwXXq8LAXrM</td>
-                                                <td>System Architect</td>
-                                                <td>2019-1-26 16:58:34</td>
+                                                <td>Name</td>
+                                                <td>sadasd</td>
                                             </tr>
                                             <tr>
-                                                <td>mmJgjJ9PkckU2S84xuZavU5pwXXq8LAXrM</td>
-                                                <td>System Architect</td>
-                                                <td>2019-1-26 16:58:34</td>
+                                                <td>Email</td>
+                                                <td>sess.gear@gmail.com</td>
                                             </tr>
                                             <tr>
-                                                <td>mmJgjJ9PkckU2S84xuZavU5pwXXq8LAXrM</td>
-                                                <td>System Architect</td>
-                                                <td>2019-1-26 16:58:34</td>
+                                                <td>Message</td>
+                                                <td>Sending accross some message to the blockchain.</td>
                                             </tr>
                                             <tr>
-                                                <td>mmJgjJ9PkckU2S84xuZavU5pwXXq8LAXrM</td>
-                                                <td>System Architect</td>
-                                                <td>2019-1-26 16:58:34</td>
+                                                <td>Signature</td>
+                                                <td>96e46b6a050048c86e3cca6aee33d345a0f74956cb0c93a3a2196d72398a91ff</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Blocktime (Unix)</td>
+                                                <td>1548613931</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Confirmations</td>
+                                                <td>55</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Transaction Id</td>
+                                                <td>a4a9cf07874a5f4261e5d941336a89a603924d198a6e2c5cd99595d29be39ce6</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Time</td>
+                                                <td>2019-1-27 18:32:8 (UTC TIME)</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -587,7 +595,6 @@
                                                     </div>
                                                     <div class="modal-footer">
                                                         <a href="#" class="btn btn-secondary" data-dismiss="modal">Close</a>
-                                                        <!-- <a href="rlr.html" class="btn btn-primary">Retrieve</a> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -619,156 +626,14 @@
                         <!-- ============================================================== -->
                         <!-- select options  -->
                         <!-- ============================================================== -->
-                        <!-- <div class="row">
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <div class="section-block" id="select">
-                                    <h3 class="section-title">Create Record</h3>
-                                    <p>Secure Blockchain Network</p>
-                                </div>
-                                <div class="card">
-                                    <h5 class="card-header">Create Record</h5>
-                                    <div class="card-body">
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="inputText3" class="col-form-label">Enter your data identifier which is associated with your data and it will be publically visible on blockchain.</label>
-                                                <input id="inputText3" type="text" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleFormControlTextarea1">Enter your data, which may be in any format like JSON, digest, hexcode, text, e.t.c.</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="input-select">Example Select</label>
-                                                <select class="form-control" id="input-select">
-                                                    <option>Choose Example</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="card-body border-top">
-                                        <h3>Sizing</h3>
-                                        <form>
-                                            <div class="form-group">
-                                                <select class="form-control form-control-sm">
-                                                    <option>Large select</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <select class="form-control">
-                                                    <option>Default select</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <select class="form-control form-control-lg">
-                                                    <option>Large select</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
+                       
                         <!-- ============================================================== -->
                         <!-- end select options  -->
                         <!-- ============================================================== -->
                         <!-- ============================================================== -->
                         <!-- checkboxes and radio -->
                         <!-- ============================================================== -->
-                        <!-- <div class="row">
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="checkboxradio">
-                                <div class="section-block">
-                                    <h3 class="section-title">Enter Your Private Key</h3>
-                                    <p>Please Review your data carefully and click on authorize to submit the data on blockchain.</p>
-                                </div>
-                                <div class="card">
-                                    <h5 class="card-header">Enter Your Private Key</h5>
-                                    <div class="card-body">
-                                        <h4>Default (stacked)</h4>
-                                        <div class="card-body">
-                                            <ul class="list-group">
-                                                <li class="list-group-item">Address : mmJgjJ9PkckU2S84xuZavU5pwXXq8LAXrM</li>
-                                                <li class="list-group-item">Data Identifier Key : 1LhhdJgjJ9PkckU2S84xuZavU5pwXXq8LAXrM</li>
-                                                <li class="list-group-item">Data : Teting Land Records</li>
-                                                <li class="list-group-item">Porta ac consectetur ac</li>
-                                                <li class="list-group-item">Vestibulum at eros</li>
-                                            </ul>
-                                        </div>
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="inputPassword">Private key</label>
-                                                <input id="inputPassword" type="password" placeholder="Enter your private key" class="form-control">
-                                            </div>
-                                            <label class="custom-control custom-checkbox">
-                                                <input type="checkbox" checked="" class="custom-control-input"><span class="custom-control-label">Default Checkbox</span>
-                                            </label>
-                                            <label class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" disabled><span class="custom-control-label">Default Checkbox </span>
-                                            </label>
-                                            <h4>Inline Checkbox</h4>
-                                            <label class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" checked="" class="custom-control-input"><span class="custom-control-label">Option 1</span>
-                                            </label>
-                                            <label class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" class="custom-control-input"><span class="custom-control-label">Option 2</span>
-                                            </label>
-                                            <label class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" class="custom-control-input"><span class="custom-control-label">Option 3</span>
-                                            </label>
-                                        </form>
-                                        <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#exampleModal">Submit Record</button>
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Your Record has been successfully published !!</h5>
-                                                        <a href="#" class="close" data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </a>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                    <ul class="list-group">
-                                                        <li class="list-group-item">Transaction ID: 69e1a995896d97944de955b358a3b33b35e578317c2682a1672b9b70f44b162b</li>
-                                                        <li class="list-group-item">Transaction URL :
-http://test-explorer.recordskeeper.co/RecordsKeeper%20Testnet/tx/69e1a995896d97944de955b358a3b33b35e578317c2682a1672b9b70f44b162b</li>
-                                                        <li class="list-group-item">Address : mmJgjJ9PkckU2S84xuZavU5pwXXq8LAXrM</li>
-                                                        <li class="list-group-item">Data Identifier Key : 1LhhdJgjJ9PkckU2S84xuZavU5pwXXq8LAXrM</li>
-                                                        <li class="list-group-item">Data : Teting Land Records</li>
-                                                        <li class="list-group-item">Porta ac consectetur ac</li>
-                                                        <li class="list-group-item">Vestibulum at eros</li>
-                                                    </ul>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <a href="#" class="btn btn-secondary" data-dismiss="modal">Close</a>
-                                                        <a href="rlr.html" class="btn btn-primary">Retrieve</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-body border-top">
-                                        <h4>Radio (Stacked)</h4>
-                                        <form>
-                                            <label class="custom-control custom-radio">
-                                                <input type="radio" name="radio-stacked" checked="" class="custom-control-input"><span class="custom-control-label">Default Radio</span>
-                                            </label>
-                                            <label class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" name="radio-inline" class="custom-control-input" disabled><span class="custom-control-label">Default Radio</span>
-                                            </label>
-                                            <h5>Inline Radio</h5>
-                                            <label class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" name="radio-inline" checked="" class="custom-control-input"><span class="custom-control-label">Option 1</span>
-                                            </label>
-                                            <label class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" name="radio-inline" class="custom-control-input"><span class="custom-control-label">Option 2</span>
-                                            </label>
-                                            <label class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" name="radio-inline" class="custom-control-input"><span class="custom-control-label">Option 3</span>
-                                            </label>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
+                        
                         <!-- ============================================================== -->
                         <!-- end checkboxes and radio -->
                         <!-- ============================================================== -->
@@ -1181,9 +1046,7 @@ http://test-explorer.recordskeeper.co/RecordsKeeper%20Testnet/tx/69e1a995896d979
                         <div class="sidebar-nav-fixed">
                             <ul class="list-unstyled">
                                 <li><a href="#overview" class="active">Welcome</a></li>
-                                <li><a href="#basicform">Retrieve your data</a></li>
-                                <!-- <li><a href="#select">Create Record</a></li>
-                                <li><a href="#checkboxradio">Enter Your Private Key</a></li> -->
+                                <li><a href="#basicform">Verify Proof-of-Existence</a></li>
                                 <!-- <li><a href="#validation">Validation state</a></li>
                                 <li><a href="#inputgroup">Input Groups</a></li>
                                 <li><a href="#inputmask">Inputmask</a></li>
