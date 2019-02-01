@@ -1,17 +1,18 @@
 <!doctype html>
 <html lang="en">
-
  
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Fishing Tag</title>
+    <title>Tracking System</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/libs/css/style.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="../assets/libs/css/style.css">
+    <link rel="stylesheet" href="../assets/vendor/multi-select/css/multi-select.css">
     <link rel="stylesheet" href="../../loader.css">
 </head>
 
@@ -23,7 +24,7 @@
          <!-- ============================================================== -->
         <!-- navbar -->
         <!-- ============================================================== -->
-         <div class="dashboard-header">
+      <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
                 <a class="navbar-brand" href="index.html"><img class="logo-img" src="../assets/images/logo.png" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -150,7 +151,7 @@
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Fishing <span class="badge badge-success">6</span></a>
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Distributor <span class="badge badge-success">6</span></a>
                                 <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <!-- <li class="nav-item">
@@ -172,10 +173,10 @@
                                                 </ul>
                                             </div>
                                         </li> -->
-                                        <li class="nav-item">
+                                        <!-- <li class="nav-item">
                                             <a class="nav-link" href="profileb.html">Add Entry</a>
                                         </li>
-                                        <!-- <li class="nav-item">
+                                        <li class="nav-item">
                                             <a class="nav-link" href="uaedashboard.html">Track</a>
                                         </li> -->
                                         <!-- <li class="nav-item">
@@ -395,12 +396,14 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">Add New Fish Details </h2>
+                            <h2 class="pageheader-title">Distributor Status List</h2>
+                            <!-- <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p> -->
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Fishing</a></li>
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Add Entry</a></li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Distributor</a></li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Track</a></li>
+                                        <!-- <li class="breadcrumb-item active" aria-current="page">Data Tables</li> -->
                                     </ol>
                                 </nav>
                             </div>
@@ -410,99 +413,142 @@
                 <!-- ============================================================== -->
                 <!-- end pageheader -->
                 <!-- ============================================================== -->
-             
-                    <div class="row">
-                        <!-- ============================================================== -->
-                        <!-- validation form -->
-                        <!-- ============================================================== -->
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div class="card">
-                                <h5 class="card-header">Add New Fish</h5>
-                                <div class="card-body">
-                                    <form class="needs-validation" onsubmit="event.preventDefault();addFish()" novalidate>
-                                        <div class="row">
-                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                                                <label for="validationCustom01">Fish name</label>
-                                                <input type="text" class="form-control" id="validationCustom01" placeholder="First name"required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                                                <label for="validationCustom02">Fishing Company Name</label>
-                                                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                            </div>
-                                            <!-- <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                                                <label for="validationCustomUsername">Username</label>
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                                    </div>
-                                                    <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
-                                                    <div class="invalid-feedback">
-                                                        Please choose a username.
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-                                                <label for="validationCustom03">Tracking ID</label>
-                                                <input onkeypress='return event.charCode >= 48 && event.charCode <= 57' type="number" class="form-control" id="validationCustom03" placeholder="ID" required>
-                                                <div class="invalid-feedback" id="track">
-                                                    Please provide a valid ID.
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-                                                <label for="validationCustom04">IOT Device ID</label>
-                                                <input onkeypress='return event.charCode >= 48 && event.charCode <= 57' type="number" class="form-control" id="validationCustom04" placeholder="ID" required>
-                                                <div class="invalid-feedback">
-                                                    Please provide a valid ID.
-                                                </div>
-                                            </div>
-                                            <!-- <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
-                                                <label for="validationCustom05">Zip</label>
-                                                <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
-                                                <div class="invalid-feedback">
-                                                    Please provide a valid zip.
-                                                </div>
-                                            </div> -->
-                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                                <div class="form-group">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                                                        <label class="form-check-label" for="invalidCheck">
-                                                            Agree to terms and conditions
-                                                        </label>
-                                                        <div class="invalid-feedback">
-                                                            You must agree before submitting.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                                                <button class="btn btn-primary" type="submit">Upload Details</button>
-                                            </div>
-                                        </div>
-                                    </form>
+                <div class="row">
+                    <!-- ============================================================== -->
+                    <!-- basic table  -->
+                    <!-- ============================================================== -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="card">
+                            <h5 class="card-header">Fish Tracking List</h5>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered first">
+                                        <thead>
+                                            <tr>
+                                                <th>Tracking ID</th>
+                                                <th>Fish Name</th>
+                                                <th>Fishing Company Name</th>
+                                                <th>IOT Device ID</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tdata">
+                                            <tr>
+                                                <td>762345</td>
+                                                <td>Common Carp</td>
+                                                <td>Top Gun Charters</td>
+                                                <td>In Transit</td>
+                                                <td><button class="btn btn-primary btn-sm" type="submit">Received</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>544355</td>
+                                                <td>Guppy</td>
+                                                <td>The Long Run Fish Charter</td>
+                                                <td>Delivered</td>
+                                                <td><button class="btn btn-primary btn-sm" type="submit">Received</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>354476</td>
+                                                <td>Siamese fighting Fish</td>
+                                                <td>Summertime Charters</td>
+                                                <td>Delivered</td>
+                                                <td><button class="btn btn-primary btn-sm" type="submit">Received</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>824901</td>
+                                                <td>Wels Catfish</td>
+                                                <td>Seaforth</td>
+                                                <td>In Transit</td>
+                                                <td><button class="btn btn-primary btn-sm" type="submit">Received</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>621348</td>
+                                                <td>Northern Pike</td>
+                                                <td>Rig Runners Fishing</td>
+                                                <td>Delivered</td>
+                                                <td><button class="btn btn-primary btn-sm" type="submit">Received</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>892647</td>
+                                                <td>Gilt Head bream</td>
+                                                <td>Randy’s Fishing</td>
+                                                <td>In Transit</td>
+                                                <td><button class="btn btn-primary btn-sm" type="submit">Received</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>109372</td>
+                                                <td>Atlantic Cod</td>
+                                                <td>Get Hooked</td>
+                                                <td>Delivered</td>
+                                                <td><button class="btn btn-primary btn-sm" type="submit">Received</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>302759</td>
+                                                <td>European Bas</td>
+                                                <td>Cutthroat Anglers</td>
+                                                <td>Delivered</td>
+                                                <td><button class="btn btn-primary btn-sm" type="submit">Received</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>112784</td>
+                                                <td>Branzino</td>
+                                                <td>Berkely Marina Charters</td>
+                                                <td>Delivered</td>
+                                                <td><button class="btn btn-primary btn-sm" type="submit">Received</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>229380</td>
+                                                <td>Cod</td>
+                                                <td>Bay Fishing Adventures</td>
+                                                <td>In Transit</td>
+                                                <td><button class="btn btn-primary btn-sm" type="submit">Received</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>410923</td>
+                                                <td>Grouper</td>
+                                                <td>Chuck’s Charter Fishing</td>
+                                                <td>In Transit</td>
+                                                <td><button class="btn btn-primary btn-sm" type="submit">Received</button></td>
+                                            </tr>
+                                        </tbody>
+                                        <!-- <tfoot>
+                                            <tr>
+                                                <th>Tracking ID</th>
+                                                <th>Fish Name</th>
+                                                <th>Fishing Company Name</th>
+                                                <th>Status</th>
+                                                <th>More Details</th>
+                                            </tr>
+                                        </tfoot> -->
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                        <!-- ============================================================== -->
-                        <!-- end validation form -->
-                        <!-- ============================================================== -->
                     </div>
-                    
-                    
-           
+                    <!-- ============================================================== -->
+                    <!-- end basic table  -->
+                    <!-- ============================================================== -->
+                </div>
             </div>
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            
+            <!-- <div class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                            Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                            <div class="text-md-right footer-links d-none d-sm-block">
+                                <a href="javascript: void(0);">About</a>
+                                <a href="javascript: void(0);">Support</a>
+                                <a href="javascript: void(0);">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
             <!-- ============================================================== -->
             <!-- end footer -->
             <!-- ============================================================== -->
@@ -518,98 +564,98 @@
     <script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
-    <script src="../assets/vendor/parsley/parsley.js"></script>
+    <script src="../assets/vendor/multi-select/js/jquery.multi-select.js"></script>
     <script src="../assets/libs/js/main-js.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script>
     <script src="../../contract.js"></script>
     <script>
-    $('#form').parsley();
+    $('#my-select, #pre-selected-options').multiSelect()
     </script>
     <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
+    $('#callbacks').multiSelect({
+        afterSelect: function(values) {
+            alert("Select value: " + values);
+        },
+        afterDeselect: function(values) {
+            alert("Deselect value: " + values);
+        }
+    });
+    </script>
+    <script>
+    $('#keep-order').multiSelect({ keepOrder: true });
+    </script>
+    <script>
+    $('#public-methods').multiSelect();
+    $('#select-all').click(function() {
+        $('#public-methods').multiSelect('select_all');
+        return false;
+    });
+    $('#deselect-all').click(function() {
+        $('#public-methods').multiSelect('deselect_all');
+        return false;
+    });
+    $('#select-100').click(function() {
+        $('#public-methods').multiSelect('select', ['elem_0', 'elem_1', 'elem_99']);
+        return false;
+    });
+    $('#deselect-100').click(function() {
+        $('#public-methods').multiSelect('deselect', ['elem_0', 'elem_1', 'elem_99']);
+        return false;
+    });
+    $('#refresh').on('click', function() {
+        $('#public-methods').multiSelect('refresh');
+        return false;
+    });
+    $('#add-option').on('click', function() {
+        $('#public-methods').multiSelect('addOption', { value: 42, text: 'test 42', index: 0 });
+        return false;
+    });
+    </script>
+    <script>
+    $('#optgroup').multiSelect({ selectableOptgroup: true });
+    </script>
+    <script>
+    $('#disabled-attribute').multiSelect();
+    </script>
+    <script>
+    $('#custom-headers').multiSelect({
+        selectableHeader: "<div class='custom-header'>Selectable items</div>",
+        selectionHeader: "<div class='custom-header'>Selection items</div>",
+        selectableFooter: "<div class='custom-header'>Selectable footer</div>",
+        selectionFooter: "<div class='custom-header'>Selection footer</div>"
+    });
 
-    function addFish()
+    function getFishDetails()
     {
-        var fish_name = document.getElementById('validationCustom01').value;
-        var fish_company_name = document.getElementById('validationCustom02').value;
-        var tracking_id = document.getElementById('validationCustom03').value;
-        var iot_device_id = document.getElementById('validationCustom04').value;
-        var terms_condition = document.getElementById('invalidCheck').checked;
+        document.getElementById('loader').style.display = "block";
+        myContract.methods.totaltracks().call((err,res) => {
+            if(err || res==0) {
+                document.getElementById('loader').style.display = "none";
+                return false;
+            }
+            // console.log('totaltracks ',res)
+            for(let i=0; i<res; i++)
+            {
+                myContract.methods.nooftracks(i).call((err,res) => {
+                    if(err) return false;
+                    // console.log('nooftracks ',res)
+                    myContract.methods.FishDB(res).call((err,res) => {
+                        // console.log('FishDB ',res)
+                        var fishname =(res.FishName);
+                        var arg = res;
+                        $("#tdata").append('<tr><td>'+res.TrackingID+'</td><td>'+res.FishName+'</td><td>'+res.FishCompanyName+'</td><td>'+"In Transit"+'</td><td><button class="btn btn-primary btn-sm" type="submit" data-toggle="modal" onclick="tabledetails('+ res.TrackingID +',`'+ res.FishName +'`, `'+ res.FishCompanyName +'`)" data-target="#exampleModal">Track</button></td></tr>')
+                    })
+                })
+            }
+            document.getElementById('loader').style.display = "none";
+        })
+    }getFishDetails()
 
-        if(fish_name && fish_company_name && tracking_id && iot_device_id && terms_condition)
-        {
-            myContract.methods.trackstatus(tracking_id).call((err,res) => {
-                if(!res)
-                {
-                    document.getElementById('loader').style.display = "block";
-
-                    var tx={
-                        to: contract_address,
-                        data: myContract.methods.addFishDetail(fish_name, fish_company_name, tracking_id, iot_device_id).encodeABI(),
-                        gas:550000
-                    }
-            
-                    console.log(tx);
-            
-                    web3.eth.accounts.signTransaction(tx, localStorage.getItem('privatekey'), function(err,res){
-                        if(err)
-                            document.getElementById('loader').style.display = "none";
-            
-                        web3.eth.sendSignedTransaction(res.rawTransaction).on('transactionHash', txHash => {
-                            console.log("tx-Hash", txHash); 
-                        }).on('receipt',receipt => {
-                            console.log(receipt);
-                            if(receipt["status"]== "0x1")
-                            {
-                                console.log("Transaction Success", tx.data);
-                                document.getElementById('validationCustom01').value = "";
-                                document.getElementById('validationCustom02').value = "";
-                                document.getElementById('validationCustom03').value = "";
-                                document.getElementById('validationCustom04').value = "";
-                                document.getElementById('invalidCheck').checked = false;
-                                document.getElementById('loader').style.display = "none";
-                                // window.location.href = "uaedashboard.html"
-                                window.location.reload()
-                            }
-                            else
-                            {
-                                console.log("Transaction Failed");
-                                document.getElementById('loader').style.display = "none";
-                            }
-                        }).catch(err =>{
-                            console.error(err);
-                            document.getElementById('loader').style.display = "none";
-                        });
-                    });
-                }
-                else
-                {
-                    // alert("TrackId is already exist")
-                    document.getElementById('validationCustom03').value = "";
-                    document.getElementById('track').innerHTML = "TrackId is already exist"
-                }
-            })
-        }
-        {
-            document.getElementById('track').innerHTML = "Please provide a valid ID"
-        }
+    function tabledetails(trackId, FishName, FishCompanyName)
+    {
+        document.getElementById('trackingid').innerHTML = trackId;
+        document.getElementById('fishname').innerHTML = FishName;
+        document.getElementById('fcompanyname').innerHTML = FishCompanyName;
     }
 
     function logout()
