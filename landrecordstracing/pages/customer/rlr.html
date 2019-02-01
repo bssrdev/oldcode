@@ -258,9 +258,9 @@
                                 <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Publish and Retrieve</a>
                                 <div id="submenu-4" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
-                                        <!-- <li class="nav-item">
+                                        <li class="nav-item">
                                             <a class="nav-link" href="plr.html">Publish Land Record</a>
-                                        </li> -->
+                                        </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#">Retrieve Land Record</a>
                                         </li>
@@ -276,19 +276,19 @@
                                     </ul>
                                 </div>
                             </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Tables</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Payment</a>
                                 <div id="submenu-5" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/general-table.html">General Tables</a>
+                                            <a class="nav-link" href="payment.html">Payment</a>
                                         </li>
-                                        <li class="nav-item">
+                                        <!-- <li class="nav-item">
                                             <a class="nav-link" href="pages/data-tables.html">Data Tables</a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
-                            </li> -->
+                            </li>
                             <!-- <li class="nav-divider">
                                 Features
                             </li>
@@ -445,7 +445,7 @@
                         <div class="row">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="page-header" id="top">
-                                    <h2 class="pageheader-title">Retrieve Land Records </h2>
+                                    <h2 class="pageheader-title">Land Records Status</h2>
                                     <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                                     <div class="page-breadcrumb">
                                         <nav aria-label="breadcrumb">
@@ -551,31 +551,73 @@
                                     <table class="table table-striped table-bordered first">
                                         <thead>
                                             <tr>
-                                                <th>Publisher Address</th>
-                                                <th>Record Identifier Data</th>
-                                                <th>Amount</th>
-                                                <th>Geo Coordinates</th>
-                                                <th>Land Dimenssions(Hectares)</th>
-                                                <th>Date & Time (UTC)</th>
+                                                <th>Holding Number</th>
+                                                <th>Name of the Tenant with Father's/Husband's</th>
+                                                <th>Address</th>
+                                                <th>Nature of right</th>
+                                                <th>Survey/Plot No</th>
+                                                <th>Area(Hect)</th>
+                                                <th>Land Revenue</th>
+                                                <th>Nature of Use</th>
+                                                <th>Status</th>
                                             </tr>
                                         </thead>
-                                        <tbody id="table_content">
-                                            <!-- <tr>
-                                                <td>Ibisj673mdkU2S84xuZavU5pwXXq8LAXrM</td>
-                                                <td>This is my land</td>
-                                                <td>1000$</td>
-                                                <td>41°24’12.2″N   2°10’26.5″E</td>
-                                                <td>12.02</td>
-                                                <td>2017-12-03 04:23:45</td>
+                                        <tbody>
+                                            <tr>
+                                                <td>113</td>
+                                                <td>Wahid Akram</td>
+                                                <td>House No 78/WE</td>
+                                                <td>Occupancy</td>
+                                                <td>106/P</td>
+                                                <td>2.02</td>
+                                                <td>11</td>
+                                                <td>Construction</td>
+                                                <td><a href="#" class="btn btn-primary btn-sm" data-dismiss="modal">Signed</a></td>
                                             </tr>
                                             <tr>
-                                                <td>JgjJ9PkckU2S8dd4663jmshpwXXq8LAXrM</td>
-                                                <td>Land is given by my Father</td>
-                                                <td>2000$</td>
-                                                <td>41°24’12.2″N   2°10’26.5″E</td>
-                                                <td>12.02</td>
-                                                <td>2018-1-20 16:58:34</td>
-                                            </tr> -->
+                                                <td>456</td>
+                                                <td>Faqar Khan</td>
+                                                <td>House No 728/WE</td>
+                                                <td>Occupancy</td>
+                                                <td>106/P</td>
+                                                <td>5</td>
+                                                <td>9.98</td>
+                                                <td>Office</td>
+                                                <td><a href="#" class="btn btn-danger btn-sm" data-dismiss="modal">In Progress</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>762</td>
+                                                <td>Syed Abdul Moghni</td>
+                                                <td>House No 89/SE</td>
+                                                <td>Occupancy</td>
+                                                <td>106/P</td>
+                                                <td>6.98</td>
+                                                <td>16.23</td>
+                                                <td>Shopping Mall</td>
+                                                <td><a href="#" class="btn btn-primary btn-sm" data-dismiss="modal">Signed</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>925</td>
+                                                <td>Irfan Khan</td>
+                                                <td>House No 89/EE</td>
+                                                <td>Occupancy</td>
+                                                <td>106/P</td>
+                                                <td>12.09</td>
+                                                <td>2.67</td>
+                                                <td>Agriculture</td>
+                                                <td><a href="#" class="btn btn-primary btn-sm" data-dismiss="modal">Signed</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>650</td>
+                                                <td>Jubaid</td>
+                                                <td>House No 889/NWE</td>
+                                                <td>Occupancy</td>
+                                                <td>106/P</td>
+                                                <td>9</td>
+                                                <td>8.87</td>
+                                                <td>Carsh Washing Center</td>
+                                                <td><a href="#" class="btn btn-danger btn-sm" data-dismiss="modal">In Progress</a></td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
