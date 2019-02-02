@@ -416,7 +416,7 @@ function getFishDetails()
                 
                 if((res.role==1) && (res.current_owner_address!=obj.address)){
                     console.log(res);  
-                    $("#tdata").append('<tr><td>'+res.tracking_id+'</td><td>'+res.fish_name+'</td><td>'+res.company_name+'</td><td>'+res.iot_tracking_device_number+'</td><td><button class="btn btn-primary btn-sm" type="submit" data-toggle="modal" onclick="purchase('+ 2 +',`'+ i +'`)" data-target="#exampleModal">Buy</button></td></tr>')
+                    $("#tdata").append('<tr><td>'+res.tracking_id+'</td><td>'+res.fish_name+'</td><td>'+res.company_name+'</td><td>'+res.iot_tracking_device_number+'</td><td><button class="btn btn-primary btn-sm" type="submit" data-toggle="modal" onclick="purchase('+ 2 +',`'+ i +'`)" data-target="#exampleModal">Confirm</button></td></tr>')
                 }
                 
                 
@@ -502,7 +502,7 @@ function getFishDetails()
                 
                 if((res.role==2) && (res.current_owner_address!=obj.address)){
                     console.log(res);  
-                    $("#tabledata").append('<tr><td>'+res.tracking_id+'</td><td>'+res.fish_name+'</td><td>'+res.company_name+'</td><td>'+res.iot_tracking_device_number+'</td><td><button class="btn btn-primary btn-sm" type="submit" data-toggle="modal" onclick="purchase('+ 3 +',`'+ i +'`)" data-target="#exampleModal">Buy</button></td></tr>')
+                    $("#tabledata").append('<tr><td>'+res.tracking_id+'</td><td>'+res.fish_name+'</td><td>'+res.company_name+'</td><td>'+res.iot_tracking_device_number+'</td><td><button class="btn btn-primary btn-sm" type="submit" data-toggle="modal" onclick="purchase('+ 3 +',`'+ i +'`)" data-target="#exampleModal">Confirm</button></td></tr>')
                 }
                 
                 
