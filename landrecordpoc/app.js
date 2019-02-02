@@ -344,6 +344,53 @@ console.log(res);
 })
 }
 
+function retrieve () {
+    console.log(landrecord);
+    let creators = []
+    $('#not-signed1, #signed1').html('')
+    
+    landrecord.methods.showUserAddresses().call().then(res => {
+        res.forEach(function(data,index){
+            if(creators.indexOf(data) == -1) {
+                creators.push(data)
+                landrecord.methods.noOfUserRecords(data).call().then(num =>{
+                    range(1,parseInt(num)+1).forEach(function(recordno,i){
+                        landrecord.methods.showRecordByKeys1(data,recordno).call().then(dataset1 => {
+                            landrecord.methods.isUserSigned(data,recordno).call().then(dataset2 => {
+                                if( !dataset2 ) {
+                                    $('#not-signed1').append('\
+                                    <tr><td>'+dataset1.holding_number+'</td>\
+                                    <td>'+dataset1.tenant_name+'</td>\
+                                    <td>'+dataset1.Address+'</td>\
+                                    <td>'+dataset1.nature_of_right+'</td>\
+                                    <td>'+dataset1.survey_plot_no+'</td>\
+                                    <td>'+dataset1.area_in_hectare+'</td>\
+                                    <td>'+dataset1.land_revenue+'</td>\
+                                    <td>'+dataset1.nature_of_use+'</td>\
+                                    <td><a href="#" onclick=sign("'+data+'",'+recordno+'); class="btn btn-danger btn-sm" data-dismiss="modal">In Progress</a></td></tr>')
+                                    // console.log(dataset1);
+                                } else {
+                                    $('#signed1').append('\
+                                    <tr><td>'+dataset1.holding_number+'</td>\
+                                    <td>'+dataset1.tenant_name+'</td>\
+                                    <td>'+dataset1.Address+'</td>\
+                                    <td>'+dataset1.nature_of_right+'</td>\
+                                    <td>'+dataset1.survey_plot_no+'</td>\
+                                    <td>'+dataset1.area_in_hectare+'</td>\
+                                    <td>'+dataset1.land_revenue+'</td>\
+                                    <td>'+dataset1.nature_of_use+'</td>\
+                                    <td><a href="#" class="btn btn-primary btn-sm" data-dismiss="modal">Signed</a></td></tr>')
+                                }
+                            })
+                        })
+                    })
+                })                
+            }
+            
+        })
+    })
+}
+
 
 function Pay() {
     document.getElementById('loader').style.display = "block";
@@ -510,3 +557,4 @@ function sign(address,id) {
 
 payment_History()
 get_Signature_to_done ()
+retrieve()
