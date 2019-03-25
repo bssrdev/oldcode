@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="../../../../global_assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="../../../../global_assets/js/main/jquery.min.js"></script>
+	<script src="../../../../global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script src="../../../../global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+	<script src="../../../../global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/daterangepicker.js"></script>
+
+	<script src="assets/js/app.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/dashboard.js"></script>
+
+	<script src="../../../../global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/datatables_basic.js"></script>
+	<!-- /theme JS files -->
+
+</head>
+
+<body>
+
+	<!-- Main navbar -->
+	<div class="navbar navbar-expand-md navbar-dark">
+		<div class="navbar-brand">
+			<a href="index.html" class="d-inline-block">
+				<img src="../../../../global_assets/images/logo_light.png" alt="">
+			</a>
+		</div>
+
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-tree5"></i>
+			</button>
+			<!-- <button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+				<i class="icon-paragraph-justify3"></i>
+			</button> -->
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			<ul class="navbar-nav">
+				<!-- <li class="nav-item">
+					<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+						<i class="icon-paragraph-justify3"></i>
+					</a>
+				</li> -->
+
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
+						<!-- <i class="icon-git-compare"></i> -->
+						<i class="icon-paragraph-justify3"></i>
+						<span class="d-md-none ml-2">Logistic updates</span>
+						<!-- <span class="badge badge-pill bg-warning-400 ml-auto ml-md-0">9</span> -->
+					</a>
+
+					<div class="dropdown-menu dropdown-content wmin-md-350">
+						<div class="dropdown-content-header">
+							<span class="font-weight-semibold">Logistic updates</span>
+							<a href="#" class="text-default"><i class="icon-sync"></i></a>
+						</div>
+
+						<div class="dropdown-content-body dropdown-scrollable">
+							<ul class="media-list">
+								<li class="media">
+									<a href="#">Dashboard</a>
+								</li>
+								<li class="media">
+									<a href="#">Shipments</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<span class="badge bg-success ml-md-3 mr-md-auto">Online</span>
+
+			<ul class="navbar-nav">
+				<!-- <li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
+						<i class="icon-people"></i>
+						<span class="d-md-none ml-2">Users</span>
+					</a>
+					
+					<div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-300">
+						<div class="dropdown-content-header">
+							<span class="font-weight-semibold">Users online</span>
+							<a href="#" class="text-default"><i class="icon-search4 font-size-base"></i></a>
+						</div>
+
+						<div class="dropdown-content-body dropdown-scrollable">
+							<ul class="media-list">
+								<li class="media">
+									<div class="mr-3">
+										<img src="../../../../global_assets/images/placeholders/placeholder.jpg" width="36" height="36" class="rounded-circle" alt="">
+									</div>
+									<div class="media-body">
+										<a href="#" class="media-title font-weight-semibold">Jordana Ansley</a>
+										<span class="d-block text-muted font-size-sm">Lead web developer</span>
+									</div>
+									<div class="ml-3 align-self-center"><span class="badge badge-mark border-success"></span></div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<img src="../../../../global_assets/images/placeholders/placeholder.jpg" width="36" height="36" class="rounded-circle" alt="">
+									</div>
+									<div class="media-body">
+										<a href="#" class="media-title font-weight-semibold">Will Brason</a>
+										<span class="d-block text-muted font-size-sm">Marketing manager</span>
+									</div>
+									<div class="ml-3 align-self-center"><span class="badge badge-mark border-danger"></span></div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<img src="../../../../global_assets/images/placeholders/placeholder.jpg" width="36" height="36" class="rounded-circle" alt="">
+									</div>
+									<div class="media-body">
+										<a href="#" class="media-title font-weight-semibold">Hanna Walden</a>
+										<span class="d-block text-muted font-size-sm">Project manager</span>
+									</div>
+									<div class="ml-3 align-self-center"><span class="badge badge-mark border-success"></span></div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<img src="../../../../global_assets/images/placeholders/placeholder.jpg" width="36" height="36" class="rounded-circle" alt="">
+									</div>
+									<div class="media-body">
+										<a href="#" class="media-title font-weight-semibold">Dori Laperriere</a>
+										<span class="d-block text-muted font-size-sm">Business developer</span>
+									</div>
+									<div class="ml-3 align-self-center"><span class="badge badge-mark border-warning-300"></span></div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<img src="../../../../global_assets/images/placeholders/placeholder.jpg" width="36" height="36" class="rounded-circle" alt="">
+									</div>
+									<div class="media-body">
+										<a href="#" class="media-title font-weight-semibold">Vanessa Aurelius</a>
+										<span class="d-block text-muted font-size-sm">UX expert</span>
+									</div>
+									<div class="ml-3 align-self-center"><span class="badge badge-mark border-grey-400"></span></div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="dropdown-content-footer bg-light">
+							<a href="#" class="text-grey mr-auto">All users</a>
+							<a href="#" class="text-grey"><i class="icon-gear"></i></a>
+						</div>
+					</div>
+				</li>
+
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
+						<i class="icon-bubbles4"></i>
+						<span class="d-md-none ml-2">Messages</span>
+						<span class="badge badge-pill bg-warning-400 ml-auto ml-md-0">2</span>
+					</a>
+					
+					<div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-350">
+						<div class="dropdown-content-header">
+							<span class="font-weight-semibold">Messages</span>
+							<a href="#" class="text-default"><i class="icon-compose"></i></a>
+						</div>
+
+						<div class="dropdown-content-body dropdown-scrollable">
+							<ul class="media-list">
+								<li class="media">
+									<div class="mr-3 position-relative">
+										<img src="../../../../global_assets/images/placeholders/placeholder.jpg" width="36" height="36" class="rounded-circle" alt="">
+									</div>
+
+									<div class="media-body">
+										<div class="media-title">
+											<a href="#">
+												<span class="font-weight-semibold">James Alexander</span>
+												<span class="text-muted float-right font-size-sm">04:58</span>
+											</a>
+										</div>
+
+										<span class="text-muted">who knows, maybe that would be the best thing for me...</span>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3 position-relative">
+										<img src="../../../../global_assets/images/placeholders/placeholder.jpg" width="36" height="36" class="rounded-circle" alt="">
+									</div>
+
+									<div class="media-body">
+										<div class="media-title">
+											<a href="#">
+												<span class="font-weight-semibold">Margo Baker</span>
+												<span class="text-muted float-right font-size-sm">12:16</span>
+											</a>
+										</div>
+
+										<span class="text-muted">That was something he was unable to do because...</span>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<img src="../../../../global_assets/images/placeholders/placeholder.jpg" width="36" height="36" class="rounded-circle" alt="">
+									</div>
+									<div class="media-body">
+										<div class="media-title">
+											<a href="#">
+												<span class="font-weight-semibold">Jeremy Victorino</span>
+												<span class="text-muted float-right font-size-sm">22:48</span>
+											</a>
+										</div>
+
+										<span class="text-muted">But that would be extremely strained and suspicious...</span>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<img src="../../../../global_assets/images/placeholders/placeholder.jpg" width="36" height="36" class="rounded-circle" alt="">
+									</div>
+									<div class="media-body">
+										<div class="media-title">
+											<a href="#">
+												<span class="font-weight-semibold">Beatrix Diaz</span>
+												<span class="text-muted float-right font-size-sm">Tue</span>
+											</a>
+										</div>
+
+										<span class="text-muted">What a strenuous career it is that I've chosen...</span>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<img src="../../../../global_assets/images/placeholders/placeholder.jpg" width="36" height="36" class="rounded-circle" alt="">
+									</div>
+									<div class="media-body">
+										<div class="media-title">
+											<a href="#">
+												<span class="font-weight-semibold">Richard Vango</span>
+												<span class="text-muted float-right font-size-sm">Mon</span>
+											</a>
+										</div>
+										
+										<span class="text-muted">Other travelling salesmen live a life of luxury...</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="dropdown-content-footer justify-content-center p-0">
+							<a href="#" class="bg-light text-grey w-100 py-2" data-popup="tooltip" title="Load more"><i class="icon-menu7 d-block top-0"></i></a>
+						</div>
+					</div>
+				</li> -->
+
+				<li class="nav-item dropdown dropdown-user">
+					<a href="#" class="navbar-nav-link d-flex align-items-center" data-toggle="dropdown">
+						<!-- <img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle mr-2" height="34" alt=""> -->
+						<span>Logout</span>
+					</a>
+
+					<!-- <div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
+						<a href="#" class="dropdown-item"><i class="icon-coins"></i> My balance</a>
+						<a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Messages <span class="badge badge-pill bg-blue ml-auto">58</span></a>
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item"><i class="icon-cog5"></i> Account settings</a>
+						<a href="#" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+					</div> -->
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page content -->
+	<div class="page-content">
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Page header -->
+			<div class="page-header page-header-light">
+				<div class="page-header-content header-elements-md-inline">
+					<div class="page-title d-flex">
+						<h4><!-- <i class="icon-arrow-left52 mr-2"></i>  --><span class="font-weight-semibold">Shipments</span></h4>
+						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+					</div>
+
+					<!-- <div class="header-elements d-none">
+						<div class="d-flex justify-content-center">
+							<a href="#" class="btn btn-link btn-float text-default"><i class="icon-bars-alt text-primary"></i><span>Statistics</span></a>
+							<a href="#" class="btn btn-link btn-float text-default"><i class="icon-calculator text-primary"></i> <span>Invoices</span></a>
+							<a href="#" class="btn btn-link btn-float text-default"><i class="icon-calendar5 text-primary"></i> <span>Schedule</span></a>
+						</div>
+					</div> -->
+				</div>
+
+				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+					<div class="d-flex">
+						<div class="breadcrumb">
+							<a href="#" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Shipments</a>
+							<span class="breadcrumb-item active">PICK-UPS</span>
+						</div>
+
+						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+					</div>
+
+					<div class="header-elements d-none">
+						<div class="breadcrumb justify-content-center">
+							<!-- <a href="#" class="breadcrumb-elements-item">
+								<i class="icon-comment-discussion mr-2"></i>
+								Support
+							</a> -->
+
+							<div class="breadcrumb-elements-item dropdown p-0">
+								<a href="#" class="breadcrumb-elements-item dropdown-toggle" data-toggle="dropdown">
+									<i class="icon-gear mr-2"></i>
+									Settings
+								</a>
+
+								<div class="dropdown-menu dropdown-menu-right">
+									<a href="#" class="dropdown-item"><!-- <i class="icon-user-lock"> --></i> Pick-Ups</a>
+									<a href="#" class="dropdown-item"><!-- <i class="icon-statistics"></i> --> In-Transit</a>
+									<a href="#" class="dropdown-item"><!-- <i class="icon-accessibility"></i> --> Deliveries</a>
+									<!-- <div class="dropdown-divider"></div> -->
+									<a href="#" class="dropdown-item"><!-- <i class="icon-gear"></i> --> In The Pipeline</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /page header -->
+
+
+			<!-- Content area -->
+			<div class="content">
+
+				<!-- Cards Start here -->
+
+				<div class="row text-center mb-2">
+					<div class="col-xl-2">
+						<div class="card-group">
+						  <div class="card">
+						    <div class="card-body">
+						      <h5 class="card-title">Total Shipments</h5>
+						      <h1 class="card-title" style="font-size: 90px;">22</h1>
+						      <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+						    </div>
+						    <div class="card-footer">
+						      <small class="text-muted">Last updated 3 mins ago</small>
+						    </div>
+						  </div>
+						</div>
+					</div>
+					<div class="col-xl-6">
+						<div class="card-group">
+						  <div class="card">
+						    <div class="card-body">
+						      <h5 class="card-title">Have Not Arrived</h5>
+						      <h1 class="card-title" style="font-size: 90px;">16</h1>
+						      <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+						    </div>
+						    <div class="card-footer">
+						      <small class="text-muted">Last updated 3 mins ago</small>
+						    </div>
+						  </div>
+						  <div class="card">
+						    <div class="card-body">
+						      <h5 class="card-title">Delivered On Time</h5>
+						      <h1 class="card-title" style="font-size: 90px;">2</h1>
+						      <!-- <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p> -->
+						    </div>
+						    <div class="card-footer">
+						      <small class="text-muted">Last updated 3 mins ago</small>
+						    </div>
+						  </div>
+						  <div class="card">
+						    <div class="card-body">
+						      <h5 class="card-title">On Site</h5>
+						      <h1 class="card-title" style="font-size: 90px;">3</h1>
+						      <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> -->
+						    </div>
+						    <div class="card-footer">
+						      <small class="text-muted">Last updated 3 mins ago</small>
+						    </div>
+						  </div>
+						</div>
+					</div>
+					<div class="col-xl-4">
+						<div class="card-group">
+						  <div class="card">
+						    <div class="card-body">
+						      <h5 class="card-title">Late Deliveries</h5>
+						      <h1 class="card-title" style="font-size: 90px;">1</h1>
+						      <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+						    </div>
+						    <div class="card-footer">
+						      <small class="text-muted">Last updated 3 mins ago</small>
+						    </div>
+						  </div>
+						  <div class="card">
+						    <div class="card-body">
+						      <h5 class="card-title">Early Deliveries</h5>
+						      <h1 class="card-title" style="font-size: 90px;">0</h1>
+						      <!-- <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p> -->
+						    </div>
+						    <div class="card-footer">
+						      <small class="text-muted">Last updated 3 mins ago</small>
+						    </div>
+						  </div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Cards end here -->
+
+				<!-- Table Starts here -->
+				<div class="row">
+					<div class="col-xl-8">
+
+						<!-- Basic datatable -->
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title">Basic datatable</h5>
+								<div class="header-elements">
+									<div class="list-icons">
+				                		<!-- <a class="list-icons-item" data-action="collapse"></a> -->
+				                		<a class="list-icons-item" data-action="reload"></a>
+				                		<!-- <a class="list-icons-item" data-action="remove"></a> -->
+				                	</div>
+			                	</div>
+							</div>
+
+							<!-- <div class="card-body">
+								The <code>DataTables</code> is a highly flexible tool, based upon the foundations of progressive enhancement, and will add advanced interaction controls to any HTML table. DataTables has most features enabled by default, so all you need to do to use it with your own tables is to call the construction function. Searching, ordering, paging etc goodness will be immediately added to the table, as shown in this example. <strong>Datatables support all available table styling.</strong>
+							</div> -->
+
+							<table class="table datatable-basic">
+								<thead>
+									<tr>
+										<th>Shipment</th>
+										<th>Origin</th>
+										<th>Destination</th>
+										<th>Carrier</th>
+										<th>MABD</th>
+										<th>Appt Time</th>
+										<th>Arr Time</th>
+										<th>Completed</th>
+										<th>Status</th>
+										<!-- <th class="text-center">Actions</th> -->
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#">825614503</a></td>
+										<td>Supplier, SC</td>
+										<td>Retailer DC,AL</td>
+										<td>Carrier Inc.</td>
+										<td>2017/07/05</td>
+										<td>21:30</td>
+										<td></td>
+										<td></td>
+										<td><span class="badge badge-success">Accepted</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">825304503</a></td>
+										<td>Supplier, SC</td>
+										<td>Retailer DC,AL</td>
+										<td>Carrier Inc.</td>
+										<td>2017/07/05</td>
+										<td>21:30</td>
+										<td></td>
+										<td></td>
+										<td><span class="badge badge-success">Accepted</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">514145203</a></td>
+										<td>Supplier, SC</td>
+										<td>Retailer DC,AL</td>
+										<td>Carrier Inc.</td>
+										<td>2017/07/05</td>
+										<td>21:30</td>
+										<td></td>
+										<td></td>
+										<td><span class="badge badge-secondary">In-Transit</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">193504503</a></td>
+										<td>Supplier, SC</td>
+										<td>Retailer DC,AL</td>
+										<td>Carrier Inc.</td>
+										<td>2017/07/05</td>
+										<td>21:30</td>
+										<td></td>
+										<td></td>
+										<td><span class="badge badge-secondary">In-Transit</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">093683645</a></td>
+										<td>Supplier, SC</td>
+										<td>Retailer DC,AL</td>
+										<td>Carrier Inc.</td>
+										<td>2017/07/05</td>
+										<td>21:30</td>
+										<td></td>
+										<td></td>
+										<td><span class="badge badge-success">Accepted</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">394804503</a></td>
+										<td>Supplier, SC</td>
+										<td>Retailer DC,AL</td>
+										<td>Carrier Inc.</td>
+										<td>2017/07/05</td>
+										<td>21:30</td>
+										<td></td>
+										<td></td>
+										<td><span class="badge badge-secondary">In-Transit</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">394004503</a></td>
+										<td>Supplier, SC</td>
+										<td>Retailer DC,AL</td>
+										<td>Carrier Inc.</td>
+										<td>2017/07/05</td>
+										<td>21:30</td>
+										<td></td>
+										<td></td>
+										<td><span class="badge badge-success">Accepted</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">204504503</a></td>
+										<td>Supplier, SC</td>
+										<td>Retailer DC,AL</td>
+										<td>Carrier Inc.</td>
+										<td>2017/07/05</td>
+										<td>21:30</td>
+										<td></td>
+										<td></td>
+										<td><span class="badge badge-secondary">In-Transit</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">891504503</a></td>
+										<td>Supplier, SC</td>
+										<td>Retailer DC,AL</td>
+										<td>Carrier Inc.</td>
+										<td>2017/07/05</td>
+										<td>21:30</td>
+										<td></td>
+										<td></td>
+										<td><span class="badge badge-secondary">In-Transit</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">728104345</a></td>
+										<td>Supplier, SC</td>
+										<td>Retailer DC,AL</td>
+										<td>Carrier Inc.</td>
+										<td>2017/07/05</td>
+										<td>21:30</td>
+										<td></td>
+										<td></td>
+										<td><span class="badge badge-success">Accepted</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">198104503</a></td>
+										<td>Supplier, SC</td>
+										<td>Retailer DC,AL</td>
+										<td>Carrier Inc.</td>
+										<td>2017/07/05</td>
+										<td>21:30</td>
+										<td></td>
+										<td></td>
+										<td><span class="badge badge-secondary">In-Transit</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">987104503</a></td>
+										<td>Supplier, SC</td>
+										<td>Retailer DC,AL</td>
+										<td>Carrier Inc.</td>
+										<td>2017/07/05</td>
+										<td>21:30</td>
+										<td></td>
+										<td></td>
+										<td><span class="badge badge-success">Accepted</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">234104503</a></td>
+										<td>Supplier, SC</td>
+										<td>Retailer DC,AL</td>
+										<td>Carrier Inc.</td>
+										<td>2017/07/05</td>
+										<td>21:30</td>
+										<td></td>
+										<td></td>
+										<td><span class="badge badge-success">Accepted</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">514123503</a></td>
+										<td>Supplier, SC</td>
+										<td>Retailer DC,AL</td>
+										<td>Carrier Inc.</td>
+										<td>2017/07/05</td>
+										<td>21:30</td>
+										<td></td>
+										<td></td>
+										<td><span class="badge badge-secondary">In-Transit</span></td>
+									</tr>
+									<tr>
+										<td><a href="#">534504503</a></td>
+										<td>Supplier, SC</td>
+										<td>Retailer DC,AL</td>
+										<td>Carrier Inc.</td>
+										<td>2017/07/05</td>
+										<td>21:30</td>
+										<td></td>
+										<td></td>
+										<td><span class="badge badge-success">Accepted</span></td>
+									</tr>
+									<!-- <tr>
+										<td>Jackelyn</td>
+										<td>Weible</td>
+										<td><a href="#">Airline Transport Pilot</a></td>
+										<td>3 Oct 1981</td>
+										<td><span class="badge badge-secondary">Inactive</span></td>
+										<td class="text-center">
+											<div class="list-icons">
+												<div class="dropdown">
+													<a href="#" class="list-icons-item" data-toggle="dropdown">
+														<i class="icon-menu9"></i>
+													</a>
+
+													<div class="dropdown-menu dropdown-menu-right">
+														<a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Aura</td>
+										<td>Hard</td>
+										<td>Business Services Sales Representative</td>
+										<td>19 Apr 1969</td>
+										<td><span class="badge badge-danger">Suspended</span></td>
+										<td class="text-center">
+											<div class="list-icons">
+												<div class="dropdown">
+													<a href="#" class="list-icons-item" data-toggle="dropdown">
+														<i class="icon-menu9"></i>
+													</a>
+
+													<div class="dropdown-menu dropdown-menu-right">
+														<a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Nathalie</td>
+										<td><a href="#">Pretty</a></td>
+										<td>Drywall Stripper</td>
+										<td>13 Dec 1977</td>
+										<td><span class="badge badge-info">Pending</span></td>
+										<td class="text-center">
+											<div class="list-icons">
+												<div class="dropdown">
+													<a href="#" class="list-icons-item" data-toggle="dropdown">
+														<i class="icon-menu9"></i>
+													</a>
+
+													<div class="dropdown-menu dropdown-menu-right">
+														<a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Sharan</td>
+										<td>Leland</td>
+										<td>Aviation Tactical Readiness Officer</td>
+										<td>30 Dec 1991</td>
+										<td><span class="badge badge-secondary">Inactive</span></td>
+										<td class="text-center">
+											<div class="list-icons">
+												<div class="dropdown">
+													<a href="#" class="list-icons-item" data-toggle="dropdown">
+														<i class="icon-menu9"></i>
+													</a>
+
+													<div class="dropdown-menu dropdown-menu-right">
+														<a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Maxine</td>
+										<td><a href="#">Woldt</a></td>
+										<td><a href="#">Business Services Sales Representative</a></td>
+										<td>17 Oct 1987</td>
+										<td><span class="badge badge-info">Pending</span></td>
+										<td class="text-center">
+											<div class="list-icons">
+												<div class="dropdown">
+													<a href="#" class="list-icons-item" data-toggle="dropdown">
+														<i class="icon-menu9"></i>
+													</a>
+
+													<div class="dropdown-menu dropdown-menu-right">
+														<a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Sylvia</td>
+										<td><a href="#">Mcgaughy</a></td>
+										<td>Hemodialysis Technician</td>
+										<td>11 Nov 1983</td>
+										<td><span class="badge badge-danger">Suspended</span></td>
+										<td class="text-center">
+											<div class="list-icons">
+												<div class="dropdown">
+													<a href="#" class="list-icons-item" data-toggle="dropdown">
+														<i class="icon-menu9"></i>
+													</a>
+
+													<div class="dropdown-menu dropdown-menu-right">
+														<a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Lizzee</td>
+										<td><a href="#">Goodlow</a></td>
+										<td>Technical Services Librarian</td>
+										<td>1 Nov 1961</td>
+										<td><span class="badge badge-danger">Suspended</span></td>
+										<td class="text-center">
+											<div class="list-icons">
+												<div class="dropdown">
+													<a href="#" class="list-icons-item" data-toggle="dropdown">
+														<i class="icon-menu9"></i>
+													</a>
+
+													<div class="dropdown-menu dropdown-menu-right">
+														<a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Kennedy</td>
+										<td>Haley</td>
+										<td>Senior Marketing Designer</td>
+										<td>18 Dec 1960</td>
+										<td><span class="badge badge-success">Active</span></td>
+										<td class="text-center">
+											<div class="list-icons">
+												<div class="dropdown">
+													<a href="#" class="list-icons-item" data-toggle="dropdown">
+														<i class="icon-menu9"></i>
+													</a>
+
+													<div class="dropdown-menu dropdown-menu-right">
+														<a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Chantal</td>
+										<td><a href="#">Nailor</a></td>
+										<td>Technical Services Librarian</td>
+										<td>10 Jan 1980</td>
+										<td><span class="badge badge-secondary">Inactive</span></td>
+										<td class="text-center">
+											<div class="list-icons">
+												<div class="dropdown">
+													<a href="#" class="list-icons-item" data-toggle="dropdown">
+														<i class="icon-menu9"></i>
+													</a>
+
+													<div class="dropdown-menu dropdown-menu-right">
+														<a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Delma</td>
+										<td>Bonds</td>
+										<td>Lead Brand Manager</td>
+										<td>21 Dec 1968</td>
+										<td><span class="badge badge-info">Pending</span></td>
+										<td class="text-center">
+											<div class="list-icons">
+												<div class="dropdown">
+													<a href="#" class="list-icons-item" data-toggle="dropdown">
+														<i class="icon-menu9"></i>
+													</a>
+
+													<div class="dropdown-menu dropdown-menu-right">
+														<a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Roland</td>
+										<td>Salmos</td>
+										<td><a href="#">Senior Program Developer</a></td>
+										<td>5 Jun 1986</td>
+										<td><span class="badge badge-secondary">Inactive</span></td>
+										<td class="text-center">
+											<div class="list-icons">
+												<div class="dropdown">
+													<a href="#" class="list-icons-item" data-toggle="dropdown">
+														<i class="icon-menu9"></i>
+													</a>
+
+													<div class="dropdown-menu dropdown-menu-right">
+														<a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Coy</td>
+										<td>Wollard</td>
+										<td>Customer Service Operator</td>
+										<td>12 Oct 1982</td>
+										<td><span class="badge badge-success">Active</span></td>
+										<td class="text-center">
+											<div class="list-icons">
+												<div class="dropdown">
+													<a href="#" class="list-icons-item" data-toggle="dropdown">
+														<i class="icon-menu9"></i>
+													</a>
+
+													<div class="dropdown-menu dropdown-menu-right">
+														<a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Maxwell</td>
+										<td>Maben</td>
+										<td>Regional Representative</td>
+										<td>25 Feb 1988</td>
+										<td><span class="badge badge-danger">Suspended</span></td>
+										<td class="text-center">
+											<div class="list-icons">
+												<div class="dropdown">
+													<a href="#" class="list-icons-item" data-toggle="dropdown">
+														<i class="icon-menu9"></i>
+													</a>
+
+													<div class="dropdown-menu dropdown-menu-right">
+														<a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Cicely</td>
+										<td>Sigler</td>
+										<td><a href="#">Senior Research Officer</a></td>
+										<td>15 Mar 1960</td>
+										<td><span class="badge badge-info">Pending</span></td>
+										<td class="text-center">
+											<div class="list-icons">
+												<div class="dropdown">
+													<a href="#" class="list-icons-item" data-toggle="dropdown">
+														<i class="icon-menu9"></i>
+													</a>
+
+													<div class="dropdown-menu dropdown-menu-right">
+														<a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
+														<a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr> -->
+								</tbody>
+							</table>
+						</div>
+						<!-- /basic datatable -->
+
+					</div>
+
+					<div class="col-xl-4">
+
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h6 class="card-title">Blockchain Details</h6>
+								<div class="header-elements">
+									<span><i class="icon-history text-warning mr-2"></i> Jul 5, 10:30</span>
+									<span class="badge bg-success align-self-start ml-3">Accepted</span>
+								</div>
+							</div>
+
+							<!-- Numbers -->
+							<div class="card-body py-0">
+								<div class="row text-center">
+									<div class="col-4">
+										<div class="mb-3">
+											<h5 class="font-weight-semibold mb-0">514104503</h5>
+											<span class="text-muted font-size-sm">Shipment</span>
+										</div>
+									</div>
+
+									<div class="col-4">
+										<div class="mb-3">
+											<h5 class="font-weight-semibold mb-0">UH89AS45</h5>
+											<span class="text-muted font-size-sm">Container ID</span>
+										</div>
+									</div>
+
+									<div class="col-4">
+										<div class="mb-3">
+											<h5 class="font-weight-semibold mb-0">Retailer DC, PA</h5>
+											<span class="text-muted font-size-sm">Destination</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /numbers -->
+
+
+							<!-- Area chart -->
+							<!-- <div id="messages-stats"></div> -->
+							<!-- /area chart -->
+
+
+							<!-- Tabs -->
+		                	<ul class="nav nav-tabs nav-tabs-solid nav-justified bg-indigo-400 border-x-0 border-bottom-0 border-top-indigo-300 mb-0">
+								<li class="nav-item">
+									<a href="#messages-tue" class="nav-link font-size-sm text-uppercase active" data-toggle="tab">
+										Contents
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="#messages-mon" class="nav-link font-size-sm text-uppercase" data-toggle="tab">
+										Maps
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="#messages-fri" class="nav-link font-size-sm text-uppercase" data-toggle="tab">
+										Blockchain Data
+									</a>
+								</li>
+							</ul>
+							<!-- /tabs -->
+
+
+							<!-- Tabs content -->
+							<div class="tab-content card-body">
+								<div class="tab-pane active fade show" id="messages-tue">
+									<ul class="media-list">
+										<li class="media">
+											<div class="mr-3 position-relative">
+												<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" height="36" alt="">
+												<span class="badge bg-danger-400 badge-pill badge-float border-2 border-white">8</span>
+											</div>
+
+											<div class="media-body">
+												<div class="d-flex justify-content-between">
+													<a href="#">James Alexander</a>
+													<span class="font-size-sm text-muted">14:58</span>
+												</div>
+
+												The constitutionally inventoried precariously...
+											</div>
+										</li>
+
+										<li class="media">
+											<div class="mr-3 position-relative">
+												<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" height="36" alt="">
+												<span class="badge bg-danger-400 badge-pill badge-float border-2 border-white">6</span>
+											</div>
+
+											<div class="media-body">
+												<div class="d-flex justify-content-between">
+													<a href="#">Margo Baker</a>
+													<span class="font-size-sm text-muted">12:16</span>
+												</div>
+
+												Pinched a well more moral chose goodness...
+											</div>
+										</li>
+
+										<li class="media">
+											<div class="mr-3">
+												<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" height="36" alt="">
+											</div>
+
+											<div class="media-body">
+												<div class="d-flex justify-content-between">
+													<a href="#">Jeremy Victorino</a>
+													<span class="font-size-sm text-muted">09:48</span>
+												</div>
+
+												Pert thickly mischievous clung frowned well...
+											</div>
+										</li>
+
+										<li class="media">
+											<div class="mr-3">
+												<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" height="36" alt="">
+											</div>
+
+											<div class="media-body">
+												<div class="d-flex justify-content-between">
+													<a href="#">Beatrix Diaz</a>
+													<span class="font-size-sm text-muted">05:54</span>
+												</div>
+
+												Nightingale taped hello bucolic fussily cardinal...
+											</div>
+										</li>
+
+										<li class="media">
+											<div class="mr-3">
+												<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" height="36" alt="">
+											</div>
+
+											<div class="media-body">												
+												<div class="d-flex justify-content-between">
+													<a href="#">Richard Vango</a>
+													<span class="font-size-sm text-muted">01:43</span>
+												</div>
+
+												Amidst roadrunner distantly pompously where...
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="tab-pane fade" id="messages-mon">
+									<ul class="media-list">
+										<li class="media">
+											<div class="mr-3">
+												<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" height="36" alt="">
+											</div>
+
+											<div class="media-body">
+												<div class="d-flex justify-content-between">
+													<a href="#">Isak Temes</a>
+													<span class="font-size-sm text-muted">Tue, 19:58</span>
+												</div>
+
+												Reasonable palpably rankly expressly grimy...
+											</div>
+										</li>
+
+										<li class="media">
+											<div class="mr-3">
+												<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" height="36" alt="">
+											</div>
+
+											<div class="media-body">
+												<div class="d-flex justify-content-between">
+													<a href="#">Vittorio Cosgrove</a>
+													<span class="font-size-sm text-muted">Tue, 16:35</span>
+												</div>
+
+												Arguably therefore more unexplainable fumed...
+											</div>
+										</li>
+
+										<li class="media">
+											<div class="mr-3">
+												<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" height="36" alt="">
+											</div>
+
+											<div class="media-body">
+												<div class="d-flex justify-content-between">
+													<a href="#">Hilary Talaugon</a>
+													<span class="font-size-sm text-muted">Tue, 12:16</span>
+												</div>
+
+												Nicely unlike porpoise a kookaburra past more...
+											</div>
+										</li>
+
+										<li class="media">
+											<div class="mr-3">
+												<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" height="36" alt="">
+											</div>
+
+											<div class="media-body">
+												<div class="d-flex justify-content-between">
+													<a href="#">Bobbie Seber</a>
+													<span class="font-size-sm text-muted">Tue, 09:20</span>
+												</div>
+
+												Before visual vigilantly fortuitous tortoise...
+											</div>
+										</li>
+
+										<li class="media">
+											<div class="mr-3">
+												<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" height="36" alt="">
+											</div>
+
+											<div class="media-body">
+												<div class="d-flex justify-content-between">
+													<a href="#">Walther Laws</a>
+													<span class="font-size-sm text-muted">Tue, 03:29</span>
+												</div>
+
+												Far affecting more leered unerringly dishonest...
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="tab-pane fade" id="messages-fri">
+									<!-- Latest posts -->
+									<div class="card">
+										<div class="card-header header-elements-inline">
+											<h6 class="card-title">Pickup Arrival</h6>
+											<div class="header-elements">
+												<div class="list-icons">
+							                		<a class="list-icons-item" data-action="collapse"></a>
+							                		<!-- <a class="list-icons-item" data-action="reload"></a> -->
+							                		<!-- <a class="list-icons-item" data-action="remove"></a> -->
+							                	</div>
+						                	</div>
+					                	</div>
+
+										<div class="card-body pb-0">
+											<div class="row">
+
+
+											</div>
+										</div>
+									</div>
+									<!-- /latest posts -->
+
+									<!-- Latest posts -->
+									<div class="card">
+										<div class="card-header header-elements-inline">
+											<h6 class="card-title">Pickup Departure</h6>
+											<div class="header-elements">
+												<div class="list-icons">
+							                		<a class="list-icons-item" data-action="collapse"></a>
+							                		<!-- <a class="list-icons-item" data-action="reload"></a> -->
+							                		<!-- <a class="list-icons-item" data-action="remove"></a> -->
+							                	</div>
+						                	</div>
+					                	</div>
+
+										<div class="card-body pb-0">
+											<div class="row">
+
+												
+											</div>
+										</div>
+									</div>
+									<!-- /latest posts -->
+
+									<!-- Latest posts -->
+									<div class="card">
+										<div class="card-header header-elements-inline">
+											<h6 class="card-title">In-Transit</h6>
+											<div class="header-elements">
+												<div class="list-icons">
+							                		<a class="list-icons-item" data-action="collapse"></a>
+							                		<!-- <a class="list-icons-item" data-action="reload"></a> -->
+							                		<!-- <a class="list-icons-item" data-action="remove"></a> -->
+							                	</div>
+						                	</div>
+					                	</div>
+
+										<div class="card-body pb-0">
+											<div class="row">
+
+												
+											</div>
+										</div>
+									</div>
+									<!-- /latest posts -->
+
+									<!-- Latest posts -->
+									<div class="card">
+										<div class="card-header header-elements-inline">
+											<h6 class="card-title">Delivery Arrival</h6>
+											<div class="header-elements">
+												<div class="list-icons">
+							                		<a class="list-icons-item" data-action="collapse"></a>
+							                		<!-- <a class="list-icons-item" data-action="reload"></a> -->
+							                		<!-- <a class="list-icons-item" data-action="remove"></a> -->
+							                	</div>
+						                	</div>
+					                	</div>
+
+										<div class="card-body pb-0">
+											<div class="row">
+
+												
+											</div>
+										</div>
+									</div>
+									<!-- /latest posts -->
+
+									<!-- Latest posts -->
+									<div class="card">
+										<div class="card-header header-elements-inline">
+											<h6 class="card-title">Unload Completion</h6>
+											<div class="header-elements">
+												<div class="list-icons">
+							                		<a class="list-icons-item" data-action="collapse"></a>
+							                		<!-- <a class="list-icons-item" data-action="reload"></a> -->
+							                		<!-- <a class="list-icons-item" data-action="remove"></a> -->
+							                	</div>
+						                	</div>
+					                	</div>
+
+										<div class="card-body pb-0">
+											<div class="row">
+
+												
+											</div>
+										</div>
+									</div>
+									<!-- /latest posts -->
+
+									<!-- Latest posts -->
+									<div class="card">
+										<div class="card-header header-elements-inline">
+											<h6 class="card-title">Delivery Appointment</h6>
+											<div class="header-elements">
+												<div class="list-icons">
+							                		<a class="list-icons-item" data-action="collapse"></a>
+							                		<!-- <a class="list-icons-item" data-action="reload"></a> -->
+							                		<!-- <a class="list-icons-item" data-action="remove"></a> -->
+							                	</div>
+						                	</div>
+					                	</div>
+
+										<div class="card-body pb-0">
+											<div class="row">
+
+												
+											</div>
+										</div>
+									</div>
+									<!-- /latest posts -->
+									<!-- <ul class="media-list">
+										<li class="media">
+											<div class="mr-3">
+												<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" height="36" alt="">
+											</div>
+
+											<div class="media-body">
+												<div class="d-flex justify-content-between">
+													<a href="#">Owen Stretch</a>
+													<span class="font-size-sm text-muted">Mon, 18:12</span>
+												</div>
+
+												Tardy rattlesnake seal raptly earthworm...
+											</div>
+										</li>
+
+										<li class="media">
+											<div class="mr-3">
+												<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" height="36" alt="">
+											</div>
+
+											<div class="media-body">
+												<div class="d-flex justify-content-between">
+													<a href="#">Jenilee Mcnair</a>
+													<span class="font-size-sm text-muted">Mon, 14:03</span>
+												</div>
+
+												Since hello dear pushed amid darn trite...
+											</div>
+										</li>
+
+										<li class="media">
+											<div class="mr-3">
+												<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" height="36" alt="">
+											</div>
+
+											<div class="media-body">
+												<div class="d-flex justify-content-between">
+													<a href="#">Alaster Jain</a>
+													<span class="font-size-sm text-muted">Mon, 13:59</span>
+												</div>
+
+												Dachshund cardinal dear next jeepers well...
+											</div>
+										</li>
+
+										<li class="media">
+											<div class="mr-3">
+												<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" height="36" alt="">
+											</div>
+
+											<div class="media-body">
+												<div class="d-flex justify-content-between">
+													<a href="#">Sigfrid Thisted</a>
+													<span class="font-size-sm text-muted">Mon, 09:26</span>
+												</div>
+
+												Lighted wolf yikes less lemur crud grunted...
+											</div>
+										</li>
+
+										<li class="media">
+											<div class="mr-3">
+												<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" height="36" alt="">
+											</div>
+
+											<div class="media-body">
+												<div class="d-flex justify-content-between">
+													<a href="#">Sherilyn Mckee</a>
+													<span class="font-size-sm text-muted">Mon, 06:38</span>
+												</div>
+
+												Less unicorn a however careless husky...
+											</div>
+										</li>
+									</ul> -->
+								</div>
+							</div>
+							<!-- /tabs content -->
+
+						</div>
+						<!-- /my messages -->
+
+					</div>
+				</div>
+				<!-- Table Ends here -->
+			</div>
+			<!-- /content area -->
+
+
+			<!-- Footer -->
+			<div class="navbar navbar-expand-lg navbar-light">
+				<div class="text-center d-lg-none w-100">
+					<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-footer">
+						<i class="icon-unfold mr-2"></i>
+						Footer
+					</button>
+				</div>
+
+				<div class="navbar-collapse collapse" id="navbar-footer">
+					<!-- <span class="navbar-text">
+						&copy; 2015 - 2018. <a href="#">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov" target="_blank">Eugene Kopyov</a>
+					</span> -->
+
+					<ul class="navbar-nav ml-lg-auto">
+						<li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link" target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
+						<!-- <li class="nav-item"><a href="http://demo.interface.club/limitless/docs/" class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i> Docs</a></li> -->
+						<!-- <li class="nav-item"><a href="https://themeforest.net/item/limitless-responsive-web-application-kit/13080328?ref=kopyov" class="navbar-nav-link font-weight-semibold"><span class="text-pink-400"><i class="icon-cart2 mr-2"></i> Purchase</span></a></li> -->
+					</ul>
+				</div>
+			</div>
+			<!-- /footer -->
+
+		</div>
+		<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
+
+</body>
+</html>

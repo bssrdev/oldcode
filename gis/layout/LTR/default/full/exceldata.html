@@ -23,8 +23,14 @@
 	<!-- /core JS files -->
 
 	<!-- Theme JS files -->
+	<script src="../../../../global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+	<script src="../../../../global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/daterangepicker.js"></script>
+
 	<script src="../../../../global_assets/js/plugins/forms/wizards/steps.min.js"></script>
-	<script src="../../../../global_assets/js/plugins/forms/selects/select2.min.js"></script>
 	<script src="../../../../global_assets/js/plugins/forms/styling/uniform.min.js"></script>
 	<script src="../../../../global_assets/js/plugins/forms/inputs/inputmask.js"></script>
 	<script src="../../../../global_assets/js/plugins/forms/validation/validate.min.js"></script>
@@ -32,8 +38,14 @@
 	<script src="../../../../global_assets/js/plugins/notifications/bootbox.min.js"></script>
 	<script src="../../../../global_assets/js/demo_pages/components_modals.js"></script>
 
-	<script src="assets/js/app.js"></script>
 	<script src="../../../../global_assets/js/demo_pages/form_wizard.js"></script>
+
+	<script src="assets/js/app.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/dashboard.js"></script>
+
+	<script src="../../../../global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/datatables_basic.js"></script>
 	<!-- /theme JS files -->
 
 </head>
@@ -313,7 +325,7 @@
 			<div class="page-header page-header-light">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><!-- <i class="icon-arrow-left52 mr-2"></i>  --><span class="font-weight-semibold">Survey Department</span></h4>
+						<h4><!-- <i class="icon-arrow-left52 mr-2"></i>  --><span class="font-weight-semibold">Planning Department</span></h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
@@ -329,8 +341,8 @@
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 					<div class="d-flex">
 						<div class="breadcrumb">
-							<a href="#" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Survey Department</a>
-							<span class="breadcrumb-item active">Update</span>
+							<a href="#" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Planning Department</a>
+							<span class="breadcrumb-item active">Overview</span>
 						</div>
 
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -343,20 +355,20 @@
 								Support
 							</a> -->
 
-							<!-- <div class="breadcrumb-elements-item dropdown p-0">
+							<div class="breadcrumb-elements-item dropdown p-0">
 								<a href="#" class="breadcrumb-elements-item dropdown-toggle" data-toggle="dropdown">
 									<i class="icon-gear mr-2"></i>
 									More Options
 								</a>
 
 								<div class="dropdown-menu dropdown-menu-right">
-									<a href="#" class="dropdown-item"><i class="icon-user-lock"></i> Overview</a>
-									<a href="#" class="dropdown-item"><i class="icon-statistics"></i> Create and Update</a>
-									<a href="#" class="dropdown-item"><i class="icon-accessibility"></i> Deliveries</a>
+									<a href="#" class="dropdown-item"><!-- <i class="icon-user-lock"></i> --> Overview</a>
+									<a href="#" class="dropdown-item"><!-- <i class="icon-statistics"></i> --> Create and Update</a>
+									<!-- <a href="#" class="dropdown-item"><i class="icon-accessibility"></i> Deliveries</a>
 									<div class="dropdown-divider"></div>
-									<a href="#" class="dropdown-item"><i class="icon-gear"></i> In The Pipeline</a>
+									<a href="#" class="dropdown-item"><i class="icon-gear"></i> In The Pipeline</a> -->
 								</div>
-							</div> -->
+							</div>
 						</div>
 					</div>
 				</div>
@@ -369,180 +381,370 @@
 
 				<!-- Main charts -->
 				<div class="row">
-					
-					<div class="col-md-8">
+					<div class="col-xl-7">
 
-						<!-- Basic layout-->
+						<!-- Traffic sources -->
 						<div class="card">
 							<div class="card-header header-elements-inline">
-								<h5 class="card-title">Update existing record</h5>
-								<!-- <div class="header-elements">
-									<div class="list-icons">
-				                		<a class="list-icons-item" data-action="collapse"></a>
-				                		<a class="list-icons-item" data-action="reload"></a>
-				                		<a class="list-icons-item" data-action="remove"></a>
-				                	</div>
-			                	</div> -->
-							</div>
-
-							<div class="card-body">
-								<form action="#">
-
-									<div class="form-group">
-										<label>Choose Makani Number:</label>
-										<select class="form-control form-control-select2" data-fouc>
-											<optgroup label="URI">
-												<option>50314949</option>
-												<option>50314861</option>
-												<option>50237167</option>
-												<option>50241388</option>
-											</optgroup>
-										</select>
-									</div>
-
-									<div class="form-group">
-										<label>Owner Name:</label>
-										<input type="text" class="form-control" placeholder="Owner Name" disabled>
-									</div>
-
-									<div class="form-group">
-										<label>Mobile Number:</label>
-										<input type="text" class="form-control" placeholder="Mobile Number" disabled>
-									</div>
-
-									<div class="form-group">
-										<label>Pin Code:</label>
-										<input type="text" class="form-control" placeholder="Pin code" disabled>
-									</div>
-
-									<div class="form-group">
-										<label>State:</label>
-										<input type="text" class="form-control" placeholder="State" disabled>
-									</div>
-
-									<div class="form-group">
-										<label>Gender:</label>
-										<input type="text" class="form-control" placeholder="Gender" disabled>
-									</div>
-
-									<div class="form-group">
-										<label>Record creation date:</label>
-										<input type="date" class="form-control" placeholder="Date" disabled>
-									</div>
-
-									<div class="form-group">
-										<label>Record creation time:</label>
-										<input type="time" class="form-control" placeholder="Time" disabled>
-									</div>
-
-									<div class="form-group">
-										<label>Geo Coordinates:</label>
-										<input type="text" class="form-control" placeholder="Coordinates">
-									</div>
-
-									<div class="form-group">
-										<label>Area:</label>
-										<input type="text" class="form-control" placeholder="Area of land in hectares">
-									</div>
-
-									<div class="form-group">
-										<label>Upload pictures:</label>
-										<input type="file" class="form-input-styled" data-fouc>
-										<span class="form-text text-muted">Accepted formats: gif, png, jpg. Max file size 2Mb</span>
-									</div>
-
-									<!-- <div class="form-group">
-										<label class="d-block">Gender:</label>
-
-										<div class="form-check form-check-inline">
-											<label class="form-check-label">
-												<input type="radio" class="form-input-styled" name="gender" checked data-fouc>
-												Male
-											</label>
-										</div>
-
-										<div class="form-check form-check-inline">
-											<label class="form-check-label">
-												<input type="radio" class="form-input-styled" name="gender" data-fouc>
-												Female
-											</label>
-										</div>
-									</div> -->
-
-									<!-- <div class="form-group">
-										<label>Your avatar:</label>
-										<input type="file" class="form-input-styled" data-fouc>
-										<span class="form-text text-muted">Accepted formats: gif, png, jpg. Max file size 2Mb</span>
-									</div> -->
-
-									<!-- <div class="form-group">
-										<label>Tags:</label>
-										<select multiple="multiple" data-placeholder="Enter tags" class="form-control form-control-select2-icons" data-fouc>
-											<optgroup label="Services">
-												<option value="wordpress2" data-icon="wordpress2">Wordpress</option>
-												<option value="tumblr2" data-icon="tumblr2">Tumblr</option>
-												<option value="stumbleupon" data-icon="stumbleupon">Stumble upon</option>
-												<option value="pinterest2" data-icon="pinterest2">Pinterest</option>
-												<option value="lastfm2" data-icon="lastfm2">Lastfm</option>
-											</optgroup>
-											<optgroup label="File types">
-												<option value="pdf" data-icon="file-pdf">PDF</option>
-												<option value="word" data-icon="file-word">Word</option>
-												<option value="excel" data-icon="file-excel">Excel</option>
-												<option value="openoffice" data-icon="file-openoffice">Open office</option>
-											</optgroup>
-											<optgroup label="Browsers">
-												<option value="chrome" data-icon="chrome" selected>Chrome</option>
-												<option value="firefox" data-icon="firefox" selected>Firefox</option>
-												<option value="safari" data-icon="safari">Safari</option>
-												<option value="opera" data-icon="opera">Opera</option>
-												<option value="IE" data-icon="IE">IE</option>
-											</optgroup>
-										</select>
-									</div> -->
-
-									<div class="form-group">
-										<label>Your message:</label>
-										<textarea rows="5" cols="5" class="form-control" placeholder="Enter your message here"></textarea>
-									</div>
-
-									<div class="text-right">
-										<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modal_theme_success_1">Update Record <i class="icon-paperplane ml-2"></i></button>
-									</div>
-								</form>
-							</div>
-						</div>
-						<!-- /basic layout -->
-						<!-- Success modal -->
-						<div id="modal_theme_success_1" class="modal fade" tabindex="-1">
-							<div class="modal-dialog">
-								<div class="modal-content">
-									<div class="modal-header bg-success">
-										<h6 class="modal-title">Notification</h6>
-										<button type="button" class="close" data-dismiss="modal">&times;</button>
-									</div>
-
-									<div class="modal-body">
-										<!-- <h6 class="font-weight-semibold">Text in a modal</h6> -->
-										<p>Details are pushed and updated on the record.</p>
-
-										<!-- <hr> -->
-
-										<!-- <h6 class="font-weight-semibold" style="text-align: center;">Your transaction details will be emailed and also sent to your mobile number.</h6> -->
-										<!-- <p style="font-size: 80px;text-align: center;">50314861</p> -->
-										<!-- <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p> -->
-									</div>
-
-									<div class="modal-footer">
-										<button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-										<!-- <button type="button" class="btn bg-success">Save changes</button> -->
+								<h6 class="card-title">GIS sources</h6>
+								<div class="header-elements">
+									<div class="form-check form-check-right form-check-switchery form-check-switchery-sm">
+										<label class="form-check-label">
+											Live update:
+											<input type="checkbox" class="form-input-switchery" checked data-fouc>
+										</label>
 									</div>
 								</div>
 							</div>
+
+							<div class="card-body py-0">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="d-flex align-items-center justify-content-center mb-2">
+											<a href="#" class="btn bg-transparent border-teal text-teal rounded-round border-2 btn-icon mr-3">
+												<i class="icon-plus3"></i>
+											</a>
+											<div>
+												<div class="font-weight-semibold">New boundaries added</div>
+												<span class="text-muted">2,349 avg</span>
+											</div>
+										</div>
+										<div class="w-75 mx-auto mb-3" id="new-visitors"></div>
+									</div>
+
+									<div class="col-sm-4">
+										<div class="d-flex align-items-center justify-content-center mb-2">
+											<a href="#" class="btn bg-transparent border-warning-400 text-warning-400 rounded-round border-2 btn-icon mr-3">
+												<i class="icon-watch2"></i>
+											</a>
+											<div>
+												<div class="font-weight-semibold">Modified boundaries</div>
+												<span class="text-muted">1,001 avg</span>
+											</div>
+										</div>
+										<div class="w-75 mx-auto mb-3" id="new-sessions"></div>
+									</div>
+
+									<div class="col-sm-4">
+										<div class="d-flex align-items-center justify-content-center mb-2">
+											<a href="#" class="btn bg-transparent border-indigo-400 text-indigo-400 rounded-round border-2 btn-icon mr-3">
+												<i class="icon-people"></i>
+											</a>
+											<div>
+												<div class="font-weight-semibold">Total parcels created</div>
+												<span class="text-muted"><span class="badge badge-mark border-success mr-2"></span> 3,350 avg</span>
+											</div>
+										</div>
+										<div class="w-75 mx-auto mb-3" id="total-online"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="chart position-relative" id="traffic-sources"></div>
 						</div>
-						<!-- /success modal -->
+						<!-- /traffic sources -->
+
+					</div>
+
+					<div class="col-xl-5">
+
+						<!-- Sales stats -->
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h6 class="card-title">Sales statistics</h6>
+								<div class="header-elements">
+									<select class="form-control" id="select_date" data-fouc>
+										<option value="val1">June, 29 - July, 5</option>
+										<option value="val2">June, 22 - June 28</option>
+										<option value="val3" selected>June, 15 - June, 21</option>
+										<option value="val4">June, 8 - June, 14</option>
+									</select>
+			                	</div>
+							</div>
+
+							<div class="card-body py-0">
+								<div class="row text-center">
+									<div class="col-4">
+										<div class="mb-3">
+											<h5 class="font-weight-semibold mb-0">5,689</h5>
+											<span class="text-muted font-size-sm">new boundaries added</span>
+										</div>
+									</div>
+
+									<div class="col-4">
+										<div class="mb-3">
+											<h5 class="font-weight-semibold mb-0">32,568</h5>
+											<span class="text-muted font-size-sm">this month</span>
+										</div>
+									</div>
+
+									<div class="col-4">
+										<div class="mb-3">
+											<h5 class="font-weight-semibold mb-0">$23,464</h5>
+											<span class="text-muted font-size-sm">expected revenue</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="chart mb-2" id="app_sales"></div>
+							<div class="chart" id="monthly-sales-stats"></div>
+						</div>
+						<!-- /sales stats -->
+
 					</div>
 				</div>
+				<!-- /main charts -->
+
+				<!-- Table Starts here -->
+				<div class="row">
+					<div class="col-xl-12">
+
+						<!-- Basic datatable -->
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title">Basic datatable</h5>
+								<div class="header-elements">
+									<div class="list-icons">
+				                		<!-- <a class="list-icons-item" data-action="collapse"></a> -->
+				                		<a class="list-icons-item" data-action="reload"></a>
+				                		<!-- <a class="list-icons-item" data-action="remove"></a> -->
+				                	</div>
+			                	</div>
+							</div>
+
+							<!-- <div class="card-body">
+								The <code>DataTables</code> is a highly flexible tool, based upon the foundations of progressive enhancement, and will add advanced interaction controls to any HTML table. DataTables has most features enabled by default, so all you need to do to use it with your own tables is to call the construction function. Searching, ordering, paging etc goodness will be immediately added to the table, as shown in this example. <strong>Datatables support all available table styling.</strong>
+							</div> -->
+
+							<table class="table datatable-basic">
+								<thead>
+									<tr>
+										<th>TRNS_ID</th>
+										<th>TRNS_TYPE_ID</th>
+										<th>TRNS_TYPE</th>
+										<th>DATE_STARTED</th>
+										<th>DATE_ENDED</th>
+										<th>ENTRY_UID</th>
+										<th>ENTRY_WHEN</th>
+										<th>COMM_PARCEL_ID</th>
+										<th>MOD_REASON</th>
+										<th>MOD_TYPE</th>
+										<th>PARENT_COMM_PARCEL__ID</th>
+										<th>CHILD_COMM_PARCEL__ID</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#" data-toggle="modal" data-target="#modal_theme_success">50314949</a></td>
+										<td>1</td>
+										<td>Parcel Adjustment</td>
+										<td>12/07/2017 00:00:00</td>
+										<td>12/07/2017 00:00:00</td>
+										<td>mohammed</td>
+										<td>12/07/2017 00:00:00</td>
+										<td>8901234</td>
+										<td>REVISED ACCORDING TO PLANNING</td>
+										<td>TITLE CHANGE</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="#" data-toggle="modal" data-target="#modal_theme_success">50028075</a></td>
+										<td>13</td>
+										<td>Change Of Location</td>
+										<td>09/27/2009 00:00:00</td>
+										<td>09/27/2009 00:00:00</td>
+										<td>fatima</td>
+										<td>09/27/2009 00:00:00</td>
+										<td>9012346</td>
+										<td>CHANGE LOCATION</td>
+										<td>CHANGE OWNER</td>
+										<td>2820981</td>
+										<td>2824399</td>
+									</tr>
+									<tr>
+										<td><a href="#" data-toggle="modal" data-target="#modal_theme_success">50196313</a></td>
+										<td>13</td>
+										<td>Change Of Location</td>
+										<td>05/24/2015 00:00:00</td>
+										<td>05/24/2015 00:00:00</td>
+										<td>Khateeb</td>
+										<td>05/24/2015 00:00:00</td>
+										<td>9012346</td>
+										<td>REVISED ACCORDING TO PLANNING</td>
+										<td>TITLE CHANGE</td>
+										<td>2820151</td>
+										<td>2824399</td>
+									</tr>
+									<tr>
+										<td><a href="#" data-toggle="modal" data-target="#modal_theme_success">50059228</a></td>
+										<td>30</td>
+										<td>Manual Parcel Adjustment</td>
+										<td>11/10/2010 00:00:00</td>
+										<td>11/10/2010 00:00:00</td>
+										<td>aisha</td>
+										<td>11/10/2010 00:00:00</td>
+										<td>9012345</td>
+										<td>REVISED ACCORDING TO PLANNING</td>
+										<td>TITLE CHANGE</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="#" data-toggle="modal" data-target="#modal_theme_success">50028076</a></td>
+										<td>10</td>
+										<td>Owner Change</td>
+										<td>09/27/2009 00:00:00</td>
+										<td>09/27/2009 00:00:00</td>
+										<td>fatima</td>
+										<td>09/27/2009 00:00:00</td>
+										<td>9012346</td>
+										<td>BUY AND SELL</td>
+										<td>CHANGE OWNER</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="#" data-toggle="modal" data-target="#modal_theme_success">50237167</a></td>
+										<td>3</td>
+										<td>Parcel Creation</td>
+										<td>03/15/2016 00:00:00</td>
+										<td>03/15/2016 00:00:00</td>
+										<td>aisha</td>
+										<td>03/15/2016 00:00:00</td>
+										<td>7890123</td>
+										<td>REVISED ACCORDING TO PLANNING</td>
+										<td>NEW PARCEL</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="#" data-toggle="modal" data-target="#modal_theme_success">50014242</a></td>
+										<td>5</td>
+										<td>Parcel Merge</td>
+										<td>03/15/2009 00:00:00</td>
+										<td>03/15/2009 00:00:00</td>
+										<td>aisha</td>
+										<td>03/15/2009 00:00:00</td>
+										<td>9012345</td>
+										<td>BUY AND SELL</td>
+										<td>MERGE PARCELS</td>
+										<td>2813524</td>
+										<td>2813840</td>
+									</tr>
+									<tr>
+										<td><a href="#" data-toggle="modal" data-target="#modal_theme_success">50218949</a></td>
+										<td>24</td>
+										<td>Retire Parcel</td>
+										<td>11/09/2015 00:00:00</td>
+										<td>11/09/2015 00:00:00</td>
+										<td>mohd_long_trn</td>
+										<td>09/08/2014 00:00:00</td>
+										<td>2345678</td>
+										<td>REVISED ACCORDING TO PLANNING</td>
+										<td>RE-ISSUE SITEPLAN</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="#" data-toggle="modal" data-target="#modal_theme_success">50243973</a></td>
+										<td>28</td>
+										<td>Recall Retired Parcel</td>
+										<td>05/03/2016 00:00:00</td>
+										<td>05/03/2016 00:00:00</td>
+										<td>Vvraghavan</td>
+										<td>05/03/2016 00:00:00</td>
+										<td>7890123</td>
+										<td>REVISED ACCORDING TO PLANNING</td>
+										<td>RE-ISSUE SITEPLAN</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><a href="#" data-toggle="modal" data-target="#modal_theme_success">50027894</a></td>
+										<td>6</td>
+										<td>Partial Affection (Road Affection)</td>
+										<td>09/23/2009 00:00:00</td>
+										<td>09/23/2009 00:00:00</td>
+										<td>aisha</td>
+										<td>09/23/2009 00:00:00</td>
+										<td>4567890</td>
+										<td>REVISED ACCORDING TO PLANNING</td>
+										<td>TITLE CHANGE</td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- /basic datatable -->
+					</div>
+				</div>
+				<!-- Table Ends here -->
+				<!-- Success modal -->
+				<div id="modal_theme_success" class="modal fade" tabindex="-1">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header bg-success">
+								<h6 class="modal-title">More Details</h6>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+
+							<div class="modal-body">
+								<h6 class="font-weight-semibold">User Details</h6>
+								<p><span style="font-weight: bold;">Owner Name :</span>Mohammed</p>
+								<p><span style="font-weight: bold;">Pin Code :</span> 678273</p>
+								<p><span style="font-weight: bold;">State :</span> Abu Dhabi</p>
+								<p><span style="font-weight: bold;">Gender :</span> Male</p>
+								<p><span style="font-weight: bold;">Creation Date :</span> 12/07/2017</p>
+								<p><span style="font-weight: bold;">Creation Time :</span> 00:00:00</p>
+								<p><span style="font-weight: bold;">Mobile Number :</span> +9718782212835</p>
+								<p><span style="font-weight: bold;">Email :</span> moh.arif@gmail.com</p>
+								<hr>
+
+								<h6 class="font-weight-semibold" style="text-align: center;">Record History.</h6>
+								<!-- Table header styling -->
+								<div class="card">
+
+									<div class="table-responsive">
+										<table class="table">
+											<thead>
+												<tr class="bg-blue">
+													<th>Modification Type</th>
+													<th>New Name</th>
+													<th>Modified Date</th>
+													<th>Transaction ID</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Buy and Sell</td>
+													<td>Mohammed</td>
+													<td>12/07/2017</td>
+													<td>0x62fe03c36be83a5017df963e2f0376a47442bef3a53cd70d611a78e7467ec007</td>
+												</tr>
+												<tr>
+													<td>Change Ownersip</td>
+													<td>Arif</td>
+													<td>01/02/2012</td>
+													<td>0x62fe03c36be83a5017df963e2f0376a47442bef3a53cd70d611a78e7467ec007</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!-- /table header styling -->
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+								<!-- <button type="button" class="btn bg-success">Save changes</button> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /success modal -->
 			</div>
 			<!-- /content area -->
 
